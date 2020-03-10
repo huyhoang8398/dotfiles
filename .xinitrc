@@ -1,0 +1,2 @@
+picom &
+exec i3

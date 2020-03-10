@@ -36,6 +36,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start some application
+bindsym $mod+Shift+w exec --no-startup-id chromium
+bindsym $mod+Shift+t exec --no-startup-id thunar
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -175,6 +179,20 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3status
 #}
+
+# lock screen 
+bindsym $mod+shift+x exec betterlockscreen -l blur
+
+# Bind print screen
+bindsym Print exec xfce4-screenshooter
+
+# Gaps (i3-gaps)
+gaps inner 6 
+gaps outer 6 
+
+# Enable popup during fullscreen
+popup_during_fullscreen smart
+
 
 # startup 
 exec_always --no-startup-id /home/huyhoang8398/.config/polybar/launch.sh

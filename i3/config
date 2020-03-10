@@ -185,6 +185,7 @@ bindsym $mod+shift+x exec betterlockscreen -l blur
 
 # Bind print screen
 bindsym Print exec xfce4-screenshooter
+exec --no-startup-id xfce4-clipman
 
 # Gaps (i3-gaps)
 gaps inner 6 

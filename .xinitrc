@@ -1,2 +1,2 @@
-picom &
+dunst &
 exec i3

@@ -31,8 +31,8 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -55,7 +55,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # use rofi instead of dmenu
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # change focus
 bindsym $mod+j focus left

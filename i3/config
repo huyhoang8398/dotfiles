@@ -30,6 +30,12 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse set Master 
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
+# playerctl
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
@@ -195,8 +201,8 @@ exec --no-startup-id xfce4-clipman
 #client.focused #b53a27 #b53a27 #b53a27 #b53a27    #b53a27
 
 # Disable titlebar
-new_window pixel 2
-new_float pixel 2
+new_window pixel 3
+new_float pixel 3
 
 # Gaps (i3-gaps)
 gaps inner 6 
@@ -211,7 +217,6 @@ exec syndaemon -i 0.5 -d -K
 # startup 
 exec_always --no-startup-id /home/huyhoang8398/.config/polybar/launch.sh
 exec --no-startup-id picom &
+#exec --no-startup-id feh --randomize --bg-scale ~/pictures/wallpaper/*
 exec --no-startup-id feh --bg-scale ~/pictures/GqyeeDrwQuMNuvLr.jpg
-#exec --no-startup-id feh --bg-scale ~/pictures/digital-art-anime-girls-fantasy-art-archer-wallpaper-c950187dd19acddb2607586fb091c60d.jpg
-#exec --no-startup-id feh --bg-scale ~/pictures/Hakurei_Reimu_17.jpg
 exec --no-startup-id nm-applet

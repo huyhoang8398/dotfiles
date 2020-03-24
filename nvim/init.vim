@@ -51,10 +51,10 @@ set copyindent      " copy indent from the previous line
 " Colors {{{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable                " enable syntax processing
-set background=dark
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+"set background=dark
+"let g:gruvbox_italic=1
+"let g:gruvbox_contrast_dark='hard'
+"colorscheme gruvbox
 " }}} Colors
 
 " copy and paste {{{

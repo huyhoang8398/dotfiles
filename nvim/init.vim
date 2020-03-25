@@ -22,6 +22,9 @@ Plug 'Yggdroot/indentLine'
 " eslint 
 "Plug 'dense-analysis/ale'
 
+" syntax highlighting
+Plug 'sheerun/vim-polyglot'
+
 " goyo - focus mode 
 Plug 'junegunn/goyo.vim'
 
@@ -38,6 +41,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim' 
 
 call plug#end()
+
+" copy vim outside terminal {{{
+set clipboard=unnamedplus
+" }}} copy vim outside terminal
+
 
 " Spaces & Tabs {{{
 set tabstop=2       " number of visual spaces per TAB
@@ -119,3 +127,4 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " }}} ctrlp
+

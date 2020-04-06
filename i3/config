@@ -220,7 +220,3 @@ exec --no-startup-id picom &
 #exec --no-startup-id feh --randomize --bg-scale ~/pictures/wallpaper/*
 exec --no-startup-id feh --bg-scale ~/pictures/GqyeeDrwQuMNuvLr.jpg
 exec --no-startup-id nm-applet
-
-# multi monitor
-workspace 1 output eDP1
-workspace 2 output DP1

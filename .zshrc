@@ -3,6 +3,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/huyhoang8398/.oh-my-zsh"
 
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
+
 # ZSH theme
 ZSH_THEME="oxide"
 

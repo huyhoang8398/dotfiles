@@ -1,5 +1,5 @@
 #!/bin/bash
-cp -r ~/pictures .
+cp -r ~/Pictures .
 cp -r ~/.zshrc ~/.zshenv ~/.vimrc ~/.xinitrc ~/.xprofile ~/.themes ~/.local/share/icons /etc/modprobe.d .
 cp -r ~/.config/nvim .
 cp -r ~/.config/i3 .

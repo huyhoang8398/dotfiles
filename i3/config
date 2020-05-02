@@ -198,7 +198,7 @@ bindsym Print exec xfce4-screenshooter
 exec --no-startup-id xfce4-clipman
 
 # Borders
-#client.focused #b53a27 #b53a27 #b53a27 #b53a27    #b53a27
+client.focused #b53a27 #b53a27 #b53a27 #b53a27 #b53a27
 
 # Disable titlebar
 new_window pixel 3

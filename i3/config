@@ -217,5 +217,6 @@ exec syndaemon -i 0.5 -d -K
 # startup 
 exec_always --no-startup-id /home/huyhoang8398/.config/polybar/launch.sh
 exec --no-startup-id picom &
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpaper/* &
+#exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpaper/* &
+exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpaper/kbx4yNS.jpg &
 exec --no-startup-id nm-applet

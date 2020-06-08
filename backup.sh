@@ -6,3 +6,4 @@ cp -r ~/.config/i3 .
 cp -r ~/.config/polybar .
 cp -r /etc/X11/xorg.conf.d .
 cp -r ~/.config/picom .
+cp ~/.config/mimeapps.list .

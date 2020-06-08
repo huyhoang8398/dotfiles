@@ -1,0 +1,13 @@
+[Added Associations]
+image/png=ristretto.desktop;
+application/pdf=okularApplication_pdf.desktop;
+video/ogg=vlc.desktop;
+image/jpeg=okularApplication_kimgio.desktop;gimp.desktop;feh.desktop;
+application/xml=code-oss.desktop;
+text/html=code-oss.desktop;
+
+[Default Applications]
+video/ogg=vlc.desktop
+application/pdf=okularApplication_pdf.desktop
+x-scheme-handler/webcal=chromium.desktop
+text/x-tex=code-oss.desktop

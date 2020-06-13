@@ -1,0 +1,11 @@
+betterlockscreen
+freeoffice
+gtk-recordmydesktop
+heroku-cli
+ibus-bamboo
+nerd-fonts-complete
+ocs-url
+polybar
+pygtk
+slack-desktop
+yay

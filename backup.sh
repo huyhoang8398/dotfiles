@@ -1,4 +1,6 @@
 #!/bin/bash
+pacman -Qqe | grep -Fvx "$(pacman -Qqm)" > pkglist.txt
+pacman -Qqm > pkglistAUR.txt
 cp -r ~/Pictures .
 cp -r ~/.zshrc ~/.zshenv ~/.vimrc ~/.xinitrc ~/.xprofile ~/.themes ~/.local/share/icons /etc/modprobe.d .
 cp -r ~/.config/nvim .

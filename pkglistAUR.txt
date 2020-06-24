@@ -3,9 +3,13 @@ freeoffice
 gtk-recordmydesktop
 heroku-cli
 ibus-bamboo
+libcurl-openssl-1.0
+mongodb-bin
+mongodb-tools-bin
 nerd-fonts-complete
 ocs-url
 polybar
 pygtk
 slack-desktop
+starship-bin
 yay

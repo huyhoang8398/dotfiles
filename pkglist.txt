@@ -98,6 +98,7 @@ thunar-volman
 tk
 tlp
 tree
+ttf-anonymous-pro
 ttf-dejavu
 ttf-droid
 ttf-fira-code

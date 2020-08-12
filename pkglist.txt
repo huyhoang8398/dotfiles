@@ -1,4 +1,5 @@
 acpi
+acpid
 alsa-utils
 arandr
 arc-gtk-theme
@@ -6,14 +7,17 @@ autoconf
 automake
 base
 bash-completion
+bc
 binutils
 bison
+blueberry
+bluez-utils
 breeze-icons
+cheese
 chromium
 code
 dmenu
 dmidecode
-docker
 dunst
 efibootmgr
 fakeroot
@@ -51,10 +55,12 @@ keychain
 libgsf
 libtool
 lightdm
+lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 linux
 linux-firmware
 lxappearance
+lxsession
 m4
 make
 man-db
@@ -82,12 +88,12 @@ pkgfile
 playerctl
 powerline
 powerline-fonts
-pulseaudio
 pulseaudio-alsa
 ranger
 rofi
 scrot
 sed
+sof-firmware
 sudo
 tcl
 terminus-font
@@ -112,7 +118,6 @@ ttf-ubuntu-font-family
 tumbler
 unzip
 vi
-vim
 vlc
 w3m
 wget
@@ -120,6 +125,7 @@ which
 xarchiver
 xdg-user-dirs
 xf86-video-intel
+xf86-video-vesa
 xfce4-clipman-plugin
 xfce4-screenshooter
 xfce4-terminal
@@ -143,6 +149,7 @@ xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
 xorg-x11perf
+xorg-xauth
 xorg-xbacklight
 xorg-xcmsdb
 xorg-xcursorgen
@@ -159,9 +166,11 @@ xorg-xkbutils
 xorg-xkill
 xorg-xlsatoms
 xorg-xlsclients
+xorg-xmodmap
 xorg-xpr
 xorg-xprop
 xorg-xrandr
+xorg-xrdb
 xorg-xrefresh
 xorg-xset
 xorg-xsetroot

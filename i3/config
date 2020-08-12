@@ -47,7 +47,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # start some application
-bindsym $mod+Shift+w exec --no-startup-id chromium
+bindsym $mod+Shift+w exec --no-startup-id firefox-developer-edition 
 bindsym $mod+Shift+t exec --no-startup-id thunar
 
 # kill focused window
@@ -191,7 +191,7 @@ bindsym $mod+r mode "resize"
 #}
 
 # lock screen 
-bindsym $mod+shift+x exec betterlockscreen -l blur
+bindsym $mod+shift+x exec betterlockscreen -l blur -s
 
 # Bind print screen
 bindsym Print exec xfce4-screenshooter
@@ -220,3 +220,4 @@ exec --no-startup-id picom &
 #exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpaper/* &
 exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpaper/kbx4yNS.jpg &
 exec --no-startup-id nm-applet
+exec --no-startup-id lxpolkit

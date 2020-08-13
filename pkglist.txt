@@ -90,6 +90,7 @@ playerctl
 powerline
 powerline-fonts
 pulseaudio-alsa
+python-pywal
 ranger
 rofi
 scrot

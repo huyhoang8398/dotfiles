@@ -27,6 +27,7 @@ fi
 alias cl="clear"
 alias c="code"
 alias nv="nvim"
+alias gcl='git clone --recurse-submodules'
 alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit -m"
@@ -43,5 +44,13 @@ source /home/huyhoang8398/script/open.sh
 # heroku autocomplete setup
 #HEROKU_AC_ZSH_SETUP_PATH=/home/huyhoang8398/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
+# pyWal
+# Import colorscheme from 'wal' asynchronously
+# # &   # Run the process in the background.
+# # ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+
 # Starship promt
 eval "$(starship init zsh)"
+source ~/.cache/wal/colors-tty.sh

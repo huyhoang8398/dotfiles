@@ -199,10 +199,12 @@ exec --no-startup-id xfce4-clipman
 
 # Borders
 client.focused #b53a27 #b53a27 #b53a27 #b53a27 #b53a27
+#client.focused #FFFFFF #FFFFFF #FFFFFF #FFFFFF #FFFFFF
+
 
 # Disable titlebar
-new_window pixel 3
-new_float pixel 3
+new_window pixel 6
+new_float pixel 5
 
 # Gaps (i3-gaps)
 gaps inner 6 

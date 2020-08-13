@@ -1,0 +1,6 @@
+betterlockscreen
+ibus-bamboo
+polybar
+pulseaudio-git
+starship-bin
+yay

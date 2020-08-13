@@ -1,4 +1,5 @@
 betterlockscreen
+etcher-bin
 ibus-bamboo
 polybar
 pulseaudio-git

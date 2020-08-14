@@ -60,6 +60,7 @@ lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 linux
 linux-firmware
+linux-headers
 lxappearance
 lxsession
 m4
@@ -105,7 +106,7 @@ thunar-archive-plugin
 thunar-volman
 tk
 tlp
-tp_smapi
+tpacpi-bat
 tree
 ttf-anonymous-pro
 ttf-dejavu

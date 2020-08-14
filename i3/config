@@ -197,11 +197,6 @@ bindsym $mod+shift+x exec betterlockscreen -l blur -s
 bindsym Print exec xfce4-screenshooter
 exec --no-startup-id xfce4-clipman
 
-# Borders
-client.focused #b53a27 #b53a27 #b53a27 #b53a27 #b53a27
-#client.focused #FFFFFF #FFFFFF #FFFFFF #FFFFFF #FFFFFF
-
-
 # Disable titlebar
 new_window pixel 6
 new_float pixel 5
@@ -219,7 +214,23 @@ exec syndaemon -i 0.5 -d -K
 # startup 
 exec_always --no-startup-id /home/huyhoang8398/.config/polybar/launch.sh
 exec --no-startup-id picom &
-#exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpaper/* &
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpaper/kbx4yNS.jpg &
 exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
+
+## use pywal cache for desktop image
+exec --no-startup-id feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
+
+## Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $fg     $bg     $fg  $bg       $fg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+client.background       $bg

@@ -40,6 +40,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
+# Multiple screen control
+bindsym XF86Display exec arandr
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -52,6 +55,10 @@ bindsym $mod+Shift+t exec --no-startup-id thunar
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# Cycle through active workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -202,7 +209,7 @@ new_window pixel 6
 new_float pixel 5
 
 # Gaps (i3-gaps)
-gaps inner 6 
+gaps inner 13
 gaps outer 6 
 
 # Enable popup during fullscreen
@@ -225,8 +232,8 @@ exec --no-startup-id feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bg i3wm.color7 #f0f0f0
+set_from_resource $fg i3wm.color2 #f0f0f0
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg

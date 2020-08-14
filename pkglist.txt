@@ -17,6 +17,7 @@ breeze-icons
 cheese
 chromium
 code
+cowsay
 dmenu
 dmidecode
 dunst
@@ -29,6 +30,7 @@ file
 findutils
 firefox-developer-edition
 flex
+fortune-mod
 fwupd
 gawk
 gcc
@@ -51,7 +53,6 @@ i3-gaps
 ibus
 inkscape
 intel-ucode
-kamoso
 keychain
 libgsf
 libtool
@@ -100,6 +101,7 @@ sof-firmware
 sudo
 tcl
 terminus-font
+terminus-font-otb
 texinfo
 thunar
 thunar-archive-plugin

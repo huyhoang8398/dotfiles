@@ -1,3 +1,6 @@
+## Preview 
+![general](static/demo.png)
+
 ## Note 
 ### To make audio work on Archlinux
 ```bash

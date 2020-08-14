@@ -10,3 +10,5 @@ cp -r /etc/X11/xorg.conf.d .
 cp -r ~/.config/picom .
 cp ~/.config/mimeapps.list .
 cp -r ~/.config/dunst .
+cp ~/.Xresources .
+cp -r ~/.config/rofi .

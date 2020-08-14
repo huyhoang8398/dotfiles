@@ -12,3 +12,4 @@ cp ~/.config/mimeapps.list .
 cp -r ~/.config/dunst .
 cp ~/.Xresources .
 cp -r ~/.config/rofi .
+cp -r /etc/conf.d/tpacpi .

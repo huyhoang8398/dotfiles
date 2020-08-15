@@ -198,7 +198,7 @@ bindsym $mod+r mode "resize"
 #}
 
 # lock screen 
-bindsym $mod+shift+x exec betterlockscreen -l blur -s
+bindsym $mod+shift+x exec betterlockscreen -l blur
 
 # Bind print screen
 bindsym Print exec xfce4-screenshooter

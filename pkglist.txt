@@ -9,6 +9,7 @@ automake
 base
 bash-completion
 bc
+bind
 binutils
 bison
 blueberry
@@ -82,6 +83,7 @@ noto-fonts-emoji
 npm
 okular
 openssh
+p7zip
 pacman
 patch
 pavucontrol
@@ -91,9 +93,11 @@ pkgfile
 playerctl
 powerline
 powerline-fonts
+psensor
 pulseaudio-alsa
 python-pywal
 ranger
+raw-thumbnailer
 rofi
 scrot
 sed
@@ -122,8 +126,10 @@ ttf-roboto
 ttf-roboto-mono
 ttf-ubuntu-font-family
 tumbler
+unrar
 unzip
 vi
+virtualbox
 vlc
 w3m
 wget
@@ -172,6 +178,7 @@ xorg-xkbutils
 xorg-xkill
 xorg-xlsatoms
 xorg-xlsclients
+xorg-xlsfonts
 xorg-xmodmap
 xorg-xpr
 xorg-xprop

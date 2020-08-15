@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 count=0
-disconnected=""
-disconnected2=""
-disconnected3=""
-wireless_connected=""
-ethernet_connected=""
+disconnected="Disconnected"
+wireless_connected="Connected"
+ethernet_connected="Connected"
 
 ID="$(ip link | awk '/state UP/ {print $2}')"
 
@@ -18,7 +16,5 @@ while true; do
         fi
     else
         echo "$disconnected" ; sleep 0.5
-        echo "$disconnected2" ; sleep 0.5
-        echo "$disconnected3" ; sleep 0.5
     fi
 done

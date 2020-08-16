@@ -102,11 +102,13 @@ rofi
 scrot
 sed
 sof-firmware
+stress
 sudo
 tcl
 terminus-font
 terminus-font-otb
 texinfo
+throttled
 thunar
 thunar-archive-plugin
 thunar-volman

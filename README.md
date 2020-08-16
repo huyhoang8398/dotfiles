@@ -33,3 +33,18 @@ Validate:
 ```bash
 sudo tlp-stat -b
 ```
+
+### Throttling 
+Lenovo has confirmed the issue, explained the cause and published updates for the embedded controller and the BIOS to LVFS .
+The alternative fix is to install throttled, then run
+```bash
+sudo pacman -S throttled
+sudo systemctl enable --now lenovo_fix.service
+```
+**testing**
+```bash
+sudo pacman -S tress
+sudo stress --cpu 8 -v --timeout 30s
+watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""
+```
+

@@ -210,7 +210,7 @@ new_float pixel 5
 
 # Gaps (i3-gaps)
 gaps inner 13
-gaps outer 6 
+gaps outer 3
 
 # Enable popup during fullscreen
 popup_during_fullscreen smart

@@ -81,6 +81,7 @@ nodejs
 noto-fonts
 noto-fonts-emoji
 npm
+obs-studio
 okular
 openssh
 p7zip

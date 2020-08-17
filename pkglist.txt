@@ -19,6 +19,7 @@ cheese
 chromium
 code
 cowsay
+discord
 dmenu
 dmidecode
 dunst

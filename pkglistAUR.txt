@@ -4,5 +4,6 @@ ibus-bamboo
 ocs-url
 polybar
 pulseaudio-git
+spotify
 starship-bin
 yay

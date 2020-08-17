@@ -128,3 +128,5 @@ let g:ctrlp_custom_ignore = {
 
 " }}} ctrlp
 
+" Set gui font for icons
+set guifont=DroidSansMono\ Nerd\ Font\ 11

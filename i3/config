@@ -241,3 +241,7 @@ client.unfocused        $fg     $bg     $fg  $bg       $fg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
+
+
+# assign some apps to preferred workspaces
+for_window [class="Spotify"] move to workspace $ws9, workspace --no-auto-back-and-forth $ws9

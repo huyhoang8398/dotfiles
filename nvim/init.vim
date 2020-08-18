@@ -20,7 +20,7 @@ Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 
 " eslint 
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " syntax highlighting
 Plug 'sheerun/vim-polyglot'

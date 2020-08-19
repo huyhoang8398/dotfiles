@@ -10,8 +10,12 @@ application/zip=xarchiver.desktop;
 [Default Applications]
 video/ogg=vlc.desktop
 application/pdf=okularApplication_pdf.desktop
-x-scheme-handler/webcal=chromium.desktop
 text/x-tex=code-oss.desktop
 inode/directory=thunar.desktop
 application/json=code-oss.desktop
 x-scheme-handler/etcher=balena-etcher-electron.desktop
+text/html=firefox-developer-edition.desktop
+x-scheme-handler/http=firefox-developer-edition.desktop
+x-scheme-handler/https=firefox-developer-edition.desktop
+x-scheme-handler/about=firefox-developer-edition.desktop
+x-scheme-handler/unknown=firefox-developer-edition.desktop

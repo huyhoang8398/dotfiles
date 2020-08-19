@@ -244,7 +244,8 @@ client.background       $bg
 
 
 # assign some apps to preferred workspaces
-for_window [class="Spotify"] move to workspace $ws9, workspace --no-auto-back-and-forth $ws9
+for_window [class="Spotify"] move to workspace $ws9
+assign [class="discord"] 6
 
 # assign workspaces to different monitors
 workspace 1 output eDP-1

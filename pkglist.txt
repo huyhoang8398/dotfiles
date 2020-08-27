@@ -9,6 +9,7 @@ automake
 base
 bash-completion
 bc
+biber
 bind
 binutils
 bison
@@ -80,6 +81,7 @@ neovim
 net-tools
 network-manager-applet
 networkmanager
+nmap
 nodejs
 noto-fonts
 noto-fonts-emoji
@@ -89,6 +91,7 @@ okular
 openssh
 p7zip
 pacman
+pandoc
 patch
 pavucontrol
 picom
@@ -112,6 +115,19 @@ tcl
 terminus-font
 terminus-font-otb
 texinfo
+texlive-bibtexextra
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-langextra
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 throttled
 thunar
 thunar-archive-plugin

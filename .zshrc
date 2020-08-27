@@ -32,7 +32,7 @@ alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit -m"
 alias gp="git push"
-
+alias sl="systemctl suspend"
 
 # Other Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

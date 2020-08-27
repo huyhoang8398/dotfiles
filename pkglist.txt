@@ -30,6 +30,7 @@ ffmpegthumbnailer
 figlet
 file
 findutils
+firefox
 firefox-developer-edition
 flex
 fortune-mod
@@ -54,6 +55,7 @@ hugo
 i3-gaps
 ibus
 inkscape
+intel-media-driver
 intel-ucode
 keychain
 libgsf

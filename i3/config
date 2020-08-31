@@ -258,3 +258,6 @@ workspace 7 output DP2 eDP-1
 workspace 8 output DP2 eDP-1
 workspace 9 output DP2 eDP-1
 #workspace 10 output DP2 eDP-1
+
+# Floating window
+for_window [class="Yad" title="yad-calendar"] floating enable

@@ -4,6 +4,7 @@ acpid
 alsa-utils
 arandr
 arc-gtk-theme
+arp-scan
 autoconf
 automake
 base
@@ -16,6 +17,7 @@ bison
 blueberry
 bluez-utils
 breeze-icons
+bridge-utils
 cheese
 chromium
 code
@@ -23,6 +25,7 @@ cowsay
 discord
 dmenu
 dmidecode
+dnsmasq
 dunst
 efibootmgr
 fakeroot
@@ -33,6 +36,7 @@ file
 findutils
 firefox
 firefox-developer-edition
+flashplugin
 flex
 fortune-mod
 fwupd
@@ -58,9 +62,15 @@ ibus
 inkscape
 intel-media-driver
 intel-ucode
+intellij-idea-community-edition
+jdk8-openjdk
+jre8-openjdk
 keychain
 libgsf
+libmtp
+libreoffice-fresh
 libtool
+libvirt
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
@@ -88,9 +98,11 @@ noto-fonts-emoji
 npm
 obs-studio
 okular
+openbsd-netcat
 openssh
 p7zip
 pacman
+pacman-contrib
 pandoc
 patch
 pavucontrol
@@ -102,9 +114,12 @@ powerline
 powerline-fonts
 psensor
 pulseaudio-alsa
+python-pip
 python-pywal
+qemu
 ranger
 raw-thumbnailer
+reflector
 rofi
 scrot
 sed
@@ -132,6 +147,7 @@ throttled
 thunar
 thunar-archive-plugin
 thunar-volman
+thunderbird
 tk
 tlp
 tpacpi-bat
@@ -151,6 +167,8 @@ tumbler
 unrar
 unzip
 vi
+virt-manager
+virt-viewer
 virtualbox
 vlc
 w3m

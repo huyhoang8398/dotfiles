@@ -234,9 +234,9 @@ exec --no-startup-id feh --bg-fill "$(< "${HOME}/.cache/wal/wal")"
 # it fails to get colors from Xresources.
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color9 #f0f0f0
-
+set_from_resource $indicator i3wm.color13 $fg
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused          $bg     $bg     $fg  $indicator       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $fg     $bg     $fg  $bg       $fg
 client.urgent           $bg     $bg     $fg  $bg       $bg

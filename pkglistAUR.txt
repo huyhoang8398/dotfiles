@@ -1,4 +1,7 @@
+android-studio
 betterlockscreen
+caffeine
+electron7
 etcher-bin
 ibus-bamboo
 ocs-url

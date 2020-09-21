@@ -207,6 +207,9 @@ exec --no-startup-id xfce4-clipman
 # Disable titlebar
 new_window pixel 6
 new_float pixel 5
+# Disable border 
+for_window [class="^.*"] border pixel 0
+
 
 # Gaps (i3-gaps)
 gaps inner 13
@@ -223,30 +226,31 @@ exec_always --no-startup-id /home/huyhoang8398/.config/polybar/launch.sh
 exec --no-startup-id picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
+exec_always --no-startup-id flashfocus
 
 ## use pywal cache for desktop image
 exec --no-startup-id feh --bg-fill "$(< "${HOME}/.cache/wal/wal")"
 
 ## Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use 
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color9 #f0f0f0
-set_from_resource $indicator i3wm.color13 $fg
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $indicator       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $fg     $bg     $fg  $bg       $fg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
+## Change 'color7' and 'color2' to whatever colors you want i3 to use 
+## from the generated scheme.
+## NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+## it fails to get colors from Xresources.
+#set_from_resource $fg i3wm.color7 #f0f0f0
+#set_from_resource $bg i3wm.color9 #f0f0f0
+#set_from_resource $indicator i3wm.color13 $fg
+##class                 border  backgr. text indicator child_border
+#client.focused          $bg     $bg     $fg  $indicator       $bg
+#client.focused_inactive $bg     $bg     $fg  $bg       $bg
+#client.unfocused        $fg     $bg     $fg  $bg       $fg
+#client.urgent           $bg     $bg     $fg  $bg       $bg
+#client.placeholder      $bg     $bg     $fg  $bg       $bg
+#client.background       $bg
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9
 assign [class="discord"] 6
+assign [class="Thunderbird"] 5
 
 # assign workspaces to different monitors
 workspace 1 output eDP-1

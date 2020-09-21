@@ -143,7 +143,6 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
-throttled
 thunar
 thunar-archive-plugin
 thunar-volman

@@ -1,7 +1,6 @@
 android-studio
 betterlockscreen
 caffeine
-electron7
 etcher-bin
 flashfocus-git
 ibus-bamboo

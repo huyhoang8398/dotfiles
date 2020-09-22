@@ -37,6 +37,10 @@ flash-fullscreen: true
 #      Lone windows will be flashed only upon switching desktops.
 flash-lone-windows: 'always'
 
+rules:
+  - window-class: discord
+    flash-on-focus: False
+
 
 # Defining window-specific flash rules
 #

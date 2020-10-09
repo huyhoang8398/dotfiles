@@ -65,10 +65,6 @@ let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 " }}} Colors
 
-" copy and paste {{{
-set clipboard=unnamedplus
-" }}} copy and paste
-
 " Cursor line {{{
 set cursorline
 " }}}

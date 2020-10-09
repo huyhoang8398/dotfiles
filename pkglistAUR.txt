@@ -1,12 +1,6 @@
 android-studio
-betterlockscreen
-caffeine
-etcher-bin
-flashfocus-git
 ibus-bamboo
 ocs-url
-polybar
-pulseaudio-git
-spotify
 starship-bin
+xfce4-panel-profiles
 yay

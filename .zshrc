@@ -3,10 +3,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/huyhoang8398/.oh-my-zsh"
 
-# NPM install user
-export PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
-
 # Plugins
 #plugins=(git)
 
@@ -47,13 +43,5 @@ fortune | pokemonsay
 # heroku autocomplete setup
 #HEROKU_AC_ZSH_SETUP_PATH=/home/huyhoang8398/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
-# pyWal
-# Import colorscheme from 'wal' asynchronously
-# # &   # Run the process in the background.
-# # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
-
-
 # Starship promt
 eval "$(starship init zsh)"
-source ~/.cache/wal/colors-tty.sh

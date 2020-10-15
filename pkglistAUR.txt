@@ -1,6 +1,8 @@
 android-studio
+chicago95-sddm-theme-git
 ibus-bamboo
 ocs-url
+spotify
 starship-bin
 xfce4-panel-profiles
 yay

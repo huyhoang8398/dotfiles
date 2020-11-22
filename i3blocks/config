@@ -1,0 +1,36 @@
+# Mediaplayer
+#
+# Spotify icon \uF1BC
+[spotify]
+label= 
+command=./spotify.py
+interval=5
+
+# Backlight
+#
+[brightness]
+command=xbacklight -get | cut -d'.' -f 1
+label=☀ 
+interval=once
+signal=13
+
+# Volume
+#
+[volume]
+command=./volume
+LABEL=♪ 
+interval=once
+signal=10
+
+# Battery
+#
+[battery]
+command=./battery
+interval=30
+LABEL=⚡
+
+# Date Time
+#
+[time]
+command=date '+%H:%M %d-%m-%Y'
+interval=5

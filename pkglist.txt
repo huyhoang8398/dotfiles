@@ -69,6 +69,7 @@ libtool
 linux
 linux-firmware
 lxappearance
+lxsession
 m4
 make
 man-pages

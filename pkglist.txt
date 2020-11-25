@@ -6,6 +6,7 @@ alsa-utils
 android-tools
 arandr
 arc-gtk-theme
+arp-scan
 autoconf
 automake
 base
@@ -59,7 +60,6 @@ i3blocks
 ibus
 imagemagick
 intel-ucode
-intellij-idea-community-edition
 jasper
 jdk8-openjdk
 jre8-openjdk

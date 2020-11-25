@@ -5,8 +5,9 @@ clion
 etcher-bin
 i3lock-color
 ibus-bamboo
+intellij-idea-ultimate-edition
+intellij-idea-ultimate-edition-jre
 ocs-url
 spotify
-terminus-font-ttf
 ttf-computer-modern-fonts
 yay

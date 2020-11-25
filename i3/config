@@ -187,7 +187,7 @@ exec --no-startup-id xfce4-clipman
 popup_during_fullscreen smart
 
 # disable mouse while typing
-exec syndaemon -i 0.5 -d -K 
+#exec syndaemon -i 0.5 -d -K 
 
 # startup 
 exec --no-startup-id picom -b

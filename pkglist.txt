@@ -12,7 +12,7 @@ automake
 base
 binutils
 bison
-blueman
+blueberry
 bluez
 bluez-utils
 bridge-utils
@@ -46,12 +46,14 @@ gettext
 git
 gnome-disk-utility
 gnome-keyring
+gnome-sound-recorder
 go-tools
 grep
 groff
 grub
 grub-customizer
 gst-libav
+gucharmap
 gvfs
 gzip
 htop
@@ -79,6 +81,7 @@ neovim
 net-tools
 network-manager-applet
 networkmanager
+nfs-utils
 nodejs
 noto-fonts
 noto-fonts-emoji
@@ -97,6 +100,7 @@ picom
 pkgconf
 pulseaudio
 pulseaudio-alsa
+pulseaudio-bluetooth
 pulsemixer
 qemu
 ristretto
@@ -104,6 +108,7 @@ rofi
 sddm
 sed
 sof-firmware
+steam
 sudo
 terminus-font
 texinfo
@@ -119,6 +124,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
+throttled
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin

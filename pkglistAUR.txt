@@ -2,7 +2,9 @@ android-sdk
 android-studio
 betterlockscreen-git
 clion
+electron8-bin
 etcher-bin
+ferdi
 i3lock-color
 ibus-bamboo
 intellij-idea-ultimate-edition
@@ -11,3 +13,4 @@ ocs-url
 spotify
 ttf-computer-modern-fonts
 yay
+zoom

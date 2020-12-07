@@ -1,2 +1,6 @@
 #!/bin/bash
-cat /proc/acpi/ibm/thermal | awk '{print $2}'
+
+TEMP=$(cat /proc/acpi/ibm/thermal | awk '{print $2}')
+FAN=$(cat /proc/acpi/ibm/fan | awk 'NR==2 {print $2}')
+
+echo $TEMP $FAN

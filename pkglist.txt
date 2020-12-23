@@ -3,6 +3,7 @@ acpi
 acpi_call
 adobe-source-sans-pro-fonts
 alsa-utils
+android-file-transfer
 android-tools
 arandr
 arc-gtk-theme
@@ -21,13 +22,11 @@ clang
 cmake
 code
 cowsay
-discord
 dmidecode
 dnsmasq
 dunst
 ebtables
 efibootmgr
-emacs
 exo
 faac
 fakeroot
@@ -47,13 +46,13 @@ git
 gnome-disk-utility
 gnome-keyring
 gnome-sound-recorder
+go
 go-tools
 grep
 groff
 grub
 grub-customizer
 gst-libav
-gucharmap
 gvfs
 gzip
 htop
@@ -176,7 +175,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -206,6 +204,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud

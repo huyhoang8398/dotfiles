@@ -7,6 +7,9 @@ export PATH="/home/huyhoang8398/script":$PATH
 # Golang
 export PATH="$PATH:$HOME/go/bin"
 
+# NPM 
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
 
 # Plugins
 #plugins=(git)

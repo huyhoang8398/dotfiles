@@ -10,6 +10,7 @@ ibus-bamboo
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 ocs-url
+orage
 spotify
 ttf-computer-modern-fonts
 yay

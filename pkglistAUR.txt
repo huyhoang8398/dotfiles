@@ -11,6 +11,7 @@ intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 ocs-url
 orage
+python2-gobject
 spotify
 ttf-computer-modern-fonts
 yay

@@ -37,6 +37,7 @@ findutils
 firefox-developer-edition
 flex
 fortune-mod
+fwupd
 garcon
 gawk
 gcc
@@ -61,6 +62,7 @@ i3-gaps
 i3blocks
 ibus
 imagemagick
+inkscape
 intel-ucode
 jasper
 jdk8-openjdk
@@ -87,6 +89,7 @@ nodejs
 noto-fonts
 noto-fonts-emoji
 ntfs-3g
+obs-studio
 okular
 openbsd-netcat
 openfortivpn

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+while :
+do
+  ID=$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')
+  TITLE=$(xprop -id $ID | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2)
+  CHARLEN=${#TITLE}
+  if [[ $CHARLEN -gt 20 ]]
+  then
+    echo ${TITLE:0:20} "..."
+  else  
+    echo "$TITLE"
+  fi
+done

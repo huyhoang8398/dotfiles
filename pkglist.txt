@@ -71,6 +71,7 @@ kdiskmark
 libguestfs
 libreoffice-still
 libtool
+light
 linux
 linux-firmware
 lxappearance

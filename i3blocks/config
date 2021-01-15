@@ -9,7 +9,7 @@ interval=5
 # Backlight
 #
 [brightness]
-command=xbacklight -get | cut -d'.' -f 1
+command=./backlight
 label=☀ 
 interval=once
 signal=13

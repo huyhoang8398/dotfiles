@@ -24,8 +24,12 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute && pkill -RTMIN+10 i3blocks
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 && pkill -RTMIN+13 i3blocks
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 && pkill -RTMIN+13 i3blocks
+#bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 9 && pkill -RTMIN+13 i3blocks
+#bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 9 && pkill -RTMIN+13 i3blocks
+
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10 && pkill -RTMIN+13 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 && pkill -RTMIN+13 i3blocks
+
 
 # Multiple screen control
 bindsym XF86Display exec arandr
@@ -197,7 +201,11 @@ exec --no-startup-id lxpolkit
 # Wallpaper
 #exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpaper/*
 #exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/fog-3622519_1920.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wp7218050.png
+#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wp7218050.png
+
+#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/f16fedc86686146624897737cf4338d8.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wallpaperflare.com_wallpaper.jpg
+
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9

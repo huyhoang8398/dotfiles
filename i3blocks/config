@@ -1,11 +1,5 @@
 # Mediaplayer
 #
-
-[focusedwindow]
-label=[]= 
-command=./focusedwindow 20
-interval=persist
-
 # Spotify icon \uF1BC
 [spotify]
 label= 

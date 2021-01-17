@@ -11,19 +11,16 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 
 " emmet 
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 
 " intellisense engine
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " indent line 
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 
 " eslint 
-Plug 'dense-analysis/ale'
-
-" syntax highlighting
-Plug 'sheerun/vim-polyglot'
+"Plug 'dense-analysis/ale'
 
 " goyo - focus mode 
 Plug 'junegunn/goyo.vim'
@@ -42,81 +39,63 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
-" copy vim outside terminal {{{
-set clipboard=unnamedplus
-" }}} copy vim outside terminal
-
-
-" Spaces & Tabs {{{
+" Spaces & Tabs
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
 set shiftwidth=2    " number of spaces to use for autoindent
 set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
-" }}} Spaces & Tabs
 
-" Colors {{{
+" Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable                " enable syntax processing
 set background=dark
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
-" }}} Colors
 
-" copy and paste {{{
+" copy and paste
 set clipboard=unnamedplus
-" }}} copy and paste
 
-" Cursor line {{{
+" Cursor line
 set cursorline
-" }}}
 
-" relative line number {{{ 
+" relative line number
 set number relativenumber
-" }}} relative line number
 
-" vim lightline status bar {{{
+" vim lightline status bar
 set laststatus=2
 let g:lightline = { 'colorscheme': 'seoul256' }
-" vim lightline status bar }}}
 
-" Vim nerd tree {{{
+" Vim nerd tree
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeIgnore = ['^node_modules$']
-" }}} vim nerd
 
-" Emmet redefine trigger keys {{{ 
-let g:user_emmet_leader_key=','
-" }}} Emmet redefine trigger keys 
+" Emmet redefine trigger keys
+"let g:user_emmet_leader_key=','
 
-" Indent line {{{ 
+" Indent line
 "let g:indentLine_color_term = 68
 "let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_char = '┆'
 "let g:indentLine_leadingSpaceChar = '·'
-let g:indentLine_fileTypeExclude = ['json', 'markdown']
-" }}}
+let g:indentLine_fileTypeExclude = ['markdown']
 
-" ES lint {{{
+" ES lint
 " Fix files with prettier, and then ESLint.
-let g:ale_fixers = ['prettier', 'eslint']
-let g:ale_fix_on_save=1
-" }}} ES lint 
+"let g:ale_fixers = ['prettier', 'eslint']
+"let g:ale_fix_on_save=1
 
-" Goyo {{{ 
+" Goyo
 let g:goyo_width=100
 map <C-k>z = :Goyo<CR>
-" }}} Goyo
 
 " vim devicons {{{
-" ctrlp glyphs
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_ctrlp = 1
-" }}} vim devicons
 
-" ctrlp {{{
+" ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
@@ -126,7 +105,26 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-" }}} ctrlp
-
 " Set gui font for icons
 set guifont=DroidSansMono\ Nerd\ Font\ 11
+
+" CTRL+S Save
+imap <C-s> <ESC>:w<CR>
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+

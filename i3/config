@@ -231,4 +231,4 @@ bar {
     font pango:Fantasque Sans Mono 13
 }
 
-exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 300 "systemctl suspend" ""
+exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "systemctl suspend" "" &

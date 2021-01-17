@@ -1,8 +1,13 @@
+set nocompatible
+
 " List of vim-plug pluggin"
 call plug#begin('~/.vim/plugged')
 
 " favorite colorscheme
 Plug 'morhetz/gruvbox'
+
+" Syntax highlight
+Plug 'sheerun/vim-polyglot'
 
 " favorite status bar
 Plug 'itchyny/lightline.vim'
@@ -17,7 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " indent line 
-"Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
 " eslint 
 "Plug 'dense-analysis/ale'
@@ -49,7 +54,7 @@ set copyindent      " copy indent from the previous line
 
 " Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-syntax enable                " enable syntax processing
+"syntax enable                " enable syntax processing
 set background=dark
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
@@ -78,7 +83,8 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " Indent line
 "let g:indentLine_color_term = 68
 "let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_char = '┆'
+"let g:indentLine_char = '┆'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_fileTypeExclude = ['markdown']
 
@@ -91,7 +97,7 @@ let g:indentLine_fileTypeExclude = ['markdown']
 let g:goyo_width=100
 map <C-k>z = :Goyo<CR>
 
-" vim devicons {{{
+" vim devicons
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_ctrlp = 1
 

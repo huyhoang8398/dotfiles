@@ -74,7 +74,7 @@ libtool
 light
 linux
 linux-firmware
-lxappearance
+lxappearance-gtk3
 lxsession
 m4
 make
@@ -135,6 +135,7 @@ thunar-media-tags-plugin
 thunar-volman
 thunderbird
 tlp
+tpacpi-bat
 ttf-anonymous-pro
 ttf-dejavu
 ttf-droid

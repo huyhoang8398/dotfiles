@@ -1,5 +1,5 @@
 [Added Associations]
-image/png=ristretto.desktop;
+image/png=feh.desktop;ristretto.desktop;
 application/pdf=okularApplication_pdf.desktop;
 video/ogg=vlc.desktop;
 image/jpeg=okularApplication_kimgio.desktop;gimp.desktop;feh.desktop;
@@ -20,3 +20,4 @@ x-scheme-handler/http=chromium.desktop
 x-scheme-handler/https=chromium.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
+x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop

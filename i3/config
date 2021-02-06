@@ -206,6 +206,7 @@ exec --no-startup-id lxpolkit
 #exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/f16fedc86686146624897737cf4338d8.jpg
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wallpaperflare.com_wallpaper.jpg
 
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/unknown.png
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9

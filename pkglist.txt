@@ -109,6 +109,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pulsemixer
 qemu
+ranger
 ristretto
 rofi
 sddm
@@ -158,6 +159,7 @@ vim
 virt-manager
 virt-viewer
 vlc
+w3m
 wget
 which
 xarchiver

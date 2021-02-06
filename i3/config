@@ -13,7 +13,7 @@ font pango:Fantasque Sans Mono 12
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse set Master 5%- unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --unmute; \
 #         exec --no-startup-id pulsemixer --change-volume +5 --max-volume 100 && \
@@ -177,23 +177,23 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# lock screen 
+# lock screen
 bindsym $mod+shift+x exec betterlockscreen -l blur
 
 # Bind print screen
 bindsym Print exec xfce4-screenshooter
 exec --no-startup-id xfce4-clipman
 
-# Disable border 
+# Disable border
 #for_window [class="^.*"] border pixel 0
 
 # Enable popup during fullscreen
 popup_during_fullscreen smart
 
 # disable mouse while typing
-#exec syndaemon -i 0.5 -d -K 
+#exec syndaemon -i 0.5 -d -K
 
-# startup 
+# startup
 exec --no-startup-id picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
@@ -213,12 +213,12 @@ assign [class="discord"] 6
 assign [class="Thunderbird"] 5
 
 # assign workspaces to different monitors
-workspace 1 output HDMI1 
-workspace 2 output HDMI1 
-workspace 3 output HDMI1 
+workspace 1 output HDMI1
+workspace 2 output HDMI1
+workspace 3 output HDMI1
 workspace 4 output HDMI1
 workspace 5 output eDP-1
-workspace 6 output eDP-1 
+workspace 6 output eDP-1
 workspace 7 output eDP-1
 workspace 8 output eDP-1
 workspace 9 output eDP-1
@@ -229,6 +229,35 @@ bar {
     position top
     status_command i3blocks
     font pango:Fantasque Sans Mono 13
+
+    colors {
+      focused_workspace  $fg      $bg          $fg
+      active_workspace   $fg      $bg          $fg
+      inactive_workspace $bg      $bg          $fg
+      urgent_workspace   #fg      #db1818      #ffffff
+    }
 }
 
+# Auto sleep
 exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "systemctl suspend" "" &
+
+# Disable titlebar
+new_window pixel 1
+new_float pixel 1
+
+# Gaps (i3-gaps)
+gaps inner 5
+gaps outer 5
+
+# i3wm color scheme
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color9 #000000
+set_from_resource $indicator i3wm.color13 #606060
+#class                 border  backgr. text indicator child_border
+client.focused          $fg     $bg     $fg  $indicator       $fg
+client.focused_inactive $fg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+client.background       $bg
+

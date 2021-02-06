@@ -15,6 +15,7 @@ parsec-bin
 pycharm-professional
 python2-gobject2
 spotify
+sublime-text-3
 ttf-computer-modern-fonts
 xidlehook
 yay

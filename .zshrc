@@ -33,6 +33,7 @@ fi
 alias cl="clear"
 alias c="code"
 alias nv="nvim"
+alias s="subl"
 alias gcl='git clone --recurse-submodules'
 alias ga="git add"
 alias gaa="git add ."

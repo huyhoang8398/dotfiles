@@ -108,6 +108,8 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulsemixer
+python-pip
+python-wheel
 qemu
 ranger
 ristretto

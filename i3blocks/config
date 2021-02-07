@@ -28,6 +28,13 @@ LABEL=♪
 interval=once
 signal=10
 
+# CPU usage
+#
+#[cpu_usage]
+#interval=1
+#command=./cpu.sh
+#min_width=⣾⣄ 100.00%
+
 # Temperature
 #
 [Temperature]

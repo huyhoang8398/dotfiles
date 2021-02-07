@@ -204,8 +204,7 @@ exec --no-startup-id lxpolkit
 #exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wp7218050.png
 
 #exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/f16fedc86686146624897737cf4338d8.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wallpaperflare.com_wallpaper.jpg
-
+#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wallpaperflare.com_wallpaper.jpg
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/unknown.png
 
 # assign some apps to preferred workspaces
@@ -230,12 +229,14 @@ bar {
     position top
     status_command i3blocks
     font pango:Fantasque Sans Mono 13
+    separator_symbol "¦"
 
     colors {
+      separator  #FF0000
       focused_workspace  $fg      $bg          $fg
       active_workspace   $fg      $bg          $fg
       inactive_workspace $bg      $bg          $fg
-      urgent_workspace   #fg      #db1818      #ffffff
+      urgent_workspace   $fg      #db1818      #ffffff
     }
 }
 
@@ -243,8 +244,8 @@ bar {
 exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "systemctl suspend" "" &
 
 # Disable titlebar
-new_window pixel 1
-new_float pixel 1
+new_window pixel 2
+new_float pixel 2
 
 # Gaps (i3-gaps)
 gaps inner 5
@@ -261,4 +262,3 @@ client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
-

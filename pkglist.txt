@@ -38,6 +38,7 @@ findutils
 firefox-developer-edition
 flex
 fortune-mod
+fprintd
 fwupd
 garcon
 gawk

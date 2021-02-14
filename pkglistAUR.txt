@@ -1,4 +1,5 @@
 android-sdk
+android-sdk-build-tools
 android-studio
 betterlockscreen-git
 clion

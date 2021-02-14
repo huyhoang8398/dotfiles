@@ -232,7 +232,7 @@ bar {
     separator_symbol "¦"
 
     colors {
-      separator  #FF0000
+      separator  #FF8C00
       focused_workspace  $fg      $bg          $fg
       active_workspace   $fg      $bg          $fg
       inactive_workspace $bg      $bg          $fg

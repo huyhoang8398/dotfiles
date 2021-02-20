@@ -13,7 +13,9 @@ font pango:Fantasque Sans Mono 12
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 5%+ unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse set Master 5%- unmute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioMicMute exec amixer sset Capture toggle && amixer -c0 sset Capture toggle
+
 
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --unmute; \
 #         exec --no-startup-id pulsemixer --change-volume +5 --max-volume 100 && \
@@ -199,13 +201,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Wallpaper
-#exec --no-startup-id feh --bg-fill --randomize ~/Pictures/wallpaper/*
-#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/fog-3622519_1920.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wp7218050.png
-
-#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/f16fedc86686146624897737cf4338d8.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wallpaperflare.com_wallpaper.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/unknown.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/macos-catalina-cb-1920x1080.jpg
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9

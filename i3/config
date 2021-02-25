@@ -201,7 +201,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/macos-catalina-cb-1920x1080.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/tumblr_p3ezv5tuoI1rmusrdo5_1280.jpg
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9

@@ -3,8 +3,9 @@ android-sdk-build-tools
 android-studio
 betterlockscreen-git
 clion
+electron8-bin
 etcher-bin
-ferdi-git
+ferdi
 i3lock-color
 ibus-bamboo
 intellij-idea-ultimate-edition
@@ -20,4 +21,3 @@ sublime-text-3
 ttf-computer-modern-fonts
 xidlehook
 yay
-zoom

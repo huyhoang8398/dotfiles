@@ -10,7 +10,6 @@ i3lock-color
 ibus-bamboo
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
-libmagick6
 ocs-url
 orage
 parsec-bin

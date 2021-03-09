@@ -5,13 +5,11 @@ betterlockscreen-git
 clion
 electron8-bin
 etcher-bin
-ferdi
 i3lock-color
 ibus-bamboo
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 ocs-url
-orage
 parsec-bin
 pycharm-professional
 python2-gobject2

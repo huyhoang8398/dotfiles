@@ -22,6 +22,7 @@ clang
 cmake
 code
 cowsay
+discord
 dkms
 dmidecode
 dnsmasq
@@ -81,6 +82,7 @@ lxappearance-gtk3
 lxsession
 m4
 make
+man-db
 man-pages
 mousepad
 neofetch

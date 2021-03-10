@@ -164,6 +164,8 @@ vim
 virt-manager
 virt-viewer
 vlc
+vulkan-intel
+vulkan-tools
 w3m
 wget
 which

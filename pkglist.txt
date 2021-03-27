@@ -94,6 +94,7 @@ nfs-utils
 nodejs
 noto-fonts
 noto-fonts-emoji
+npm
 ntfs-3g
 obs-studio
 okular
@@ -120,7 +121,6 @@ rofi
 sddm
 sed
 sof-firmware
-steam
 sudo
 terminus-font
 texinfo

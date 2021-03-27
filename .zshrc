@@ -1,8 +1,8 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/huyhoang8398/.oh-my-zsh"
-export PATH="/home/huyhoang8398/script":$PATH
+export ZSH="/home/kn/.oh-my-zsh"
+export PATH="/home/kn/script":$PATH
 
 # Golang
 export PATH="$PATH:$HOME/go/bin"
@@ -46,7 +46,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Useful script
-source /home/huyhoang8398/script/open.sh
+source /home/kn/script/open.sh
 
 # Random fortune
 #fortune | pokemonsay

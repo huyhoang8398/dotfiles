@@ -79,6 +79,7 @@ linux
 linux-firmware
 linux-headers
 lxappearance-gtk3
+lxrandr
 lxsession
 m4
 make

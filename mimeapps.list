@@ -7,7 +7,7 @@ application/xml=code-oss.desktop;
 text/html=code-oss.desktop;
 application/zip=xarchiver.desktop;
 text/markdown=code-oss.desktop;
-text/plain=feh.desktop;
+text/plain=nvim.desktop;feh.desktop;
 
 [Default Applications]
 video/ogg=vlc.desktop

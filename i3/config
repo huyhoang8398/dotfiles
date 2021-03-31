@@ -235,7 +235,11 @@ bar {
     }
 }
 
-# Auto sleep
+# Auto sleep and disable screensaver
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
+# xidlehook for sleep
 exec xidlehook --not-when-fullscreen --not-when-audio --timer 300 "systemctl suspend" "" &
 
 # Disable titlebar

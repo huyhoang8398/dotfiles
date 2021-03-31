@@ -54,3 +54,6 @@ source /home/kn/script/open.sh
 # heroku autocomplete setup
 #HEROKU_AC_ZSH_SETUP_PATH=/home/huyhoang8398/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
+#zsh uses square brackets for globbing / pattern matching.
+alias pip='noglob pip'
+

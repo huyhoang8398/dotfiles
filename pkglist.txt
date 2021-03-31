@@ -123,6 +123,7 @@ sddm
 sed
 sof-firmware
 sudo
+tcpdump
 terminus-font
 texinfo
 texlive-bibtexextra
@@ -170,6 +171,7 @@ vulkan-tools
 w3m
 wget
 which
+wireshark-qt
 xarchiver
 xclip
 xdg-user-dirs

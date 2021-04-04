@@ -2,4 +2,4 @@
 
 DATE=$(date '+%H:%M %d-%m-%Y')
 
-echo $DATE ""
+echo $DATE"|"

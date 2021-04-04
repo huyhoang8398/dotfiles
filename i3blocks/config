@@ -20,7 +20,7 @@ interval=5
 command=./backlight
 background=#81A1C1
 color=#2E3440
-label= |☀ 
+label=|☀ 
 interval=once
 signal=13
 

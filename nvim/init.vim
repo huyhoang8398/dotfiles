@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " favorite colorscheme
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
@@ -54,11 +55,13 @@ set copyindent      " copy indent from the previous line
 
 " Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"syntax enable                " enable syntax processing
+
+" Gruvbox setting
 set background=dark
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+"let g:gruvbox_italic=1
+"let g:gruvbox_contrast_dark='hard'
+"colorscheme gruvbox
+colorscheme nord
 
 " copy and paste
 set clipboard=unnamedplus
@@ -71,7 +74,7 @@ set number relativenumber
 
 " vim lightline status bar
 set laststatus=2
-let g:lightline = { 'colorscheme': 'seoul256' }
+let g:lightline = { 'colorscheme': 'PaperColor' }
 set noshowmode
 
 " Vim nerd tree

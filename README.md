@@ -1,5 +1,5 @@
 ## Preview 
-![general](static/demo.png)
+![general](static/demo2.png)
 
 ## Note 
 ### To make audio work on Archlinux

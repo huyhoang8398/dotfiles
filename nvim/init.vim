@@ -72,6 +72,7 @@ set number relativenumber
 " vim lightline status bar
 set laststatus=2
 let g:lightline = { 'colorscheme': 'seoul256' }
+set noshowmode
 
 " Vim nerd tree
 map <C-n> :NERDTreeToggle<CR>

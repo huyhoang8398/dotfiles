@@ -9,6 +9,7 @@ i3lock-color
 ibus-bamboo
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
+nerd-fonts-droid-sans-mono
 ocs-url
 parsec-bin
 pycharm-professional

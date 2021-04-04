@@ -201,7 +201,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/unknown.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/pic.png
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9
@@ -220,6 +220,24 @@ workspace 8 output eDP-1
 workspace 9 output eDP-1
 #workspace 10 output DP2 eDP-1
 
+# Color 
+set $nord0 #2E3440
+set $nord1 #3B4252
+set $nord2 #434C5E
+set $nord3 #4C566A
+set $nord4 #D8DEE9
+set $nord5 #E5E9F0
+set $nord6 #ECEFF4
+set $nord7 #8FBCBB
+set $nord8 #88C0D0
+set $nord9 #81A1C1
+set $nord10 #5E81AC
+set $nord11 #BF616A
+set $nord12 #D08770
+set $nord13 #EBCB8B
+set $nord14 #A3BE8C
+set $nord15 #B48EAD
+
 # Status bar
 bar {
     position top
@@ -227,13 +245,23 @@ bar {
     font pango:Fantasque Sans Mono 13
 
     colors {
-      separator  $bg
-      focused_workspace  $fg      $bg          $fg
-      active_workspace   $fg      $bg          $fg
-      inactive_workspace $bg      $bg          $fg
-      urgent_workspace   $fg      #db1818      #ffffff
+      background $nord0
+      separator  $nord3
+      focused_workspace  $nord9   $nord9  $nord0
+      active_workspace   $nord9   $nord9  $nord0
+      inactive_workspace $nord0   $nord0  $nord6
+      urgent_workspace   $nord12  $nord12  $nord0 
     }
 }
+# Window color
+# class                 border  backgr. text    indicator child_border
+client.focused          $nord9  $nord9  $nord0  $nord7    $nord9
+client.focused_inactive $nord0  $nord1  $nord6  $nord0    $nord1
+client.unfocused        $nord1  $nord0  $nord6  $nord0    $nord1 
+client.urgent           $nord12 $nord12 $nord0  $nord12   $nord12
+client.placeholder      $nord0  $nord0  $nord6  $nord0    $nord0
+
+client.background       $nord6
 
 # Auto sleep and disable screensaver
 exec --no-startup-id xset s off
@@ -249,15 +277,3 @@ new_float pixel 2
 # Gaps (i3-gaps)
 gaps inner 5
 gaps outer 5
-
-# i3wm color scheme
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color9 #000000
-set_from_resource $indicator i3wm.color13 #606060
-#class                 border  backgr. text indicator child_border
-client.focused          $fg     $bg     $fg  $indicator       $fg
-client.focused_inactive $fg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-client.background       $bg

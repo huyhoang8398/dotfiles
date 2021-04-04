@@ -4,8 +4,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " favorite colorscheme
-Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
+Plug 'ayu-theme/ayu-vim'
 
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
@@ -55,13 +54,12 @@ set copyindent      " copy indent from the previous line
 
 " Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 
-" Gruvbox setting
-set background=dark
-"let g:gruvbox_italic=1
-"let g:gruvbox_contrast_dark='hard'
-"colorscheme gruvbox
-colorscheme nord
 
 " copy and paste
 set clipboard=unnamedplus
@@ -84,13 +82,13 @@ let g:NERDTreeIgnore = ['^node_modules$']
 " Emmet redefine trigger keys
 "let g:user_emmet_leader_key=','
 
-" Indent line
-"let g:indentLine_color_term = 68
-"let g:indentLine_leadingSpaceEnabled = 1
-"let g:indentLine_char = '┆'
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-"let g:indentLine_leadingSpaceChar = '·'
+" IndentLine {{
+let g:indentLine_char = ''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
 let g:indentLine_fileTypeExclude = ['markdown']
+" }}
 
 " ES lint
 " Fix files with prettier, and then ESLint.

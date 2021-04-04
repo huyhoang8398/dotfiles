@@ -201,7 +201,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/pic.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/nord_trees_darker.jpg
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9

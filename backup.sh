@@ -15,3 +15,6 @@ cp -r ~/.config/i3blocks .
 cp -r ~/.config/rofi .
 cp -r ~/.themes .
 cp -r ~/.local/share/icons .
+cp -r ~/.icons .
+cp -r /usr/share/fonts .
+

@@ -14,6 +14,7 @@ ocs-url
 parsec-bin
 pycharm-professional
 python2-gobject2
+spicetify-cli
 spotify
 sublime-text-3
 ttf-computer-modern-fonts

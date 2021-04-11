@@ -146,6 +146,7 @@ thunar-volman
 thunderbird
 tlp
 tpacpi-bat
+tree
 ttf-anonymous-pro
 ttf-dejavu
 ttf-droid

@@ -18,7 +18,6 @@ bridge-utils
 chromium
 clang
 cmake
-cowsay
 discord
 dkms
 dmidecode
@@ -106,7 +105,6 @@ pkgconf
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
-pulsemixer
 python-pip
 python-wheel
 qemu

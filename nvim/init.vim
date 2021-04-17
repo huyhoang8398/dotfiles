@@ -63,6 +63,8 @@ let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 
+" highlight search and replace
+set icm=nosplit
 
 " copy and paste
 set clipboard=unnamedplus

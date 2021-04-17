@@ -6,7 +6,7 @@ image/jpeg=okularApplication_kimgio.desktop;gimp.desktop;feh.desktop;
 application/xml=code-oss.desktop;
 text/html=code-oss.desktop;
 application/zip=xarchiver.desktop;
-text/markdown=nvim.desktop;code-oss.desktop;
+text/markdown=sublime_text.desktop;nvim.desktop;code-oss.desktop;
 text/plain=sublime_text.desktop;nvim.desktop;feh.desktop;
 
 [Default Applications]

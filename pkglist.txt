@@ -27,7 +27,6 @@ dkms
 dmidecode
 dnsmasq
 dunst
-ebtables
 efibootmgr
 exo
 faac
@@ -67,6 +66,7 @@ ibus
 imagemagick
 inkscape
 intel-ucode
+iptables-nft
 jasper
 jdk8-openjdk
 jre8-openjdk

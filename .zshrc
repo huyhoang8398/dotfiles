@@ -56,4 +56,4 @@ source /home/kn/script/open.sh
 
 #zsh uses square brackets for globbing / pattern matching.
 alias pip='noglob pip'
-
+alias discord='discord --no-sandbox'

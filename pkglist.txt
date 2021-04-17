@@ -119,7 +119,6 @@ sed
 sof-firmware
 sudo
 tcpdump
-terminus-font
 texinfo
 texlive-bibtexextra
 texlive-core

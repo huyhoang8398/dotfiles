@@ -3,8 +3,6 @@ acpi
 acpi_call
 adobe-source-sans-pro-fonts
 alsa-utils
-android-file-transfer
-android-tools
 arandr
 arc-gtk-theme
 arp-scan
@@ -69,7 +67,6 @@ iptables-nft
 jasper
 jdk8-openjdk
 jre8-openjdk
-kdiskmark
 libguestfs
 libreoffice-still
 libtool

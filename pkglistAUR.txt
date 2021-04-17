@@ -1,15 +1,10 @@
 betterlockscreen-git
-clion
-electron8-bin
 etcher-bin
 i3lock-color
 ibus-bamboo
-intellij-idea-ultimate-edition
-intellij-idea-ultimate-edition-jre
 nerd-fonts-droid-sans-mono
 ocs-url
 parsec-bin
-pycharm-professional
 python2-gobject2
 spicetify-cli
 spotify

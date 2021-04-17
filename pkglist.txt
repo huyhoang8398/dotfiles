@@ -100,7 +100,6 @@ openfortivpn
 os-prober
 pacman
 pandoc
-parole
 patch
 pavucontrol
 picom

@@ -1,3 +1,6 @@
+env:
+  WINIT_X11_SCALE_FACTOR: "1.75"
+
 # Font configuration (changes require restart)
 draw_bold_text_with_bright_colors: true
 font:
@@ -78,7 +81,7 @@ window:
     columns: 60
     lines: 20
 
-    #scale_with_dpi: true
+    scale_with_dpi: true
 
 key_bindings:
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }

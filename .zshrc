@@ -8,8 +8,8 @@ export PATH="/home/kn/script":$PATH
 export PATH="$PATH:$HOME/go/bin"
 
 # NPM 
-PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
+PATH="$HOME/.local/bin:$PATH"
+export npm_config_prefix="$HOME/.local"
 
 # Plugins
 #plugins=(git)

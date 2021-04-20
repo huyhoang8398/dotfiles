@@ -277,3 +277,4 @@ new_float pixel 2
 # Gaps (i3-gaps)
 gaps inner 5
 gaps outer 5
+smart_gaps on

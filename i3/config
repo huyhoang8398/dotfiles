@@ -201,7 +201,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/n14.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/1586853771_daniel-leone-v7datklzzaw-unsplash-modded.jpg
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9
@@ -277,4 +277,4 @@ new_float pixel 2
 # Gaps (i3-gaps)
 gaps inner 5
 gaps outer 5
-smart_gaps on
+#smart_gaps on

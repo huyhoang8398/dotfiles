@@ -61,6 +61,7 @@ i3blocks
 ibus
 imagemagick
 inkscape
+intel-media-driver
 intel-ucode
 iptables-nft
 jasper
@@ -69,6 +70,7 @@ jre8-openjdk
 libguestfs
 libreoffice-still
 libtool
+libva-utils
 light
 linux
 linux-firmware
@@ -114,6 +116,7 @@ ristretto
 rofi
 sddm
 sed
+socat
 sof-firmware
 sudo
 tcpdump
@@ -220,6 +223,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+zbar
 zip
 zsh
 zsh-autosuggestions

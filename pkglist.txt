@@ -67,6 +67,7 @@ iptables-nft
 jasper
 jdk8-openjdk
 jre8-openjdk
+keepassxc
 libguestfs
 libreoffice-still
 libtool

@@ -43,7 +43,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # start some application
-bindsym $mod+Shift+w exec --no-startup-id chromium
+bindsym $mod+Shift+w exec --no-startup-id firefox-developer-edition
 bindsym $mod+Shift+t exec --no-startup-id thunar
 
 # kill focused window
@@ -199,9 +199,10 @@ popup_during_fullscreen smart
 exec --no-startup-id picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
+exec --no-startup-id bash /home/kn/script/keepass.sh
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/1586853771_daniel-leone-v7datklzzaw-unsplash-modded.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/image0.jpg
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9

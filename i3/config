@@ -34,7 +34,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 && pkill -RTMIN+1
 
 
 # Multiple screen control
-bindsym XF86Display exec arandr
+bindsym XF86Display exec lxrandr
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -207,18 +207,6 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/n14.png
 for_window [class="Spotify"] move to workspace $ws9
 assign [class="discord"] 6
 assign [class="Thunderbird"] 5
-
-# assign workspaces to different monitors
-workspace 1 output eDP-1 HDMI1
-workspace 2 output eDP-1 HDMI1
-workspace 3 output eDP-1 HDMI1
-workspace 4 output eDP-1 HDMI1
-workspace 5 output eDP-1
-workspace 6 output eDP-1
-workspace 7 output eDP-1
-workspace 8 output eDP-1
-workspace 9 output eDP-1
-#workspace 10 output DP2 eDP-1
 
 # Color 
 set $nord0 #2E3440

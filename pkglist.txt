@@ -36,6 +36,7 @@ libtool
 light
 linux
 linux-firmware
+lxrandr
 lxsession
 m4
 make
@@ -71,6 +72,7 @@ tlp
 tpacpi-bat
 ttf-fantasque-sans-mono
 ttf-font-awesome
+tumbler
 unzip
 vi
 vim

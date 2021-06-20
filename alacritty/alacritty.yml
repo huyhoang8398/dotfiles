@@ -78,7 +78,7 @@ window:
     columns: 60
     lines: 20
 
-    #scale_with_dpi: true
+    scale_with_dpi: true
 
 key_bindings:
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }

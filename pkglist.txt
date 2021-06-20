@@ -27,6 +27,7 @@ gnome-keyring
 grep
 groff
 grub
+gvfs
 gzip
 i3-gaps
 i3blocks

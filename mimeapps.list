@@ -1,24 +1,13 @@
 [Added Associations]
-image/png=ristretto.desktop;feh.desktop;
+image/png=feh.desktop;ristretto.desktop;
 application/pdf=okularApplication_pdf.desktop;
 video/ogg=vlc.desktop;
 image/jpeg=okularApplication_kimgio.desktop;gimp.desktop;feh.desktop;
 application/xml=code-oss.desktop;
-text/html=code-oss.desktop;firefox-developer-edition.desktop;
+text/html=code-oss.desktop;
 application/zip=xarchiver.desktop;
 text/markdown=sublime_text.desktop;nvim.desktop;code-oss.desktop;
 text/plain=sublime_text.desktop;nvim.desktop;feh.desktop;
-x-scheme-handler/http=firefox-developer-edition.desktop;
-x-scheme-handler/https=firefox-developer-edition.desktop;
-x-scheme-handler/chrome=firefox-developer-edition.desktop;
-application/x-extension-htm=firefox-developer-edition.desktop;
-application/x-extension-html=firefox-developer-edition.desktop;
-application/x-extension-shtml=firefox-developer-edition.desktop;
-application/xhtml+xml=firefox-developer-edition.desktop;
-application/x-extension-xhtml=firefox-developer-edition.desktop;
-application/x-extension-xht=firefox-developer-edition.desktop;
-text/x-c++src=sublime_text.desktop;
-application/x-shellscript=sublime_text.desktop;vim.desktop;
 
 [Default Applications]
 video/ogg=vlc.desktop
@@ -33,10 +22,3 @@ x-scheme-handler/https=chromium.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
 x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
-x-scheme-handler/chrome=firefox-developer-edition.desktop
-application/x-extension-htm=firefox-developer-edition.desktop
-application/x-extension-html=firefox-developer-edition.desktop
-application/x-extension-shtml=firefox-developer-edition.desktop
-application/xhtml+xml=firefox-developer-edition.desktop
-application/x-extension-xhtml=firefox-developer-edition.desktop
-application/x-extension-xht=firefox-developer-edition.desktop

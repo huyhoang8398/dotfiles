@@ -2,8 +2,6 @@ separator=false
 separator_block_width=0
 
 #[focused_window]
-#background=#81A1C1
-#color=#2E3440
 #label=[]=
 #command=./focusedwindow
 #interval=persist
@@ -59,7 +57,7 @@ command=./battery
 background=#81A1C1
 color=#2E3440
 interval=30
-LABEL=|⚡
+LABEL= |⚡
 
 # Date Time
 #
@@ -68,5 +66,5 @@ command=./calendar
 interval=1
 background=#81A1C1
 color=#2E3440
-label=| 
+label= | 
 

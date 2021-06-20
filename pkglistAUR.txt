@@ -1,14 +1,5 @@
 betterlockscreen-git
-etcher-bin
 i3lock-color
 ibus-bamboo
-nerd-fonts-droid-sans-mono
-ocs-url
-parsec-bin
-python2-gobject2
-spicetify-cli
-spotify
-sublime-text-3
-ttf-computer-modern-fonts
 xidlehook
 yay

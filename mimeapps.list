@@ -2,7 +2,7 @@
 image/png=feh.desktop;ristretto.desktop;
 application/pdf=okularApplication_pdf.desktop;
 video/ogg=vlc.desktop;
-image/jpeg=okularApplication_kimgio.desktop;gimp.desktop;feh.desktop;
+image/jpeg=chromium.desktop;okularApplication_kimgio.desktop;gimp.desktop;feh.desktop;
 application/xml=code-oss.desktop;
 text/html=code-oss.desktop;
 application/zip=xarchiver.desktop;

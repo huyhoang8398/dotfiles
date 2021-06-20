@@ -23,6 +23,7 @@ gawk
 gcc
 gettext
 git
+gnome-keyring
 grep
 groff
 grub

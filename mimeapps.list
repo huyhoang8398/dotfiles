@@ -8,6 +8,7 @@ text/html=code-oss.desktop;
 application/zip=xarchiver.desktop;
 text/markdown=sublime_text.desktop;nvim.desktop;code-oss.desktop;
 text/plain=sublime_text.desktop;nvim.desktop;feh.desktop;
+application/x-yaml=nvim.desktop;
 
 [Default Applications]
 video/ogg=vlc.desktop

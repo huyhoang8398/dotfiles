@@ -26,6 +26,8 @@ gcc
 gettext
 git
 gnome-keyring
+go
+go-tools
 grep
 groff
 grub
@@ -54,7 +56,9 @@ man-pages
 neovim
 network-manager-applet
 networkmanager
+nodejs
 noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
 openbsd-netcat
@@ -68,6 +72,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 qemu
+qt5-graphicaleffects
 rofi
 sddm
 sed
@@ -83,6 +88,7 @@ tlp
 tpacpi-bat
 ttf-fantasque-sans-mono
 ttf-font-awesome
+ttf-hack
 tumbler
 unzip
 vde2

@@ -77,7 +77,7 @@ set number relativenumber
 
 " vim lightline status bar
 set laststatus=2
-let g:lightline = { 'colorscheme': 'PaperColor' }
+let g:lightline = { 'colorscheme': 'wombat' }
 set noshowmode
 
 " Vim nerd tree

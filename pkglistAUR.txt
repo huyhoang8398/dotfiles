@@ -1,5 +1,7 @@
 betterlockscreen-git
 i3lock-color
 ibus-bamboo
+spotify
+visual-studio-code-bin
 xidlehook
 yay

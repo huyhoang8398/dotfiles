@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 _step_size=${_step_size:-5}
 _use_sudo=${_use_sudo:-0}
 

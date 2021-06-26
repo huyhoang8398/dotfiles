@@ -19,8 +19,9 @@ interval=5
 [brightness]
 command=./backlight
 background=#81A1C1
+
+label=| 
 color=#2E3440
-label=|☀ 
 interval=once
 signal=13
 

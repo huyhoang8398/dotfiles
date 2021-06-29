@@ -88,4 +88,5 @@ case $BLOCK_BUTTON in
   5) amixer $AMIXER_PARAMS -q -D $MIXER sset $SCONTROL $(capability) ${STEP}- unmute ;; # scroll down, decrease
 esac
 
-volume | format
+VOLUME=$(volume | format)
+echo $VOLUME ""

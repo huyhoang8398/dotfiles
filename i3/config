@@ -212,7 +212,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/n14.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/nord.jpg
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9
@@ -243,6 +243,7 @@ bar {
     status_command i3blocks
     font pango:Fantasque Sans Mono 13
 
+    tray_output none
     colors {
       background $nord0
       separator  $nord3

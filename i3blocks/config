@@ -10,7 +10,7 @@ separator_block_width=0
 [spotify]
 background=#D08770
 color=#2E3440
-label=  
+label=| 
 command=./spotify.py
 interval=5
 
@@ -64,7 +64,7 @@ LABEL=|⚡
 [calendar]
 command=./calendar
 interval=1
-background=#81A1C1
+background=#D8DEE9
 color=#2E3440
 label=| 
 

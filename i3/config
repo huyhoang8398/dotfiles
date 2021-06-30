@@ -108,27 +108,27 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-#set $ws10 "10"
+set $ws1 "1:www"
+set $ws2 "2:dev"
+set $ws3 "3:sys"
+set $ws4 "4:doc"
+set $ws5 "5:kvm"
+set $ws6 "6:social"
+set $ws7 "7:others"
+set $ws8 "8:mail"
+set $ws9 "9:music"
+#set $ws10 "10:X"
 
 # Automatically putting workspaces on specific screens
-workspace 1 output DP-2 eDP-1 
-workspace 2 output DP-2 eDP-1
-workspace 3 output DP-2 eDP-1
-workspace 4 output DP-2 eDP-1
-workspace 5 output DP-2 eDP-1
-workspace 6 output eDP-1
-workspace 7 output eDP-1
-workspace 8 output eDP-1
-workspace 9 output eDP-1
+workspace $ws1 output DP-2 eDP-1 
+workspace $ws2 output DP-2 eDP-1
+workspace $ws3 output DP-2 eDP-1
+workspace $ws4 output DP-2 eDP-1
+workspace $ws5 output DP-2 eDP-1
+workspace $ws6 output eDP-1
+workspace $ws7 output eDP-1
+workspace $ws8 output eDP-1
+workspace $ws9 output eDP-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -216,8 +216,8 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/aIg1Gs-den-fUtV9dP0jAMLA
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9
-assign [class="discord"] 6
-assign [class="Thunderbird"] 5
+assign [class="discord"] $ws6
+assign [class="Thunderbird"] $ws5
 
 # Color 
 set $nord0 #2E3440
@@ -242,7 +242,7 @@ bar {
     position top
     status_command i3blocks
     font pango:Fantasque Sans Mono 13
-
+    strip_workspace_numbers yes
     colors {
       background $nord0
       separator  $nord3

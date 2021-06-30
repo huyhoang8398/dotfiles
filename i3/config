@@ -243,6 +243,7 @@ bar {
     status_command i3blocks
     font pango:Fantasque Sans Mono 13
     strip_workspace_numbers yes
+    tray_output none
     colors {
       background $nord0
       separator  $nord3

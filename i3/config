@@ -113,10 +113,10 @@ set $ws2 "2:dev"
 set $ws3 "3:sys"
 set $ws4 "4:doc"
 set $ws5 "5:kvm"
-set $ws6 "6:social"
-set $ws7 "7:others"
-set $ws8 "8:mail"
-set $ws9 "9:music"
+set $ws6 "6:chat"
+set $ws7 "7:mail"
+set $ws8 "8:etc"
+set $ws9 "9:mus"
 #set $ws10 "10:X"
 
 # Automatically putting workspaces on specific screens
@@ -217,7 +217,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/aIg1Gs-den-fUtV9dP0jAMLA
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9
 assign [class="discord"] $ws6
-assign [class="Thunderbird"] $ws5
+assign [class="Virt-manager"] $ws5
 
 # Color 
 set $nord0 #2E3440
@@ -243,7 +243,6 @@ bar {
     status_command i3blocks
     font pango:Fantasque Sans Mono 13
     strip_workspace_numbers yes
-    tray_output none
     colors {
       background $nord0
       separator  $nord3

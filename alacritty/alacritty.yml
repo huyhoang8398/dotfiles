@@ -4,7 +4,7 @@ env:
 draw_bold_text_with_bright_colors: true
 font:
   # The size to use.
-  size: 18
+  size: 16
   # The normal (roman) font face to use.
   normal:
     family: Roboto Mono for Powerline

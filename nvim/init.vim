@@ -59,8 +59,8 @@ set copyindent      " copy indent from the previous line
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
+"let ayucolor="mirage" " for mirage version of theme
+let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 
 " highlight search and replace

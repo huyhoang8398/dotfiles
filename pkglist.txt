@@ -73,6 +73,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 qemu
 qt5-graphicaleffects
+ranger
 rofi
 sddm
 sed
@@ -96,6 +97,7 @@ vi
 vim
 virt-manager
 virt-viewer
+w3m
 wget
 which
 xarchiver

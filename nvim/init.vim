@@ -4,7 +4,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " favorite colorscheme
-Plug 'ayu-theme/ayu-vim'
+Plug 'morhetz/gruvbox'
 
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
@@ -58,10 +58,9 @@ set copyindent      " copy indent from the previous line
 " Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
-"let ayucolor="mirage" " for mirage version of theme
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+set background=light " uncomment to use light mode
+colorscheme gruvbox
+
 
 " highlight search and replace
 set icm=nosplit
@@ -77,7 +76,7 @@ set number relativenumber
 
 " vim lightline status bar
 set laststatus=2
-let g:lightline = { 'colorscheme': 'wombat' }
+let g:lightline = { 'colorscheme': 'PaperColor' }
 set noshowmode
 
 " Vim nerd tree

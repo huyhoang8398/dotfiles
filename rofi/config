@@ -1,2 +1,1 @@
-rofi.theme: nord
-rofi.theme: /usr/share/rofi/themes/gruvbox-light-hard.rasi
+rofi.theme: gruvbox-light-hard

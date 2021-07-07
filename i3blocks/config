@@ -1,5 +1,5 @@
-separator=false
-separator_block_width=0
+separator=true
+#separator_block_width=0
 
 #[focused_window]
 #label=[]=
@@ -8,9 +8,9 @@ separator_block_width=0
 
 # Spotify icon \uF1BC
 [spotify]
-background=#feb0be
+background=#f9f5d7
 color=#2E3440
-label=  
+label= 
 command=./spotify.py
 interval=5
 
@@ -18,9 +18,9 @@ interval=5
 #
 [brightness]
 command=./backlight
-background=#EBCB8B
+background=#f9f5d7
 color=#2E3440
-label=  
+label= 
 interval=once
 signal=13
 
@@ -28,9 +28,9 @@ signal=13
 #
 [volume]
 command=./volume
-background=#A3BE8C
+background=#f9f5d7
 color=#2E3440
-label=  
+label= 
 interval=once
 signal=10
 
@@ -45,16 +45,16 @@ signal=10
 #
 [Temperature]
 command=./temperature
-background=#8FBCBB
+background=#f9f5d7
 color=#2E3440
-label=  
+label= 
 interval=30
 
 # Battery
 #
 [battery]
 command=./battery
-background=#88C0D0
+background=#f9f5d7
 color=#2E3440
 interval=30
 label=⚡
@@ -66,4 +66,4 @@ command=./calendar
 interval=1
 background=#f9f5d7
 color=#2E3440
-label=  
+label= 

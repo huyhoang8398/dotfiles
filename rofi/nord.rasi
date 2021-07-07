@@ -16,7 +16,7 @@
     nord14: #a3be8c;
     nord15: #b48ead;
 
-	  font: "Fantasque Sans Mono 15";
+	  font: "Fantasque Sans Mono 14";
     background-color: @nord1;
     border: 0px;
     margin: 0px;

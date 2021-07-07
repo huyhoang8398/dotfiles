@@ -8,7 +8,7 @@ separator_block_width=0
 
 # Spotify icon \uF1BC
 [spotify]
-background=#feb0be
+background=#D08770
 color=#2E3440
 label=| 
 command=./spotify.py
@@ -64,6 +64,6 @@ LABEL=|⚡
 [calendar]
 command=./calendar
 interval=1
-background=#f9f5d7
+background=#D8DEE9
 color=#2E3440
 label=| 

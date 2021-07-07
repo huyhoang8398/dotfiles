@@ -212,12 +212,30 @@ exec --no-startup-id nm-applet
 exec --no-startup-id lxpolkit
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/ILb6j1i.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/aIg1Gs-den-fUtV9dP0jAMLAPG0Sl_FyXqr7Hybj0yc.png
 
 # assign some apps to preferred workspaces
 for_window [class="Spotify"] move to workspace $ws9
 assign [class="discord"] $ws6
 assign [class="Virt-manager"] $ws5
+
+# Color 
+set $nord0 #2E3440
+set $nord1 #3B4252
+set $nord2 #434C5E
+set $nord3 #4C566A
+set $nord4 #D8DEE9
+set $nord5 #E5E9F0
+set $nord6 #ECEFF4
+set $nord7 #8FBCBB
+set $nord8 #88C0D0
+set $nord9 #81A1C1
+set $nord10 #5E81AC
+set $nord11 #BF616A
+set $nord12 #D08770
+set $nord13 #EBCB8B
+set $nord14 #A3BE8C
+set $nord15 #B48EAD
 
 # Status bar
 bar {
@@ -225,25 +243,24 @@ bar {
     status_command i3blocks
     font pango:Fantasque Sans Mono 13
     strip_workspace_numbers yes
-
     colors {
-      background #f9f5d7
-      separator  #f9f5d7
-      focused_workspace  #91bebb   #91bebb  #2E3440
-      active_workspace   #91bebb   #91bebb  #2E3440
-      inactive_workspace #f9f5d7   #f9f5d7  #2E3440
-      urgent_workspace   #feb0be   #feb0be  #2E3440 
+      background $nord0
+      separator  $nord3
+      focused_workspace  $nord9   $nord9  $nord0
+      active_workspace   $nord9   $nord9  $nord0
+      inactive_workspace $nord0   $nord0  $nord6
+      urgent_workspace   $nord12  $nord12  $nord0 
     }
 }
 # Window color
 # class                 border  backgr. text    indicator child_border
-client.unfocused          #91bebb #91bebb #2E3440 #EBCB8B   #91bebb
-client.focused_inactive #f9f5d7 #91bebb #2E3440 #EBCB8B   #91bebb
-client.focused        #f9f5d7 #f9f5d7 #2E3440 #EBCB8B   #f9f5d7 
-client.urgent           #feb0be #feb0be #2E3440 #feb0be   #feb0be
-client.placeholder      #91bebb #91bebb #91bebb #91bebb   #91bebb
+client.focused          $nord9  $nord9  $nord0  $nord7    $nord9
+client.focused_inactive $nord0  $nord1  $nord6  $nord0    $nord1
+client.unfocused        $nord1  $nord0  $nord6  $nord0    $nord1 
+client.urgent           $nord12 $nord12 $nord0  $nord12   $nord12
+client.placeholder      $nord0  $nord0  $nord6  $nord0    $nord0
 
-client.background       $f9f5d7
+client.background       $nord6
 
 # Auto sleep and disable screensaver
 exec --no-startup-id xset s off

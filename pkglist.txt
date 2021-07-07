@@ -24,6 +24,7 @@ flex
 gawk
 gcc
 gettext
+gimp
 git
 gnome-keyring
 go

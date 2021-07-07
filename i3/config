@@ -237,9 +237,9 @@ bar {
 }
 # Window color
 # class                 border  backgr. text    indicator child_border
-client.unfocused          #91bebb #91bebb #2E3440 #EBCB8B   #91bebb
+client.unfocused        #91bebb #91bebb #2E3440 #EBCB8B   #91bebb
 client.focused_inactive #f9f5d7 #91bebb #2E3440 #EBCB8B   #91bebb
-client.focused        #f9f5d7 #f9f5d7 #2E3440 #EBCB8B   #f9f5d7 
+client.focused          #f9f5d7 #f9f5d7 #2E3440 #EBCB8B   #f9f5d7 
 client.urgent           #feb0be #feb0be #2E3440 #feb0be   #feb0be
 client.placeholder      #91bebb #91bebb #91bebb #91bebb   #91bebb
 
@@ -259,3 +259,6 @@ new_float pixel 2
 # Gaps (i3-gaps)
 gaps inner 5
 gaps outer 5
+
+# Flash focus
+exec_always --no-startup-id flashfocus

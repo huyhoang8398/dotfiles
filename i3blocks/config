@@ -47,7 +47,7 @@ signal=10
 command=./temperature
 background=#f9f5d7
 color=#2E3440
-label= 
+label= 
 interval=30
 
 # Battery

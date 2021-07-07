@@ -1,4 +1,5 @@
 betterlockscreen-git
+flashfocus-git
 i3lock-color
 ibus-bamboo
 spotify

@@ -15,7 +15,7 @@
     /* Theme settings */
     highlight: bold italic;
     scrollbar: true;
-	  font: "Fantasque Sans Mono 14";
+	  font: "Fantasque Sans Mono 13";
 
     /* Gruvbox light colors */
     gruvbox-light-bg0-hard:     #f9f5d7;

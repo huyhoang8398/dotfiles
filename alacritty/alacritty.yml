@@ -57,6 +57,9 @@ colors:
     white:   '#3c3836'
 
 window:
+  padding:
+    x: 12
+    y: 12
   dimensions:
     columns: 60
     lines: 20

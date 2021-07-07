@@ -10,7 +10,7 @@ separator_block_width=0
 [spotify]
 background=#feb0be
 color=#2E3440
-label=| 
+label=  
 command=./spotify.py
 interval=5
 
@@ -20,7 +20,7 @@ interval=5
 command=./backlight
 background=#EBCB8B
 color=#2E3440
-label=| 
+label=  
 interval=once
 signal=13
 
@@ -30,7 +30,7 @@ signal=13
 command=./volume
 background=#A3BE8C
 color=#2E3440
-LABEL=|♪ 
+label=  
 interval=once
 signal=10
 
@@ -47,7 +47,7 @@ signal=10
 command=./temperature
 background=#8FBCBB
 color=#2E3440
-label=| 
+label=  
 interval=30
 
 # Battery
@@ -57,7 +57,7 @@ command=./battery
 background=#88C0D0
 color=#2E3440
 interval=30
-LABEL=|⚡
+label=⚡
 
 # Date Time
 #
@@ -66,4 +66,4 @@ command=./calendar
 interval=1
 background=#f9f5d7
 color=#2E3440
-label=| 
+label=  

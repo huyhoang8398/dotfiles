@@ -1,0 +1,85 @@
+separator=true
+#separator_block_width=0
+
+#[focused_window]
+#label=[]= 
+#command=./focusedwindow
+#background=#f9f5d7
+#color=#2E3440
+#interval=persist
+
+# Spotify icon \uF1BC
+#[spotify]
+#background=#f9f5d7
+#color=#2E3440
+#label= 
+#command=./spotify.py
+#interval=5
+
+# Backlight
+#
+#[brightness]
+#command=./backlight
+#background=#f9f5d7
+#color=#2E3440
+#label= 
+#interval=once
+#signal=13
+
+# Volume
+#
+#[volume]
+#background=#f9f5d7
+#color=#2E3440
+#markup=pango
+#command=./volume
+#interval=once
+#signal=10
+
+# CPU usage
+#
+#[cpu_usage]
+#interval=1
+#command=./cpu.sh
+#min_width=⣾⣄ 100.00%
+
+# Temperature
+#
+#[Temperature]
+#markup=pango
+#command=./temperature
+#background=#f9f5d7
+#color=#2E3440
+#interval=30
+
+# Caffeine
+[caffeine]
+command=./caffeine
+interval=once
+markup=pango
+format=json
+
+# Dunst
+#
+[dunst]
+command=./dunst
+interval=once
+format=json
+markup=pango
+#min_width=50
+#align=center
+
+# Battery
+#
+[battery]
+markup=pango
+command=./battery
+interval=30
+
+# Backlight
+#
+[calendar]
+markup=pango
+command=./calendar
+interval=1
+

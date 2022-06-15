@@ -1,0 +1,11 @@
+betterlockscreen
+i3lock-color
+ibus-bamboo
+nerd-fonts-fira-code
+pfetch
+spicetify-cli
+spotify
+ttf-iosevka
+visual-studio-code-bin
+xidlehook
+yay

@@ -1,0 +1,264 @@
+set $mod Mod4
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+#font pango:monospace 8
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 10
+font pango:JetBrains Mono 10
+
+# Audio control
+bindsym XF86AudioRaiseVolume exec --no-startup-id bash $HOME/.config/bin/volume.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id bash $HOME/.config/bin/volume.sh down
+bindsym XF86AudioMute exec --no-startup-id bash $HOME/.config/bin/volume.sh mute
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && dunstify "Microphone Toggled" -i mic-off -r 5555 -u normal
+bindsym XF86AudioMicMute exec --no-startup-id bash $HOME/.config/bin/volume.sh mic
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id bash $HOME/.config/bin/brightness_i3 up
+bindsym XF86MonBrightnessDown exec --no-startup-id bash $HOME/.config/bin/brightness_i3 down
+
+# Multiple screen control
+bindsym XF86Display exec arandr
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec alacritty
+
+# start some application
+bindsym $mod+Shift+w exec --no-startup-id google-chrome-stable
+bindsym $mod+Shift+t exec --no-startup-id thunar
+bindsym control+grave exec --no-startup-id dunstctl history-pop
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# Cycle through active workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# use rofi instead of dmenu
+bindsym $mod+d exec rofi -show drun -modi drun
+
+## use rofi as alt+tab
+bindsym Mod1+Tab exec rofi -show window
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1:1"
+set $ws2 "2:2"
+set $ws3 "3:3"
+set $ws4 "4:4"
+set $ws5 "5:5"
+set $ws6 "6:6"
+set $ws7 "7:7"
+set $ws8 "8:8"
+set $ws9 "9:9"
+#set $ws10 "10:X"
+
+# Automatically putting workspaces on specific screens
+workspace $ws1 output DP-2 eDP-1 
+workspace $ws2 output DP-2 eDP-1
+workspace $ws3 output DP-2 eDP-1
+workspace $ws4 output DP-2 eDP-1
+workspace $ws5 output DP-2 eDP-1
+workspace $ws6 output DP-2 eDP-1
+workspace $ws7 output HDMI-1 eDP-1
+workspace $ws8 output HDMI-1 eDP-1
+workspace $ws9 output HDMI-1 eDP-1
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+#bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+#bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec $HOME/.config/bin/rofi-power-i3
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# lock screen
+bindsym $mod+shift+x exec betterlockscreen -l blur
+
+# Bind print screen
+bindsym Print exec flameshot gui
+
+# Sticky floating window
+bindsym $mod+shift+s sticky disable
+bindsym $mod+s sticky enable
+
+# Disable border
+#for_window [class="^.*"] border pixel 0
+
+# Enable popup during fullscreen
+popup_during_fullscreen smart
+
+# disable mouse while typing
+#exec syndaemon -i 0.5 -d -K
+
+# startup
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id nm-applet --indicator
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id xset s off 
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
+exec --no-startup-id xset -b
+exec_always --no-startup-id picom -b
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id flameshot
+
+# assign some apps to preferred workspaces
+for_window [class="Spotify"] move to workspace $ws9
+assign [class="discord"] $ws6
+assign [class="Virt-manager"] $ws5
+assign [class="Thunderbird"] $ws7
+for_window [class="Steam"] floating enable
+assign [class="Steam"] $ws8
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Arandr"] floating enable
+for_window [class="Arandr"] resize set 800 500 
+for_window [class="TelegramDesktop"] move to workspace $ws6
+for_window [workspace=6] layout tabbed
+for_window [class="Osmo"] floating enable
+for_window [class="Osmo"] resize set 800 600
+
+# Disable titlebar
+new_window pixel 4
+new_float pixel 4
+
+# Gaps (i3-gaps)
+gaps inner 10
+gaps outer 5
+
+# Window color
+# class                 border  backgr. text    indicator child_border
+client.unfocused        #061115 #061115 #D9D7D6 #061115 #061115
+client.focused_inactive #061115 #061115 #D9D7D6 #061115 #061115
+client.focused          #D9D7D6 #D9D7D6 #061115 #D9D7D6 #D9D7D6
+client.urgent           #D9D7D6 #162026 #D9D7D6 #D9D7D6 #D9D7D6
+#client.placeholder      #91bebb #91bebb #91bebb #91bebb   #91bebb
+
+client.background       #061115
+
+# Status bar
+bar {
+    position top
+    status_command i3blocks
+    font pango:JetBrains Mono 12
+    strip_workspace_numbers yes
+    tray_output primary
+
+    colors {
+      background #061115
+      separator  #061115
+      focused_workspace  #162026 #162026 #8CD7AA
+      active_workspace   #162026 #162026 #D9D7D6
+      inactive_workspace #061115 #061115 #D9D7D6
+      urgent_workspace   #162026 #162026 #DF5B61
+    }
+}

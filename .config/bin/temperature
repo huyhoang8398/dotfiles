@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TEMP=$(cat /proc/acpi/ibm/thermal | awk '{print $2}')
+FAN=$(cat /proc/acpi/ibm/fan | awk 'NR==2 {print $2}')
+
+if [[ $TEMP -gt 50 ]]
+then
+    echo "" $TEMP $FAN
+elif [[ $TEMP -gt 70 ]]
+then
+    echo "" $TEMP $FAN
+else 
+    echo "" $TEMP $FAN
+fi

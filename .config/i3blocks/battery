@@ -1,0 +1,39 @@
+#!/bin/bash
+
+BATTERY=0
+BATTERY_INFO=$(acpi -b | grep "Battery ${BATTERY}")
+BATTERY_STATE=$(echo "${BATTERY_INFO}" | grep -wo "Full\|Charging\|Discharging\|Unknown\|Not charging")
+BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' | tr -d '%')
+
+URGENT_VALUE=15
+
+if [[ "${BATTERY_STATE}" = "Charging" ]]; then
+	echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf583</span>" $BATTERY_POWER% ""
+  echo ""
+elif [[ "${BATTERY_STATE}" = "Discharging" ]] || [[ "${BATTERY_STATE}" = "Not charging" ]] || [[ "${BATTERY_STATE}" = "Unknown" ]] || [[ "${BATTERY_STATE}" = "Full" ]]; then
+  if [[ "${BATTERY_POWER}" -eq "100" ]]; then
+    echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf578</span>" $BATTERY_POWER% ""
+  fi
+  if [[ "${BATTERY_POWER}" -ge "90" ]] && [[ "${BATTERY_POWER}" -lt "100" ]]; then
+    echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf581</span>" $BATTERY_POWER% ""
+  fi
+  if [[ "${BATTERY_POWER}" -ge "80" ]] && [[ "${BATTERY_POWER}" -lt "90" ]]; then
+    echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf57f</span>" $BATTERY_POWER% ""
+  fi
+  if [[ "${BATTERY_POWER}" -ge "60" ]] && [[ "${BATTERY_POWER}" -lt "80" ]]; then
+    echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf57e</span>" $BATTERY_POWER% ""
+  fi
+  if [[ "${BATTERY_POWER}" -ge "50" ]] && [[ "${BATTERY_POWER}" -lt "60" ]]; then
+    echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf57c</span>" $BATTERY_POWER% ""
+  fi
+  if [[ "${BATTERY_POWER}" -ge "20" ]] && [[ "${BATTERY_POWER}" -lt "50" ]]; then
+    echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf57a</span>" $BATTERY_POWER% ""
+  fi
+  if [[ "${BATTERY_POWER}" -lt "20" ]]; then
+    echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf579</span>" $BATTERY_POWER% ""
+  fi
+fi
+
+if [[ "${BATTERY_POWER}" -le "${URGENT_VALUE}" ]]; then
+  exit 33
+fi

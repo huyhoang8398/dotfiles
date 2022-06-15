@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TEMP=$(cat /proc/acpi/ibm/thermal | awk '{print $2}')
+FAN=$(cat /proc/acpi/ibm/fan | awk 'NR==2 {print $2}')
+
+if [ $TEMP -gt 50 ] && [ $TEMP -lt 70 ]
+then
+    echo -e "<span fallback=\"true\" font=\"Iosevka Nerd Font 14\" rise=\"-1024\">\uf2c9</span>" $TEMP $FAN
+elif [[ $TEMP -gt 70 ]]
+then
+    echo -e "<span fallback=\"true\" font=\"Iosevka Nerd Font 14\" rise=\"-1024\">\uf2c7</span>" $TEMP $FAN
+else 
+    echo -e "<span fallback=\"true\" font=\"Iosevka Nerd Font 14\" rise=\"-1024\">\uf2ca</span>" $TEMP $FAN
+fi

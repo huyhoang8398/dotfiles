@@ -1,0 +1,16 @@
+#!/bin/bash
+
+var=$(echo -e "L to Lock\nS to Suspend\nE to Exit\nR to Reboot\nSH to Shutdown" | rofi -i -dmenu
+)
+
+if [[ $var == "L to Lock" ]]; then
+	betterlockscreen -l
+elif [[ $var == "S to Suspend" ]]; then
+	betterlockscreen -s
+elif [[ $var == "E to Exit" ]]; then
+	bspc quit & disown
+elif [[ $var == "R to Reboot" ]]; then
+	systemctl reboot
+elif [[ $var == "SH to Shutdown" ]]; then
+	systemctl poweroff
+fi

@@ -1,3 +1,6 @@
+backend = "glx";
+glx-no-stencil = true;
+glx-copy-from-front = false;
 shadow = true;
 
 shadow-radius = 10;
@@ -23,15 +26,18 @@ shadow-exclude = [
 ];
 
 transition = true;
-transition-offset = 25;
+transition-offset = 15;
 transition-direction = "smart-x";
 transition-timing-function = "ease-out-cubic";
 transition-step = 0.028;
-transition-rule = [];
+transition-rule = [
+  "none: class_g= 'rofi'",
+  "none: class_g= 'Rofi'",
+];
 fading = true;
-fade-delta = 7;
-fade-in-step = 0.05;
-fade-out-step = 0.05;
+fade-delta = 2;
+fade-in-step = 0.015;
+fade-out-step = 0.015;
 shadow-ignore-shaped = false;
 inactive-opacity = 1.0;
 active-opacity = 1.0;
@@ -67,3 +73,19 @@ wintypes :
 };
 
 corner-radius = 0;
+
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+use-ewmh-active-win = true;
+detect-rounded-corners = true;
+
+detect-client-opacity = true;
+
+vsync = true;
+
+dbe = false;
+
+unredir-if-possible = false;
+detect-transient = true;
+detect-client-leader = true;
+

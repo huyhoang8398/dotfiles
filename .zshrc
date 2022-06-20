@@ -4,17 +4,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/home/kn/.oh-my-zsh"
 export PATH="/home/kn/script":$PATH
 
-# Golang
-export PATH="$PATH:$HOME/go/bin"
-
-# NPM 
-PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
-
 # Plugins
 #plugins=(git)
 
-ZSH_THEME="oxide"
+#ZSH_THEME="oxide"
+CASE_SENSITIVE="true"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,22 +23,10 @@ else
   export EDITOR='nvim'
 fi
 
-# Alias 
-alias cl="clear"
-alias c="code"
-alias nv="nvim"
-alias s="subl"
-alias gcl='git clone --recurse-submodules'
-alias ga="git add"
-alias gaa="git add ."
-alias gc="git commit -m"
-alias gp="git push"
-alias sl="systemctl suspend"
-
 # Other Plugins
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
 
 # Useful script
 source /home/kn/script/open.sh
@@ -61,3 +43,22 @@ alias discord='discord --no-sandbox'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
+alias vim='nvim'
+alias s="kitty +kitten ssh"
+alias ss="sudo systemctl"
+alias update="sudo pacman -Syu"
+
+alias cl="clear"
+alias c="code"
+alias nv="nvim"
+alias s="subl"
+alias gcl='git clone --recurse-submodules'
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit -m"
+alias gp="git push"
+alias gs="git status"
+
+#export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+eval "$(starship init zsh)"
+

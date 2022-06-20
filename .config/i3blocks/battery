@@ -23,10 +23,10 @@ elif [[ "${BATTERY_STATE}" = "Discharging" ]] || [[ "${BATTERY_STATE}" = "Not ch
   if [[ "${BATTERY_POWER}" -ge "60" ]] && [[ "${BATTERY_POWER}" -lt "80" ]]; then
     echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf57e</span>" $BATTERY_POWER% ""
   fi
-  if [[ "${BATTERY_POWER}" -ge "50" ]] && [[ "${BATTERY_POWER}" -lt "60" ]]; then
+  if [[ "${BATTERY_POWER}" -ge "40" ]] && [[ "${BATTERY_POWER}" -lt "60" ]]; then
     echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf57c</span>" $BATTERY_POWER% ""
   fi
-  if [[ "${BATTERY_POWER}" -ge "20" ]] && [[ "${BATTERY_POWER}" -lt "50" ]]; then
+  if [[ "${BATTERY_POWER}" -ge "20" ]] && [[ "${BATTERY_POWER}" -lt "40" ]]; then
     echo -e "" "<span fallback=\"true\" font=\"Iosevka Nerd Font\">\uf57a</span>" $BATTERY_POWER% ""
   fi
   if [[ "${BATTERY_POWER}" -lt "20" ]]; then

@@ -5,11 +5,11 @@ glx-copy-from-front = false;
 # Enabled client-side shadows on windows.
 shadow = true;
 # The blur radius for shadows. (default 12)
-shadow-radius = 15;
+shadow-radius = 10;
 # The left offset for shadows. (default -15)
-shadow-offset-x = -15;
+shadow-offset-x = -10;
 # The top offset for shadows. (default -15)
-shadow-offset-y = -15;
+shadow-offset-y = -10;
 # The translucency for shadows. (default .75)
 shadow-opacity = .65;
 
@@ -21,7 +21,8 @@ shadow-opacity = .65;
 # Avoid drawing shadow on all shaped windows (see also: --detect-rounded-corners)
 shadow-ignore-shaped = false;
 shadow-exclude = [
-  "class_g = 'i3-frame'"
+  "class_g = 'i3-frame'",
+  "class_g = 'i3bar'",
 ];
 
 # Rounded Corners (picom-ibhagwan-git on AUR)
@@ -41,10 +42,10 @@ blur-background-exclude = [
 # Fade windows during opacity changes.
 fading = true;
 # The time between steps in a fade in milliseconds. (default 10).
-fade-delta = 5;
+fade-delta = 3;
 # Opacity change between steps while fading in. (default 0.028).
 # fade-in-step = 0.03;
-fade-in-step = 0.03;
+fade-in-step = 0.028;
 # Opacity change between steps while fading out. (default 0.03).
 # fade-out-step = 0.03;
 fade-out-step = 0.03;

@@ -45,7 +45,7 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+d exec rofi -show drun -modi drun
 
 ## use rofi as alt+tab
-bindsym Mod1+Tab exec rofi -show window
+bindsym Mod1+Tab exec bash $HOME/.config/bin/alt-tab-rofi.sh
 
 # change focus
 bindsym $mod+j focus left

@@ -15,9 +15,16 @@ import os
 import subprocess
 import json
 
+icon_on = "~/.config/dunst/icons/my-caffeine-on-symbolic.svg"
+icon_off = "~/.config/dunst/icons/my-caffeine-off-symbolic.svg"
+
 def caffeine_toggle():
     '''Toggle caffeine'''
     subprocess.run(["xfconf-query", "-c", "xfce4-power-manager", "-p", "/xfce4-power-manager/presentation-mode", "-T"], check=True)
+    if on():
+        subprocess.run(["dunstify", "Presentation Mode on", "-i", icon_on, "-r", "5555", "-u", "normal"], check=True)
+    else:
+        subprocess.run(["dunstify", "Presentation Mode off", "-i", icon_off, "-r", "5555", "-u", "normal"], check=True)
 
 def clicked():
     '''Returns True if the button was clicked'''

@@ -59,6 +59,6 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gs="git status"
 
-#export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 

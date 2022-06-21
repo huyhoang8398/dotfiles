@@ -43,7 +43,7 @@ if clicked():
     caffeine_toggle()
 
 if on():
-    RTN = {"full_text":"<span font='Iosevka Nerd Font 15'>\ue61b</span>" " "}
+    RTN = {"full_text":"<span font='Iosevka Nerd Font 15'>\uf928</span>" " "}
 else:
     RTN = {"full_text":"<span font='Iosevka Nerd Font 15'>\uf9b1</span>" " "}
 

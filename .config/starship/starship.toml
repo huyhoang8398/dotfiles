@@ -15,7 +15,8 @@ format = "[$hostname](bold blue) "
 disabled = false
 
 [directory]
-disabled = false
+truncation_length = 100
+truncate_to_repo = false
 
 [line_break]
 disabled = false

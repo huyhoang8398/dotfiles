@@ -188,8 +188,7 @@ bindsym $mod+shift+x exec betterlockscreen -l blur
 bindsym Print exec flameshot gui
 
 # Sticky floating window
-bindsym $mod+shift+s sticky disable
-bindsym $mod+s sticky enable
+bindsym $mod+shift+s sticky toggle
 
 # Disable border
 #for_window [class="^.*"] border pixel 0
@@ -227,6 +226,13 @@ for_window [class="TelegramDesktop"] move to workspace $ws6
 for_window [workspace=6] layout tabbed
 for_window [class="Osmo"] floating enable
 for_window [class="Osmo"] resize set 800 600
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
 
 # Disable titlebar
 new_window pixel 4
@@ -253,6 +259,8 @@ bar {
     font pango:JetBrains Mono 12
     strip_workspace_numbers yes
     tray_output primary
+    tray_padding 4
+    height 26
 
     colors {
       background #061115
@@ -263,3 +271,6 @@ bar {
       urgent_workspace   #162026 #162026 #DF5B61
     }
 }
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+plus scratchpad show
+

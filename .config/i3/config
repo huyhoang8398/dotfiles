@@ -191,7 +191,7 @@ bindsym Print exec flameshot gui
 bindsym $mod+shift+s sticky toggle
 
 # Disable border
-#for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 4
 
 # Enable popup during fullscreen
 popup_during_fullscreen smart
@@ -273,4 +273,3 @@ bar {
 }
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+plus scratchpad show
-

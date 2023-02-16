@@ -3,12 +3,6 @@
 format = "$all"
 add_newline = true
 
-[character]
-error_symbol = "[](bold red)"
-success_symbol = "[](bold green)"
-vicmd_symbol = "[](bold yellow)"
-format = "$symbol [|](bold bright-black) "
-
 [hostname]
 ssh_only = true
 format = "[$hostname](bold blue) "
@@ -21,5 +15,5 @@ truncate_to_repo = false
 [line_break]
 disabled = false
 
-[lua]
-symbol = "[](blue) "
+[battery]
+disabled = true

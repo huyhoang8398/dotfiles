@@ -3,7 +3,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kn/.oh-my-zsh"
 export PATH="/home/kn/script":$PATH
-export PATH="$HOME/.local/bin:"$PATH
 
 # Plugins
 #plugins=(git)
@@ -44,10 +43,10 @@ alias discord='discord --no-sandbox'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
-alias vim='nvim'
+#alias vim='nvim'
 alias s="kitty +kitten ssh"
 alias ss="sudo systemctl"
-alias update="sudo apt update && sudo apt upgrade"
+#alias update="sudo pacman -Syu"
 
 alias cl="clear"
 alias c="code"
@@ -63,6 +62,12 @@ alias gs="git status"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export TERM=xterm-256color
+
+. /etc/zsh_command_not_found
+

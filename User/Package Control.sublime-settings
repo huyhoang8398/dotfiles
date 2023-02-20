@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"A File Icon",
+		"LSP",
+		"LSP-bash",
+		"NeoVintageous",
+		"Package Control",
+		"Pretty Shell",
+		"SublimeLinter",
+		"SublimeLinter-shellcheck",
+	],
+	"in_process_packages":
+	[
+	],
+}

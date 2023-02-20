@@ -1,12 +1,3 @@
-# JavaCafe01 Prompt
-
-format = "$all"
-add_newline = true
-
-[hostname]
-ssh_only = true
-format = "[$hostname](bold blue) "
-disabled = false
 
 [directory]
 truncation_length = 100
@@ -14,6 +5,3 @@ truncate_to_repo = false
 
 [line_break]
 disabled = false
-
-[battery]
-disabled = true

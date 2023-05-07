@@ -1,16 +1,23 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/kn/.oh-my-zsh"
-export PATH="/home/kn/script":$PATH
+export ZSH="/Users/kn/.oh-my-zsh"
 
 # Plugins
-#plugins=(git)
+#plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
-#ZSH_THEME="oxide"
-CASE_SENSITIVE="true"
-
+ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 
 # User configuration
 # You may need to manually set your language environment
@@ -23,42 +30,21 @@ else
   export EDITOR='nvim'
 fi
 
-# Other Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
-
-# Useful script
-source /home/kn/script/open.sh
-
-# Random fortune
-#fortune | pokemonsay
-
-# heroku autocomplete setup
-#HEROKU_AC_ZSH_SETUP_PATH=/home/huyhoang8398/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-
-#zsh uses square brackets for globbing / pattern matching.
-alias pip='noglob pip'
-alias discord='discord --no-sandbox'
-alias mv='mv -i'
-alias rm='rm -i'
-alias cp='cp -i'
-alias vim='nvim'
-alias s="kitty +kitten ssh"
-alias ss="sudo systemctl"
-alias update="sudo pacman -Syu"
-
+# Alias 
 alias cl="clear"
 alias c="code"
 alias nv="nvim"
-alias s="subl"
+#alias vim="nvim"
 alias gcl='git clone --recurse-submodules'
 alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit -m"
 alias gp="git push"
-alias gs="git status"
+alias gcl='git clone --recurse-submodules'
 
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+# Starship promt
 eval "$(starship init zsh)"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

@@ -1,5 +1,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Starship promt
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+
+# Golang
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kn/.oh-my-zsh"
 
@@ -18,16 +26,15 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-
 # User configuration
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='vim'
 fi
 
 # Alias 
@@ -45,6 +52,7 @@ alias gcl='git clone --recurse-submodules'
 # Starship promt
 eval "$(starship init zsh)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

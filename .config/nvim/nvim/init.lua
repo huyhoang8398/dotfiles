@@ -140,6 +140,7 @@ require("lazy").setup(
                 highlight = { enable = true },
                 indent = { enable = true },
                 ensure_installed = {
+                    "go",
                     "bash",
                     "json",
                     "lua",
@@ -211,6 +212,76 @@ require("lazy").setup(
                 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
             end,
         },
+        {
+            'VonHeikemen/lsp-zero.nvim',
+            branch = 'v2.x',
+            dependencies = {
+                -- LSP Support
+                {'neovim/nvim-lspconfig'},             -- Required
+                {                                      -- Optional
+                    'williamboman/mason.nvim',
+                    build = function()
+                        pcall(vim.cmd, 'MasonUpdate')
+                    end,
+                },
+                {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+                -- Autocompletion
+                {'hrsh7th/nvim-cmp'},     -- Required
+                {'hrsh7th/cmp-nvim-lsp'}, -- Required
+                {'L3MON4D3/LuaSnip',
+                  dependencies = { "rafamadriz/friendly-snippets" }
+                },
+            },
+        },
     }
 )
+
+-- LSP --
+local lsp = require('lsp-zero').preset({})
+lsp.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
+})
+lsp.on_attach(function(client, bufnr)
+    lsp.default_keymaps({buffer = bufnr})
+    vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_definitions<cr>', {buffer = true})
+    vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_references<cr>', {buffer = true})
+end)
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+lsp.setup()
+
+--- Snippet ---
+-- Make sure you setup `cmp` after lsp-zero
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+require('luasnip.loaders.from_vscode').lazy_load()
+
+cmp.setup({
+    snippet = {
+        expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+        end,
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = {
+            cmp.config.window.bordered(),
+            max_height = 15,
+            max_width = 60,
+        }
+    },
+    sources = {
+        {name = 'nvim_lsp'},
+        {name = 'luasnip'},
+    },
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        ['<Tab>'] = cmp_action.luasnip_supertab(),
+        ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+    }
+})
 

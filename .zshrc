@@ -20,10 +20,10 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-  autoload -Uz compinit
-  compinit
+    autoload -Uz compinit
+    compinit
 fi
 
 # User configuration
@@ -32,16 +32,16 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+    export EDITOR='nvim'
 else
-  export EDITOR='vim'
+    export EDITOR='nvim'
 fi
 
 # Alias 
 alias cl="clear"
 alias c="code"
 alias nv="nvim"
-#alias vim="nvim"
+alias vim="nvim"
 alias gcl='git clone --recurse-submodules'
 alias ga="git add"
 alias gaa="git add ."

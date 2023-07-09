@@ -1,16 +1,14 @@
 -- lazy.nvim --
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system(
-        {
-            "git",
-            "clone",
-            "--filter=blob:none",
-            "https://github.com/folke/lazy.nvim.git",
-            "--branch=stable", -- latest stable release
-            lazypath
-        }
-    )
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 -- Indentation -- 
@@ -32,7 +30,6 @@ vim.opt.expandtab = true
 -- Word wrap / line wrap --
 vim.wo.wrap = true
 vim.wo.linebreak = true
-vim.wo.list = false -- extra option I set in addition to the ones in your question
 
 require("lazy").setup(
     {
@@ -187,19 +184,26 @@ require("lazy").setup(
                         }
                     },
                     defaults = {
-                        theme = "dropdown",
+                        entry_prefix = "  ",
+                        initial_mode = "insert",
+                        selection_strategy = "reset",
+                        sorting_strategy = "ascending",
                         layout_strategy = "horizontal",
                         layout_config = {
-                            width = 0.95,
-                            height = 0.95
-                        },
-                        mappings = {
-                            i = {
-                                ["<esc>"] = require('telescope.actions').close
+                            horizontal = {
+                                prompt_position = "top",
+                                preview_width = 0.55,
+                                results_width = 0.8,
                             },
+                            vertical = {
+                                mirror = false,
+                            },
+                            width = 0.87,
+                            height = 0.80,
+                            preview_cutoff = 120,
                         },
                     },
-	            }
+                }
                 local builtin = require('telescope.builtin')
                 vim.keymap.set('n', '<leader>\\', builtin.find_files, {})
                 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})

@@ -31,6 +31,12 @@ vim.opt.expandtab = true
 -- Word wrap / line wrap --
 vim.wo.wrap = true
 vim.wo.linebreak = true
+-- Hide diagnostics --
+--vim.diagnostic.config({ virtual_text = false })
+-- Copy to system clipboard --
+vim.opt.clipboard = "unnamedplus"
+-- Highlight on yank --
+vim.cmd("au TextYankPost * lua vim.highlight.on_yank {timeout = 250, on_visual = true}")
 
 require("lazy").setup({
 	-- colorscheme --
@@ -50,7 +56,7 @@ require("lazy").setup({
 					night_filter = "spectrum",
 				},
 				inc_search = "background", -- underline | background
-				background_clear = { "nvim-tree", "neo-tree", "bufferline" },
+				background_clear = { "float_win" },
 				plugins = {
 					bufferline = {
 						underline_selected = true,
@@ -66,14 +72,6 @@ require("lazy").setup({
 				override = function(c)
 					return {
 						ColorColumn = { bg = c.editor.background },
-						-- Mine
-						DashboardRecent = { fg = c.base.magenta },
-						DashboardProject = { fg = c.base.blue },
-						DashboardConfiguration = { fg = c.base.white },
-						DashboardSession = { fg = c.base.green },
-						DashboardLazy = { fg = c.base.cyan },
-						DashboardServer = { fg = c.base.yellow },
-						DashboardQuit = { fg = c.base.red },
 					}
 				end,
 			})
@@ -241,7 +239,7 @@ require("lazy").setup({
 })
 
 -- LSP --
-local lsp = require("lsp-zero").preset({})
+local lsp = require("lsp-zero").preset({ float_border = "none", configure_diagnostics = false })
 lsp.set_sign_icons({
 	error = "✘",
 	warn = "▲",
@@ -252,6 +250,9 @@ lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({ buffer = bufnr })
 	vim.keymap.set("n", "gr", "<cmd>Telescope lsp_definitions<cr>", { buffer = true })
 	vim.keymap.set("n", "gd", "<cmd>Telescope lsp_references<cr>", { buffer = true })
+	vim.keymap.set("n", "<space>ca", function()
+		vim.lsp.buf.code_action({ apply = true })
+	end)
 end)
 lsp.format_on_save({
 	format_opts = {
@@ -262,6 +263,15 @@ lsp.format_on_save({
 		["null-ls"] = { "python", "bash", "lua", "sh" },
 	},
 })
+
+-- Show LSP diagnostics
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+	underline = true,
+	virtual_text = true,
+	signs = true,
+	update_in_insert = false,
+})
+
 require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 lsp.setup()
 
@@ -299,11 +309,7 @@ cmp.setup({
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
-		documentation = {
-			cmp.config.window.bordered(),
-			max_height = 15,
-			max_width = 60,
-		},
+		documentation = cmp.config.window.bordered(),
 	},
 	sources = {
 		{ name = "nvim_lsp" },

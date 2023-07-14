@@ -1,1 +1,1 @@
-![preview](static/showcase.md)
+![preview](static/showcase.png)

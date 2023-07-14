@@ -3,6 +3,18 @@ local keymap = vim.keymap
 -- General Keymap --
 --- delete char dont copy to cliboard
 keymap.set("n", "x", '"_x')
+keymap.set("n", "<Esc>", ":noh<CR>")
+--- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
+--- https://neovim.discourse.group/t/how-do-i-jump-to-relative-line-number-with-gj-gk/2203/4
+vim.api.nvim_set_keymap("n", "j", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
+vim.api.nvim_set_keymap("n", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
+vim.api.nvim_set_keymap("n", "<Down>", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
+vim.api.nvim_set_keymap("n", "<Up>", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
+
+vim.api.nvim_set_keymap("x", "j", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
+vim.api.nvim_set_keymap("x", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
+vim.api.nvim_set_keymap("v", "<Down>", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
+vim.api.nvim_set_keymap("v", "<Up>", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 
 -- Telescope --
 keymap.set("n", "<leader>\\", "<cmd>Telescope find_files<CR>")

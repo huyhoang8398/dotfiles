@@ -61,6 +61,23 @@ local default_plugins = {
 			require("telescope").load_extension("fzf")
 		end,
 	},
+	-- Nvim-tree --
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+
+		opts = function()
+			return require("kn.plugins.configs.nvimtree")
+		end,
+
+		config = function(_, opts)
+			require("nvim-tree").setup(opts)
+		end,
+	},
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v2.x",
@@ -85,6 +102,16 @@ local default_plugins = {
 				"L3MON4D3/LuaSnip", -- Required
 				dependencies = { "rafamadriz/friendly-snippets" },
 			},
+			--{
+			--	"nvimdev/lspsaga.nvim",
+			--	dependencies = {
+			--		"nvim-treesitter/nvim-treesitter",
+			--		"nvim-tree/nvim-web-devicons",
+			--	},
+			--	config = function()
+			--		require("lspsaga").setup({})
+			--	end,
+			--},
 		},
 		config = function()
 			require("kn.plugins.configs.lsp-zero")

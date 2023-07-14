@@ -18,6 +18,7 @@ local lualine_sections = {
 local opts = {
 	options = {
 		icons_enabled = true,
+		globalstatus = true,
 		theme = "sonokai",
 		-- component_separators = "|",
 		-- section_separators = "",
@@ -26,7 +27,7 @@ local opts = {
 	sections = lualine_sections,
 	inactive_sections = vim.deepcopy(lualine_sections),
 	tabline = {},
-	extensions = {},
+	extensions = { "nvim-tree" },
 }
 
 return opts

@@ -11,6 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 require("kn.plugins")
 require("kn.core.options")

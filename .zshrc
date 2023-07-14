@@ -16,7 +16,10 @@ export ZSH="/Users/kn/.oh-my-zsh"
 
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
+
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 if type brew &>/dev/null; then
@@ -44,6 +47,7 @@ alias nv="nvim"
 alias vim="nvim"
 alias gcl='git clone --recurse-submodules'
 alias ga="git add"
+alias gs="git status"
 alias gaa="git add ."
 alias gc="git commit -m"
 alias gp="git push"

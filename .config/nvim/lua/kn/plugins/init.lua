@@ -128,5 +128,14 @@ local default_plugins = {
 			require("kn.plugins.configs.mason-null-ls")
 		end,
 	},
+	{
+		"lewis6991/gitsigns.nvim",
+		opts = function()
+			return require("kn.plugins.configs.gitsigns")
+		end,
+		config = function(_, opts)
+			require("gitsigns").setup(opts)
+		end,
+	},
 }
 require("lazy").setup(default_plugins, opts)

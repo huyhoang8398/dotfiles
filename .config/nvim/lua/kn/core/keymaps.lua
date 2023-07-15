@@ -27,3 +27,10 @@ keymap.set("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
 keymap.set("n", "<leader>cm", "<cmd>Telescope git_commits<CR>")
 keymap.set("n", "<leader>gt", "<cmd>Telescope git_status<CR>")
 keymap.set("n", "<leader>ma", "<cmd>Telescope marks<CR>")
+
+-- Nvimtree--
+keymap.set("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
+
+-- Buffers --
+keymap.set("n", "<leader>x", ":enew<bar>bd #<CR>")
+keymap.set("n", "<leader>t", ":tabnew<CR>")

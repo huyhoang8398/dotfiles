@@ -33,6 +33,7 @@ lsp.ensure_installed({
 	"bashls",
 	"docker_compose_language_service",
 	"dockerls",
+	"marksman",
 })
 
 lsp.format_on_save({

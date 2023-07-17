@@ -27,6 +27,7 @@ keymap.set("n", "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>")
 keymap.set("n", "<leader>cm", "<cmd>Telescope git_commits<CR>")
 keymap.set("n", "<leader>gt", "<cmd>Telescope git_status<CR>")
 keymap.set("n", "<leader>ma", "<cmd>Telescope marks<CR>")
+keymap.set("n", "<leader>dg", "<cmd>Telescope diagnostics<CR>")
 
 -- Nvimtree--
 keymap.set("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")

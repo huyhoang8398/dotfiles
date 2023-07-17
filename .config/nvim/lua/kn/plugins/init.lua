@@ -94,6 +94,17 @@ local default_plugins = {
 				end,
 			},
 			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+			{
+				"jay-babu/mason-null-ls.nvim",
+				event = { "BufReadPre", "BufNewFile" },
+				dependencies = {
+					"williamboman/mason.nvim",
+					"jose-elias-alvarez/null-ls.nvim",
+				},
+				config = function()
+					require("kn.plugins.configs.mason-null-ls")
+				end,
+			},
 
 			-- Autocompletion
 			{ "hrsh7th/nvim-cmp" }, -- Required
@@ -119,16 +130,6 @@ local default_plugins = {
 		config = function()
 			require("kn.plugins.configs.lsp-zero")
 			require("kn.plugins.configs.cmp")
-		end,
-	},
-	{
-		"jay-babu/mason-null-ls.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		dependencies = {
-			"jose-elias-alvarez/null-ls.nvim",
-		},
-		config = function()
-			require("kn.plugins.configs.mason-null-ls")
 		end,
 	},
 	{

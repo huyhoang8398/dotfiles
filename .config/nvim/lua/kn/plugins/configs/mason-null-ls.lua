@@ -1,3 +1,4 @@
+require("mason").setup()
 local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
@@ -7,6 +8,9 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.shfmt,
+		null_ls.builtins.diagnostics.hadolint,
+		null_ls.builtins.diagnostics.selene,
+		null_ls.builtins.diagnostics.shellcheck,
 	},
 })
 -- See mason-null-ls.nvim's documentation for more details:
@@ -16,6 +20,10 @@ require("mason-null-ls").setup({
 		"shellcheck",
 		"selene",
 		"pylint",
+		"hadolint",
+		"black",
+		"shfmt",
+		"stylua",
 	},
 	automatic_installation = true,
 })

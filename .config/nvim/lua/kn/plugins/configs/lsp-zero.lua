@@ -46,13 +46,5 @@ lsp.format_on_save({
 	},
 })
 
--- Show LSP diagnostics
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-	underline = true,
-	virtual_text = true,
-	signs = true,
-	update_in_insert = false,
-})
-
 require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 lsp.setup()

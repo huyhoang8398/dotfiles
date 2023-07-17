@@ -16,6 +16,16 @@ vim.api.nvim_set_keymap("x", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr
 vim.api.nvim_set_keymap("v", "<Down>", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
 vim.api.nvim_set_keymap("v", "<Up>", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 
+--- Vim toggle diagnostics ---
+function _G.toggle_diagnostics()
+	if vim.diagnostic.config().virtual_text then
+		vim.diagnostic.config({ virtual_text = false })
+	else
+		vim.diagnostic.config({ virtual_text = true })
+	end
+end
+vim.api.nvim_set_keymap("n", "<leader>tt", ":call v:lua.toggle_diagnostics()<CR>", { noremap = true, silent = true })
+
 -- Telescope --
 keymap.set("n", "<leader>\\", "<cmd>Telescope find_files<CR>")
 keymap.set("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>")
@@ -33,5 +43,5 @@ keymap.set("n", "<leader>dg", "<cmd>Telescope diagnostics<CR>")
 keymap.set("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
 
 -- Buffers --
-keymap.set("n", "<leader>x", ":enew<bar>bd #<CR>")
-keymap.set("n", "<leader>t", ":tabnew<CR>")
+--keymap.set("n", "<leader>x", ":enew<bar>bd #<CR>")
+--keymap.set("n", "<leader>t", ":tabnew<CR>")

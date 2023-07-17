@@ -5,7 +5,7 @@ opt.termguicolors = true
 
 -- Indentation --
 opt.list = true
-opt.listchars:append("space:⋅")
+--opt.listchars:append("space:⋅")
 opt.listchars:append("eol:↴")
 
 -- Enable mouse

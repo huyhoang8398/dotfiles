@@ -101,9 +101,6 @@ local default_plugins = {
 					"williamboman/mason.nvim",
 					"jose-elias-alvarez/null-ls.nvim",
 				},
-				config = function()
-					require("kn.plugins.configs.mason-null-ls")
-				end,
 			},
 
 			-- Autocompletion
@@ -130,6 +127,7 @@ local default_plugins = {
 		config = function()
 			require("kn.plugins.configs.lsp-zero")
 			require("kn.plugins.configs.cmp")
+			require("kn.plugins.configs.mason-null-ls")
 		end,
 	},
 	{

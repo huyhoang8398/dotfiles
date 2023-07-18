@@ -8,9 +8,17 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.shfmt,
-		null_ls.builtins.diagnostics.hadolint,
+		null_ls.builtins.diagnostics.hadolint.with({
+			diagnostic_config = {
+				underline = false,
+			},
+		}),
 		null_ls.builtins.diagnostics.selene,
-		null_ls.builtins.diagnostics.shellcheck,
+		null_ls.builtins.diagnostics.shellcheck.with({
+			diagnostic_config = {
+				underline = false,
+			},
+		}),
 	},
 })
 -- See mason-null-ls.nvim's documentation for more details:

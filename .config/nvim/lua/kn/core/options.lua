@@ -45,3 +45,14 @@ opt.backspace = "indent,eol,start"
 -- Searching --
 opt.ignorecase = true
 opt.smartcase = true
+
+-- Moonfly --
+opt.fillchars = {
+	horiz = "━",
+	horizup = "┻",
+	horizdown = "┳",
+	vert = "┃",
+	vertleft = "┫",
+	vertright = "┣",
+	verthoriz = "╋",
+}

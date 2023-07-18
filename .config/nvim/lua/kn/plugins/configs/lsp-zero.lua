@@ -46,5 +46,12 @@ lsp.format_on_save({
 	},
 })
 
-require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+local lspconfig = require("lspconfig")
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+-- Disable LSP semantic highlight that is conflicting with treesitter for DockerLS --
+lspconfig.dockerls.setup({
+	on_attach = function(client, bufnr)
+		client.server_capabilities.semanticTokensProvider = nil
+	end,
+})
 lsp.setup()

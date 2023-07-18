@@ -1,11 +1,11 @@
 local opts = require("kn.plugins.configs.lazy-nvim")
 local default_plugins = {
 	{
-		"sainnhe/sonokai",
+		"bluz71/vim-moonfly-colors",
+		name = "moonfly",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- load the colorscheme here
 			require("kn.core.colorscheme")
 		end,
 	},

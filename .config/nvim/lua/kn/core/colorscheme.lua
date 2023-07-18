@@ -1,3 +1,5 @@
-vim.g.sonokai_style = "atlantis"
-vim.g.sonokai_better_performance = "1"
-vim.cmd([[colorscheme sonokai]])
+vim.g.moonflyWinSeparator = 2
+vim.g.moonflyVirtualTextColor = true
+vim.g.moonflyUnderlineMatchParen = true
+vim.g.moonflyCursorColor = true
+vim.cmd([[colorscheme moonfly]])

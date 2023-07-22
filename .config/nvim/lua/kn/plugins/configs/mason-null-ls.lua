@@ -8,17 +8,11 @@ null_ls.setup({
 		null_ls.builtins.formatting.black,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.shfmt,
-		null_ls.builtins.diagnostics.hadolint.with({
-			diagnostic_config = {
-				underline = false,
-			},
-		}),
+		null_ls.builtins.diagnostics.hadolint,
 		null_ls.builtins.diagnostics.selene,
-		null_ls.builtins.diagnostics.shellcheck.with({
-			diagnostic_config = {
-				underline = false,
-			},
-		}),
+		null_ls.builtins.diagnostics.shellcheck,
+		null_ls.builtins.diagnostics.ruff,
+		null_ls.builtins.diagnostics.mypy,
 	},
 })
 -- See mason-null-ls.nvim's documentation for more details:
@@ -27,11 +21,13 @@ require("mason-null-ls").setup({
 	ensure_installed = {
 		"shellcheck",
 		"selene",
-		"pylint",
 		"hadolint",
 		"black",
 		"shfmt",
 		"stylua",
+		"ruff",
+		"mypy",
+		"debugpy",
 	},
 	automatic_installation = true,
 })

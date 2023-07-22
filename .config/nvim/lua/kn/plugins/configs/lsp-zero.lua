@@ -26,16 +26,6 @@ lsp.on_attach(function(client, bufnr)
 	--vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action", opts)
 end)
 
-lsp.ensure_installed({
-	-- Replace these with whatever servers you want to install
-	"pyright",
-	"lua_ls",
-	"bashls",
-	"docker_compose_language_service",
-	"dockerls",
-	"marksman",
-})
-
 lsp.format_on_save({
 	format_opts = {
 		async = false,
@@ -47,11 +37,14 @@ lsp.format_on_save({
 })
 
 local lspconfig = require("lspconfig")
+
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+
 -- Disable LSP semantic highlight that is conflicting with treesitter for DockerLS --
 lspconfig.dockerls.setup({
 	on_attach = function(client, bufnr)
 		client.server_capabilities.semanticTokensProvider = nil
 	end,
 })
+
 lsp.setup()

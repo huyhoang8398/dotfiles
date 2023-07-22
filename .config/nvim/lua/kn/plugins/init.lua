@@ -93,7 +93,9 @@ local default_plugins = {
 					require("mason").setup()
 				end,
 			},
-			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+			{
+				"williamboman/mason-lspconfig.nvim",
+			}, -- Optional
 			{
 				"jay-babu/mason-null-ls.nvim",
 				event = { "BufReadPre", "BufNewFile" },
@@ -113,19 +115,10 @@ local default_plugins = {
 				"L3MON4D3/LuaSnip", -- Required
 				dependencies = { "rafamadriz/friendly-snippets" },
 			},
-			--{
-			--	"nvimdev/lspsaga.nvim",
-			--	dependencies = {
-			--		"nvim-treesitter/nvim-treesitter",
-			--		"nvim-tree/nvim-web-devicons",
-			--	},
-			--	config = function()
-			--		require("lspsaga").setup({})
-			--	end,
-			--},
 		},
 		config = function()
 			require("kn.plugins.configs.lsp-zero")
+			require("kn.plugins.configs.mason-lspconfig")
 			require("kn.plugins.configs.cmp")
 			require("kn.plugins.configs.mason-null-ls")
 		end,
@@ -137,6 +130,27 @@ local default_plugins = {
 		end,
 		config = function(_, opts)
 			require("gitsigns").setup(opts)
+		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = "mfussenegger/nvim-dap",
+		config = function()
+			require("kn.plugins.configs.nvim-dap-ui")
+		end,
+	},
+	{
+		"mfussenegger/nvim-dap",
+	},
+	{
+		"mfussenegger/nvim-dap-python",
+		dependencies = {
+			"mfussenegger/nvim-dap",
+			"rcarriga/nvim-dap-ui",
+		},
+		config = function(_, opts)
+			local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+			require("dap-python").setup(path)
 		end,
 	},
 }

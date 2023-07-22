@@ -45,3 +45,10 @@ keymap.set("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
 -- Buffers --
 --keymap.set("n", "<leader>x", ":enew<bar>bd #<CR>")
 --keymap.set("n", "<leader>t", ":tabnew<CR>")
+
+-- nvim-dap --
+function _G.debug_python()
+	require("dap-python").test_method()
+end
+keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>")
+vim.api.nvim_set_keymap("n", "<leader>dpr", ":call v:lua.debug_python()<CR>", { noremap = true, silent = true })

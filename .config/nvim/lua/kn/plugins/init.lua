@@ -9,6 +9,25 @@ local default_plugins = {
 			require("kn.core.colorscheme")
 		end,
 	},
+	-- Bufferline --
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("bufferline").setup({
+				options = {
+					offsets = {
+						{
+							filetype = "NvimTree",
+							separator = true,
+						},
+					},
+				},
+			})
+		end,
+	},
+
 	-- lualine (status line) --
 	{
 		"nvim-lualine/lualine.nvim",
@@ -113,6 +132,7 @@ local default_plugins = {
 			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
 			{
 				"L3MON4D3/LuaSnip", -- Required
+				build = "make install_jsregexp",
 				dependencies = { "rafamadriz/friendly-snippets" },
 			},
 		},

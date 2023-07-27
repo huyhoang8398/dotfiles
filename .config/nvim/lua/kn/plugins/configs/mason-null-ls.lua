@@ -28,6 +28,7 @@ require("mason-null-ls").setup({
 		"ruff",
 		"mypy",
 		"debugpy",
+		"bash-debug-adapter",
 	},
 	automatic_installation = true,
 })

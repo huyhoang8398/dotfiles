@@ -2,7 +2,7 @@ return {
 	defaults = { lazy = false },
 	install = {
 		missing = true,
-		colorscheme = { "sonokai", "habamax" },
+		colorscheme = { "moonfly", "habamax" },
 	},
 
 	ui = {

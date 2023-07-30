@@ -8,6 +8,12 @@ opt.list = true
 --opt.listchars:append("space:⋅")
 opt.listchars:append("eol:↴")
 
+-- disable showing modes in command line
+opt.showmode = false
+
+-- global statusline
+
+opt.laststatus = 3
 -- Enable mouse
 opt.mouse = "a"
 

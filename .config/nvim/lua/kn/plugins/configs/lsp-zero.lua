@@ -24,6 +24,8 @@ lsp.on_attach(function(client, bufnr)
 		vim.lsp.buf.code_action({ apply = true })
 	end, opts)
 	--vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action", opts)
+	vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
+	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 end)
 
 lsp.format_on_save({

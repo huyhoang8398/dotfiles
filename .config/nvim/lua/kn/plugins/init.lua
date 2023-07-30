@@ -26,6 +26,7 @@ local default_plugins = {
 					offsets = {
 						{
 							filetype = "NvimTree",
+							text = "Explorer",
 							separator = true,
 						},
 					},

@@ -10,7 +10,7 @@ local options = {
 		preserve_window_proportions = true,
 	},
 	git = {
-		enable = false,
+		enable = true,
 		ignore = true,
 	},
 	filesystem_watchers = {
@@ -31,11 +31,13 @@ local options = {
 		},
 
 		icons = {
+			webdev_colors = true,
+			git_placement = "before",
 			show = {
 				file = true,
 				folder = true,
 				folder_arrow = true,
-				git = false,
+				git = true,
 			},
 
 			glyphs = {

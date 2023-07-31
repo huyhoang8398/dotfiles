@@ -1,4 +1,4 @@
-local opts = require("kn.plugins.configs.lazy-nvim")
+local lazy_opts = require("kn.plugins.configs.lazy-nvim")
 local default_plugins = {
 	{
 		"bluz71/vim-moonfly-colors",
@@ -188,4 +188,4 @@ local default_plugins = {
 		end,
 	},
 }
-require("lazy").setup(default_plugins, opts)
+require("lazy").setup(default_plugins, lazy_opts)

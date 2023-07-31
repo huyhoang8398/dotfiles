@@ -180,5 +180,12 @@ local default_plugins = {
 			require("dap-python").setup(path)
 		end,
 	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+			require("kn.plugins.configs.autopairs")
+		end,
+	},
 }
 require("lazy").setup(default_plugins, opts)

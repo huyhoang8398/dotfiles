@@ -18,6 +18,7 @@ local default_plugins = {
 			require("bufferline").setup({
 				options = {
 					diagnostics = "nvim_lsp",
+					--separator_style = "slope",
 					diagnostics_update_in_insert = false,
 					diagnostics_indicator = function(count, level, diagnostics_dict, context)
 						local icon = level:match("error") and " " or " "
@@ -42,17 +43,11 @@ local default_plugins = {
 		opts = function()
 			return require("kn.plugins.configs.lualine")
 		end,
-		config = function(_, opts)
-			require("lualine").setup(opts)
-		end,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		opts = function()
 			return require("kn.plugins.configs.indent_blankline")
-		end,
-		config = function(_, opts)
-			require("indent_blankline").setup(opts)
 		end,
 	},
 
@@ -63,9 +58,6 @@ local default_plugins = {
 
 		opts = function()
 			return require("kn.plugins.configs.treesitter")
-		end,
-		config = function(_, opts)
-			require("nvim-treesitter.configs").setup(opts)
 		end,
 	},
 
@@ -98,10 +90,6 @@ local default_plugins = {
 
 		opts = function()
 			return require("kn.plugins.configs.nvimtree")
-		end,
-
-		config = function(_, opts)
-			require("nvim-tree").setup(opts)
 		end,
 	},
 	{
@@ -154,9 +142,6 @@ local default_plugins = {
 		"lewis6991/gitsigns.nvim",
 		opts = function()
 			return require("kn.plugins.configs.gitsigns")
-		end,
-		config = function(_, opts)
-			require("gitsigns").setup(opts)
 		end,
 	},
 	{

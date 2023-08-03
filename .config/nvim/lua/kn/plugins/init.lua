@@ -9,30 +9,19 @@ local default_plugins = {
 			require("kn.core.colorscheme")
 		end,
 	},
-	-- Bufferline --
+	-- Barbar tabsline --
 	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("bufferline").setup({
-				options = {
-					diagnostics = "nvim_lsp",
-					--separator_style = "slope",
-					diagnostics_update_in_insert = false,
-					diagnostics_indicator = function(count, level, diagnostics_dict, context)
-						local icon = level:match("error") and " " or " "
-						return " " .. icon .. count
-					end,
-					offsets = {
-						{
-							filetype = "NvimTree",
-							text = "Explorer",
-							separator = true,
-						},
-					},
-				},
-			})
+		"romgrk/barbar.nvim",
+		dependencies = {
+			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+		},
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+		version = "^1.0.0", -- optional: only update when a new 1.x version is released
+		opts = function()
+			return require("kn.plugins.configs.barbar")
 		end,
 	},
 
@@ -87,7 +76,10 @@ local default_plugins = {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-
+		init = function()
+			vim.g.loaded_netrw = 1
+			vim.g.loaded_netrwPlugin = 1
+		end,
 		opts = function()
 			return require("kn.plugins.configs.nvimtree")
 		end,

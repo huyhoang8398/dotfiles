@@ -10,9 +10,9 @@ local opts = {
 
 	-- Enable highlighting visible buffers
 	highlight_visible = true,
-	sidebar_filetypes = {
-		NvimTree = true,
-	},
+	--sidebar_filetypes = {
+	--	NvimTree = true,
+	--},
 }
 
 return opts

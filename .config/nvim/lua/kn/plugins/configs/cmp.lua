@@ -4,8 +4,8 @@ local cmp_action = require("lsp-zero").cmp_action()
 
 vim.tbl_map(function(type)
 	require("luasnip.loaders.from_" .. type).lazy_load()
-end, { "vscode" })
-require("luasnip").filetype_extend("python", { "python-docstring" })
+end, { "vscode", "snipmate", "lua" })
+require("luasnip").filetype_extend("python", { "pydoc" })
 require("luasnip").filetype_extend("sh", { "shelldoc" })
 
 cmp.setup({

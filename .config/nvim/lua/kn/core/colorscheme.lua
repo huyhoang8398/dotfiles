@@ -1,7 +1,13 @@
-vim.g.moonflyWinSeparator = 2
-vim.g.moonflyVirtualTextColor = true
-vim.g.moonflyUnderlineMatchParen = true
-vim.g.moonflyCursorColor = true
+local g = vim.g
+
+g.moonflyWinSeparator = 2
+g.moonflyVirtualTextColor = true
+g.moonflyUnderlineMatchParen = true
+g.moonflyCursorColor = true
+g.moonflyTransparent = true
+g.moonflyNormalFloat = true
+
+-- Overwrite folder color in nvimtree
 vim.api.nvim_create_autocmd("ColorScheme", {
 	pattern = "moonfly",
 	callback = function()

@@ -1,5 +1,5 @@
 -- LSP --
-local lsp = require("lsp-zero").preset({ float_border = "none", configure_diagnostics = false })
+local lsp = require("lsp-zero").preset({ float_border = "rounded", configure_diagnostics = true })
 lsp.set_sign_icons({
 	error = "✘",
 	warn = "▲",

@@ -50,7 +50,10 @@ keymap.set("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
 function _G.debug_python()
 	require("dap-python").test_method()
 end
-keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>")
+
+keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+keymap.set("n", "<leader>db", ":lua require'dapui'.toggle()<CR>")
 vim.api.nvim_set_keymap("n", "<leader>dpr", ":call v:lua.debug_python()<CR>", { noremap = true, silent = true })
 
 -- Barbar --

@@ -24,6 +24,7 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "nvim_lua" },
 		{ name = "path" },
+		{ name = "nvim_lsp_signature_help" },
 	},
 	mapping = {
 		["<CR>"] = cmp.mapping.confirm({ select = false }),

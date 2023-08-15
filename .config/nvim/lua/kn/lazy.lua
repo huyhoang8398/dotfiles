@@ -1,18 +1,18 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-		defaults = { lazy = false },
+	defaults = { lazy = false },
 	install = {
 		missing = true,
 		colorscheme = { "moonfly", "habamax" },
@@ -33,7 +33,6 @@ local opts = {
 		},
 		reset_packpath = true, -- reset the package path to improve startup time
 	},
-
 }
 local plugins = {
 	{
@@ -81,16 +80,9 @@ local plugins = {
 		branch = "v2.x",
 		dependencies = {
 			-- LSP Support
-			{
-				"neovim/nvim-lspconfig",
-			},
-			{ -- Optional
-				"williamboman/mason.nvim",
-				build = ":MasonUpdate", -- :MasonUpdate updates registry contents
-			},
-			{
-				"williamboman/mason-lspconfig.nvim",
-			}, -- Optional
+			{ "neovim/nvim-lspconfig" },
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
 			{
 				"jay-babu/mason-null-ls.nvim",
 				event = { "BufReadPre", "BufNewFile" },
@@ -117,9 +109,7 @@ local plugins = {
 			},
 		},
 	},
-	{
-		"lewis6991/gitsigns.nvim",
-	},
+	{ "lewis6991/gitsigns.nvim" },
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = "mfussenegger/nvim-dap",

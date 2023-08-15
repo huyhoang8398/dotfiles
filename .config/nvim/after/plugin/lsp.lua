@@ -85,4 +85,3 @@ cmp.setup({
 		["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
 	},
 })
-

@@ -1,6 +1,6 @@
 local HEIGHT_RATIO = 0.8 -- You can change this
 local WIDTH_RATIO = 0.5 -- You can change this too
-local options = {
+local opts = {
 	update_focused_file = {
 		enable = true,
 		update_root = false,
@@ -89,5 +89,4 @@ local options = {
 		},
 	},
 }
-
-return options
+require("nvim-tree").setup(opts)

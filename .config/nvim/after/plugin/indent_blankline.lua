@@ -3,4 +3,5 @@ local opts = {
 	show_current_context = true,
 	show_end_of_line = true,
 }
-return opts
+
+require("indent_blankline").setup(opts)

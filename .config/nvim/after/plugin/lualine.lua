@@ -30,4 +30,4 @@ local opts = {
 	extensions = { "nvim-tree" },
 }
 
-return opts
+require('lualine').setup(opts)

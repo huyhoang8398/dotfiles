@@ -1,56 +1,60 @@
-local lazy_opts = require("kn.plugins.configs.lazy-nvim")
-local default_plugins = {
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+local opts = {
+		defaults = { lazy = false },
+	install = {
+		missing = true,
+		colorscheme = { "moonfly", "habamax" },
+	},
+
+	ui = {
+		icons = {
+			ft = "",
+			lazy = "󰂠 ",
+			loaded = "",
+			not_loaded = "",
+		},
+	},
+
+	performance = {
+		cache = {
+			enabled = true,
+		},
+		reset_packpath = true, -- reset the package path to improve startup time
+	},
+
+}
+local plugins = {
 	{
 		"bluz71/vim-moonfly-colors",
 		name = "moonfly",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			require("kn.core.colorscheme")
-		end,
 	},
-	-- Barbar tabsline --
-	{
-		"romgrk/barbar.nvim",
-		dependencies = {
-			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
-		},
-		init = function()
-			vim.g.barbar_auto_setup = false
-		end,
-		version = "^1.0.0", -- optional: only update when a new 1.x version is released
-		opts = function()
-			return require("kn.plugins.configs.barbar")
-		end,
-	},
-
 	-- lualine (status line) --
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = function()
-			return require("kn.plugins.configs.lualine")
-		end,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		opts = function()
-			return require("kn.plugins.configs.indent_blankline")
-		end,
 	},
 
 	-- Tree sitter --
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-
-		opts = function()
-			return require("kn.plugins.configs.treesitter")
-		end,
-		config = function(_, opts)
-			require("nvim-treesitter.configs").setup(opts)
-		end,
 	},
 
 	-- Telescope --
@@ -62,14 +66,6 @@ local default_plugins = {
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		},
 		cmd = "Telescope",
-
-		opts = function()
-			return require("kn.plugins.configs.telescope")
-		end,
-		config = function(_, opts)
-			require("telescope").setup(opts)
-			require("telescope").load_extension("fzf")
-		end,
 	},
 	-- Nvim-tree --
 	{
@@ -79,13 +75,6 @@ local default_plugins = {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-		init = function()
-			vim.g.loaded_netrw = 1
-			vim.g.loaded_netrwPlugin = 1
-		end,
-		opts = function()
-			return require("kn.plugins.configs.nvimtree")
-		end,
 	},
 	{
 		"VonHeikemen/lsp-zero.nvim",
@@ -98,9 +87,6 @@ local default_plugins = {
 			{ -- Optional
 				"williamboman/mason.nvim",
 				build = ":MasonUpdate", -- :MasonUpdate updates registry contents
-				config = function()
-					require("mason").setup()
-				end,
 			},
 			{
 				"williamboman/mason-lspconfig.nvim",
@@ -130,25 +116,13 @@ local default_plugins = {
 				},
 			},
 		},
-		config = function()
-			require("kn.plugins.configs.lsp-zero")
-			require("kn.plugins.configs.mason-lspconfig")
-			require("kn.plugins.configs.cmp")
-			require("kn.plugins.configs.mason-null-ls")
-		end,
 	},
 	{
 		"lewis6991/gitsigns.nvim",
-		opts = function()
-			return require("kn.plugins.configs.gitsigns")
-		end,
 	},
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = "mfussenegger/nvim-dap",
-		config = function()
-			require("kn.plugins.configs.nvim-dap-ui")
-		end,
 	},
 	{
 		"mfussenegger/nvim-dap",
@@ -159,17 +133,10 @@ local default_plugins = {
 			"mfussenegger/nvim-dap",
 			"rcarriga/nvim-dap-ui",
 		},
-		config = function(_, opts)
-			local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-			require("dap-python").setup(path)
-		end,
 	},
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		config = function()
-			require("kn.plugins.configs.autopairs")
-		end,
 	},
 }
-require("lazy").setup(default_plugins, lazy_opts)
+require("lazy").setup(plugins, opts)

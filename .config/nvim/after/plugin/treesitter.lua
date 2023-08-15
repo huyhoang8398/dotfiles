@@ -13,4 +13,5 @@ local opts = {
 		"yaml",
 	},
 }
-return opts
+
+require("nvim-treesitter.configs").setup(opts)

@@ -114,9 +114,7 @@ local plugins = {
 		"rcarriga/nvim-dap-ui",
 		dependencies = "mfussenegger/nvim-dap",
 	},
-	{
-		"mfussenegger/nvim-dap",
-	},
+	{ "mfussenegger/nvim-dap" },
 	{
 		"mfussenegger/nvim-dap-python",
 		dependencies = {

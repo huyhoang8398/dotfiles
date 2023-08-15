@@ -63,9 +63,6 @@ opt.fillchars = {
 	verthoriz = "╋",
 }
 
--- Python --
-vim.g.python3_host_prog = "/Users/kn/.pyenv/shims/python"
-
 -- Nvimtree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

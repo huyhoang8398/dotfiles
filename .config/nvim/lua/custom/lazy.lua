@@ -108,7 +108,14 @@ local plugins = {
 		dependencies = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
+			{
+				"williamboman/mason.nvim",
+				opts = {
+					ui = {
+						border = "single",
+					},
+				},
+			},
 			{
 				"williamboman/mason-lspconfig.nvim",
 				config = function()

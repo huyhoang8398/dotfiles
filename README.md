@@ -1,1 +1,1 @@
-![preview](static/showcase.png)
+![preview](static/nvim.png)

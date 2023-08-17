@@ -71,7 +71,7 @@ local plugins = {
 	-- Tree sitter --
 	{
 		"nvim-treesitter/nvim-treesitter",
-		tag = "v0.9.0",
+		tag = "v0.9.1",
 		build = ":TSUpdate",
 		event = "BufReadPost",
 		config = function()

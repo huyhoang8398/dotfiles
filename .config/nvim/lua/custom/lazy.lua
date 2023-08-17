@@ -1,3 +1,4 @@
+-- Bootstrap and install lazy.nvim as the Neovim plugin manager.
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -12,13 +13,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-	defaults = { lazy = false },
 	install = {
 		missing = true,
 		colorscheme = { "moonfly", "habamax" },
 	},
 
 	ui = {
+		border = "single",
 		icons = {
 			ft = "",
 			lazy = "󰂠 ",
@@ -28,10 +29,17 @@ local opts = {
 	},
 
 	performance = {
-		cache = {
-			enabled = true,
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"netrwPlugin",
+				"rplugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
 		},
-		reset_packpath = true, -- reset the package path to improve startup time
 	},
 }
 local plugins = {
@@ -40,31 +48,47 @@ local plugins = {
 		name = "moonfly",
 		lazy = false,
 		priority = 1000,
+		config = function()
+			require("config.moonfly")
+		end,
 	},
 	-- lualine (status line) --
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("config.lualine")
+		end,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
+		event = "BufReadPre",
+		config = function()
+			require("config.indent-blankline")
+		end,
 	},
 
 	-- Tree sitter --
 	{
 		"nvim-treesitter/nvim-treesitter",
+		tag = "v0.9.0",
 		build = ":TSUpdate",
+		event = "BufReadPost",
+		config = function()
+			require("config.treesitter")
+		end,
 	},
 
 	-- Telescope --
 	{
 		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
 		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		},
-		cmd = "Telescope",
+		config = function()
+			require("config.telescope")
+		end,
 	},
 	-- Nvim-tree --
 	{
@@ -74,6 +98,9 @@ local plugins = {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
+		config = function()
+			require("config.nvim-tree")
+		end,
 	},
 	{
 		"VonHeikemen/lsp-zero.nvim",
@@ -82,7 +109,12 @@ local plugins = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
+			{
+				"williamboman/mason-lspconfig.nvim",
+				config = function()
+					require("config.mason-lspconfig")
+				end,
+			},
 			{
 				"jay-babu/mason-null-ls.nvim",
 				event = { "BufReadPre", "BufNewFile" },
@@ -90,16 +122,24 @@ local plugins = {
 					"williamboman/mason.nvim",
 					"jose-elias-alvarez/null-ls.nvim",
 				},
+				config = function()
+					require("config.mason-null-ls")
+				end,
 			},
 
 			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+			{
+				"hrsh7th/nvim-cmp",
+				dependencies = {
+					"hrsh7th/cmp-nvim-lua",
+					"hrsh7th/cmp-buffer",
+					"hrsh7th/cmp-path",
+					"hrsh7th/cmp-nvim-lsp",
+					"saadparwaiz1/cmp_luasnip",
+					"hrsh7th/cmp-nvim-lsp-signature-help",
+				},
+				event = "InsertEnter",
+			},
 			{
 				"L3MON4D3/LuaSnip",
 				build = "make install_jsregexp",
@@ -108,23 +148,42 @@ local plugins = {
 				},
 			},
 		},
+		config = function()
+			require("config.lsp")
+		end,
 	},
-	{ "lewis6991/gitsigns.nvim" },
+	{
+		"lewis6991/gitsigns.nvim",
+		event = "BufReadPre",
+		config = function()
+			require("config.gitsigns")
+		end,
+	},
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = "mfussenegger/nvim-dap",
+		config = function()
+			require("config.nvim-dap-ui")
+		end,
 	},
 	{ "mfussenegger/nvim-dap" },
 	{
 		"mfussenegger/nvim-dap-python",
+		ft = "python",
 		dependencies = {
 			"mfussenegger/nvim-dap",
 			"rcarriga/nvim-dap-ui",
 		},
+		config = function()
+			require("config.nvim-dap-python")
+		end,
 	},
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
+		config = function()
+			require("config.autopairs")
+		end,
 	},
 	{ "mbbill/undotree" },
 }

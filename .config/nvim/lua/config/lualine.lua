@@ -1,3 +1,5 @@
+local lualine = require("lualine")
+
 local lualine_sections = {
 	lualine_a = { "mode" },
 	lualine_b = { "branch", "b:gitsigns_status" },
@@ -30,4 +32,4 @@ local opts = {
 	extensions = { "nvim-tree" },
 }
 
-require("lualine").setup(opts)
+lualine.setup(opts)

@@ -1,3 +1,4 @@
+local nvim_tree = require("nvim-tree")
 local HEIGHT_RATIO = 0.8 -- You can change this
 local WIDTH_RATIO = 0.5 -- You can change this too
 local opts = {
@@ -89,4 +90,8 @@ local opts = {
 		},
 	},
 }
-require("nvim-tree").setup(opts)
+nvim_tree.setup(opts)
+
+-- Mapping
+local map = vim.keymap.set
+map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")

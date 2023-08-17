@@ -1,5 +1,6 @@
 local opt = vim.opt
 local wo = vim.wo
+
 -- Colorscheme requirement --
 opt.termguicolors = true
 

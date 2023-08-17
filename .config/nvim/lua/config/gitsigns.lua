@@ -1,3 +1,4 @@
+local gitsigns = require("gitsigns")
 local opts = {
 	signs = {
 		add = { text = "│" },
@@ -65,4 +66,4 @@ local opts = {
 	end,
 }
 
-require("gitsigns").setup(opts)
+gitsigns.setup(opts)

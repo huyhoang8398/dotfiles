@@ -4,9 +4,9 @@
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # Golang
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+#export GOPATH=$HOME/go
+#export GOROOT="$(brew --prefix golang)/libexec"
+#export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kn/.oh-my-zsh"
@@ -35,16 +35,15 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='nvim'
+    export EDITOR='vim'
 else
-    export EDITOR='nvim'
+    export EDITOR='vim'
 fi
 
 # Alias 
 alias cl="clear"
 alias c="code"
 alias nv="nvim"
-alias vim="nvim"
 alias gcl='git clone --recurse-submodules'
 alias ga="git add"
 alias gs="git status"
@@ -60,3 +59,4 @@ eval "$(starship init zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

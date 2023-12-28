@@ -127,7 +127,7 @@ local plugins = {
 				event = { "BufReadPre", "BufNewFile" },
 				dependencies = {
 					"williamboman/mason.nvim",
-					"jose-elias-alvarez/null-ls.nvim",
+					"nvimtools/none-ls.nvim",
 				},
 				config = function()
 					require("config.mason-null-ls")

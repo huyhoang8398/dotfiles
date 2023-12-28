@@ -4,9 +4,9 @@
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # Golang
-#export GOPATH=$HOME/go
+export GOPATH=$HOME/go
 #export GOROOT="$(brew --prefix golang)/libexec"
-#export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kn/.oh-my-zsh"
@@ -60,3 +60,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

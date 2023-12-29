@@ -51,6 +51,7 @@ alias gaa="git add ."
 alias gc="git commit -m"
 alias gp="git push"
 alias gcl='git clone --recurse-submodules'
+alias vim='nvim'
 
 # Starship promt
 eval "$(starship init zsh)"

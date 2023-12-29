@@ -22,7 +22,7 @@ dap.configurations.sh = {
 		program = "${file}",
 		cwd = "${workspaceFolder}",
 		pathCat = "cat",
-		pathBash = "/bin/bash",
+		pathBash = "/usr/local/bin/bash",
 		pathMkfifo = "mkfifo",
 		pathPkill = "pkill",
 		args = {},
@@ -47,3 +47,4 @@ end
 map("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
 map("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
 map("n", "<leader>db", ":lua require'dapui'.toggle()<CR>")
+map("n", "<leader>k", ":lua require'dapui'.eval()<CR>")

@@ -62,6 +62,8 @@ local plugins = {
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
+		dependencies = { "HiPhish/rainbow-delimiters.nvim" },
+		main = "ibl",
 		event = "BufReadPre",
 		config = function()
 			require("config.indent-blankline")

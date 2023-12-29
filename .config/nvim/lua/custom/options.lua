@@ -36,6 +36,7 @@ opt.expandtab = true
 -- Word wrap / line wrap --
 wo.wrap = true
 wo.linebreak = true
+opt.showbreak = "↳" -- Use this to wrap long lines
 
 -- Hide diagnostics --
 --vim.diagnostic.config({ virtual_text = false })

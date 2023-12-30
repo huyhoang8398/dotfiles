@@ -195,5 +195,14 @@ local plugins = {
 		end,
 	},
 	{ "mbbill/undotree" },
+	-- Harpoon
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("config.harpoon")
+		end,
+	},
 }
 require("lazy").setup(plugins, opts)

@@ -68,3 +68,4 @@ opt.fillchars = {
 -- Nvimtree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.env.PYENV_VERSION = vim.fn.system("pyenv version"):match("(%S+)%s+%(.-%)")

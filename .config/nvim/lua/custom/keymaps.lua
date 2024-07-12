@@ -20,6 +20,9 @@ api("x", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 api("v", "<Down>", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
 api("v", "<Up>", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 
+-- Combine 0 and ^
+map('n', '0', "getline('.')[0 : col('.') - 2] =~# '^\\s\\+$' ? '0' : '^'", { silent = true, expr = true })
+
 --- Vim toggle diagnostics ---
 function _G.toggle_diagnostics()
     if vim.diagnostic.config().virtual_text then

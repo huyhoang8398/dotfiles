@@ -1,8 +1,9 @@
 local treesitter = require("nvim-treesitter.configs")
 local opts = {
-    highlight = { enable = true },
-    indent = { enable = true },
     ensure_installed = {
+        "vimdoc",
+        "luadoc",
+        "vim",
         "dockerfile",
         "go",
         "bash",
@@ -13,6 +14,9 @@ local opts = {
         "python",
         "yaml",
     },
+    highlight = { enable = true },
+    indent = { enable = true },
+    sync_install = false,
 }
 
 treesitter.setup(opts)

@@ -1,31 +1,31 @@
 local telescope = require("telescope")
 local actions = require("telescope.actions")
 local opts = {
-	defaults = {
-		hl_result_eol = false,
-		layout_config = {
-			height = 0.8,
-			prompt_position = "top",
-			preview_width = 0.5,
-			width = 0.9,
-		},
-		mappings = {
-			i = {
-				["<esc>"] = actions.close,
-				["<C-f>"] = actions.results_scrolling_down,
-				["<C-b>"] = actions.results_scrolling_up,
-			},
-		},
-		multi_icon = "✚",
-		prompt_prefix = "❯ ",
-		selection_caret = "▶ ",
-		sorting_strategy = "ascending",
-	},
-	pickers = {
-		buffers = {
-			show_all_buffers = true,
-		},
-	},
+    defaults = {
+        hl_result_eol = false,
+        layout_config = {
+            height = 0.8,
+            prompt_position = "top",
+            preview_width = 0.5,
+            width = 0.9,
+        },
+        mappings = {
+            i = {
+                ["<esc>"] = actions.close,
+                ["<C-f>"] = actions.results_scrolling_down,
+                ["<C-b>"] = actions.results_scrolling_up,
+            },
+        },
+        multi_icon = "✚",
+        prompt_prefix = "❯ ",
+        selection_caret = "▶ ",
+        sorting_strategy = "ascending",
+    },
+    pickers = {
+        buffers = {
+            show_all_buffers = true,
+        },
+    },
 }
 telescope.setup(opts)
 telescope.load_extension("fzf")

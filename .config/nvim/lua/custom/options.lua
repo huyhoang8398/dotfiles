@@ -56,13 +56,13 @@ opt.smartcase = true
 
 -- Moonfly --
 opt.fillchars = {
-	horiz = "━",
-	horizup = "┻",
-	horizdown = "┳",
-	vert = "┃",
-	vertleft = "┫",
-	vertright = "┣",
-	verthoriz = "╋",
+    horiz = "━",
+    horizup = "┻",
+    horizdown = "┳",
+    vert = "┃",
+    vertleft = "┫",
+    vertright = "┣",
+    verthoriz = "╋",
 }
 
 -- Nvimtree

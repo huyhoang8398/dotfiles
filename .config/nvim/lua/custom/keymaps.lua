@@ -22,12 +22,13 @@ api("v", "<Up>", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 
 --- Vim toggle diagnostics ---
 function _G.toggle_diagnostics()
-	if vim.diagnostic.config().virtual_text then
-		vim.diagnostic.config({ virtual_text = false })
-	else
-		vim.diagnostic.config({ virtual_text = true })
-	end
+    if vim.diagnostic.config().virtual_text then
+        vim.diagnostic.config({ virtual_text = false })
+    else
+        vim.diagnostic.config({ virtual_text = true })
+    end
 end
+
 api("n", "<leader>tt", ":call v:lua.toggle_diagnostics()<CR>", { noremap = true, silent = true })
 
 -- Buffers --

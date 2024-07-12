@@ -209,7 +209,7 @@ local plugins = {
                 vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
                 vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
                 vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-                vim.keymap.set("n", "<leader>ff", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
+                --vim.keymap.set("n", "<leader>ff", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
                 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 
                 -- Disable semantic highlights
@@ -304,6 +304,13 @@ local plugins = {
         config = function()
             require("config.harpoon")
         end,
+    },
+    {
+        'stevearc/conform.nvim',
+        opts = {},
+        config = function()
+            require("config.conform")
+        end
     },
 }
 require("lazy").setup(plugins, opts)

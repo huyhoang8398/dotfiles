@@ -279,6 +279,16 @@ local plugins = {
         end,
     },
     {
+        "jay-babu/mason-nvim-dap.nvim",
+        config = function()
+            require("mason").setup()
+            require('mason-nvim-dap').setup({
+                ensure_installed = { 'bash', 'python' },
+                handlers = {}, -- sets up dap in the predefined manner
+            })
+        end,
+    },
+    {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = function()

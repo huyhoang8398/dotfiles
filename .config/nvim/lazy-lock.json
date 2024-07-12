@@ -14,6 +14,7 @@
   "lsp-zero.nvim": { "branch": "v4.x", "commit": "6cd3605eae4c36ff35f38be3b5d1d56910bb941d" },
   "lualine.nvim": { "branch": "master", "commit": "6a40b530539d2209f7dc0492f3681c8c126647ad" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "37a336b653f8594df75c827ed589f1c91d91ff6c" },
+  "mason-nvim-dap.nvim": { "branch": "main", "commit": "4ba55f9755ebe8297d92c419b90a946123292ae6" },
   "mason.nvim": { "branch": "main", "commit": "f96a31855fa8aea55599cea412fe611b85a874ed" },
   "moonfly": { "branch": "master", "commit": "31f65a1bbddd7de9a639d8d0e32b8066c0de1da1" },
   "nvim-autopairs": { "branch": "master", "commit": "78a4507bb9ffc9b00f11ae0ac48243d00cb9194d" },

@@ -35,5 +35,5 @@ end
 api("n", "<leader>tt", ":call v:lua.toggle_diagnostics()<CR>", { noremap = true, silent = true })
 
 -- Buffers --
---map("n", "<leader>x", ":enew<bar>bd #<CR>")
---map("n", "<leader>t", ":tabnew<CR>")
+map("n", "<leader>bd", ":bd<CR>")
+-- map("n", "<leader>bt", ":tabnew<CR>")

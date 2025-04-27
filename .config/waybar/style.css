@@ -1,0 +1,118 @@
+/* General Style */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 15px;
+    min-height: 0;
+}
+
+/* Waybar window */
+window#waybar {
+    background: rgba(30, 30, 30, 0.9);
+    /* Slightly transparent bar */
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+/* Modules – no background, but keep padding for spacing */
+#workspaces,
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#backlight,
+#custom-power,
+#wlr-taskbar {
+    padding: 0 10px;
+    margin: 0 6px;
+}
+
+/* Specific rule to reduce padding for right-aligned modules */
+#pulseaudio,
+#backlight,
+#battery,
+#network,
+#tray,
+#clock,
+#custom-power {
+    padding-right: 6px; /* Reduce padding on the right side */
+}
+
+/* Hover effects */
+#workspaces button:hover,
+#clock:hover,
+#battery:hover,
+#network:hover,
+#pulseaudio:hover,
+#tray:hover,
+#backlight:hover,
+#custom-launcher:hover,
+#custom-power:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+}
+
+/* Power icon */
+#custom-power {
+    font-size: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #ff5c5c;
+}
+
+/* Clock */
+#clock {
+    font-weight: bold;
+    color: #EBCB8B;
+}
+
+/* Battery states */
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+#battery.charging {
+    color: lightgreen;
+}
+
+/* Taskbar buttons */
+#wlr-taskbar {
+    padding: 0 4px;
+}
+
+#wlr-taskbar button {
+    background: transparent;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+#wlr-taskbar button.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Tray */
+#tray {
+    padding: 0 5px;
+}
+
+#tray>.item {
+    margin: 0 4px;
+}
+
+/* Audio muted */
+#pulseaudio.muted {
+    color: gray;
+}
+
+/* Network disconnected */
+#network.disconnected {
+    color: orange;
+}

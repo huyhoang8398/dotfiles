@@ -1,21 +1,16 @@
 sort=-time
+margin=5
 layer=top
-background-color=#061115
+background-color=#080808
 width=400
 height=200
-border-size=2
-border-color=#061115
+border-size=4
+border-color=#323437
 icons=1
 max-icon-size=64
 default-timeout=5000
 ignore-timeout=1
-font=JetBrains Mono 12
-
-[urgency=low]
-border-color=#061115
-
-[urgency=normal]
-border-color=#061115
+font=JetBrainsMonoNerdFont 12
 
 [urgency=high]
 border-color=#DF5B61

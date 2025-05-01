@@ -1,8 +1,5 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kn/.oh-my-zsh"
-export PATH="/home/kn/script":$PATH
 
 # Plugins
 #plugins=(git)
@@ -18,28 +15,21 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='vim'
 fi
 
 # Other Plugins
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
 
 # Useful script
-source /home/kn/script/open.sh
-
-# Random fortune
-#fortune | pokemonsay
-
-# heroku autocomplete setup
-#HEROKU_AC_ZSH_SETUP_PATH=/home/huyhoang8398/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+#source /home/kn/script/open.sh
 
 #zsh uses square brackets for globbing / pattern matching.
 alias pip='noglob pip'
-alias discord='discord --no-sandbox'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -62,12 +52,5 @@ alias gs="git status"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 export TERM=xterm-256color
-
-. /etc/zsh_command_not_found
-
+source /usr/share/doc/pkgfile/command-not-found.zsh

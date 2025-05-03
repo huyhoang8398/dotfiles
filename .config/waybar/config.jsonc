@@ -3,20 +3,20 @@
     "spacing": 0,
     "height": 0,
 
-    "margin-top": 8,
-    "margin-right": 8,
+    "margin-top": 5,
+    "margin-right": 5,
     "margin-bottom": 0,
-    "margin-left": 8,
+    "margin-left": 5,
 
     "modules-left": [
         "hyprland/workspaces"
     ],
 
     "modules-center": [
-        "clock"
     ],
 
     "modules-right": [
+	"idle_inhibitor",
         "pulseaudio#output",
         "pulseaudio#input",
 	"backlight",
@@ -25,11 +25,20 @@
         "cpu",
         "memory",
         "battery",
+        "clock",
         "tray"
     ],
 
     "hyprland/workspaces": {
 	"format": "{icon}"
+    },
+    "idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+		"activated": "có làm thì mới có ăn 🔥",
+		"deactivated": "chilling cùng a Bảnh 🧘"
+	},
+	"timeout": 30.5
     },
 
     "tray": {
@@ -38,13 +47,14 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p - %a, %d %b %Y}",
-        "tooltip": false
+        "format": "{:%H:%M - %a, %d %b %Y}",
+        "tooltip": true,
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
     "cpu": {
         "format": "cpu {usage}%",
-        "interval": 2,
+        "interval": 5,
 
         "states": {
             "critical": 90
@@ -53,7 +63,7 @@
 
     "memory": {
         "format": "mem {percentage}%",
-        "interval": 2,
+        "interval": 5,
 
         "states": {
             "critical": 80
@@ -91,6 +101,7 @@
         "tooltip": false
     },
     "pulseaudio#input": {
+        "scroll-step": 5,
     	"format-source": "mic {volume}%",
     	"format-source-muted": "mic muted",
     	"format": "{format_source}",

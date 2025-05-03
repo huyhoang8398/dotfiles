@@ -25,6 +25,7 @@ tooltip {
 #memory,
 #battery,
 #network,
+#idle_inhibitor,
 #pulseaudio {
     margin: 6px 6px 6px 0px;
     padding: 2px 8px;
@@ -77,6 +78,18 @@ tooltip {
 #pulseaudio {
     background-color: #ddc7a1;
     border: 2px solid #ddc7a1;
+    color: #1d2021;
+}
+
+#idle_inhibitor.deactivated {
+    background-color: #b2ceee;
+    border: 2px solid #b2ceee;
+    color: #1d2021;
+}
+
+#idle_inhibitor.activated {
+    background-color: #f4a261;
+    border: 2px solid #f4a261;
     color: #1d2021;
 }
 

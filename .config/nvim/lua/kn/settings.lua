@@ -44,9 +44,6 @@ opt.showbreak = "↳" -- Use this to wrap long lines
 -- Copy to system clipboard --
 opt.clipboard = "unnamedplus"
 
--- Highlight on yank --
-vim.cmd("au TextYankPost * lua vim.highlight.on_yank {timeout = 250, on_visual = true}")
-
 -- Backspace --
 opt.backspace = "indent,eol,start"
 
@@ -54,18 +51,4 @@ opt.backspace = "indent,eol,start"
 opt.ignorecase = true
 opt.smartcase = true
 
--- Moonfly --
-opt.fillchars = {
-	horiz = "━",
-	horizup = "┻",
-	horizdown = "┳",
-	vert = "┃",
-	vertleft = "┫",
-	vertright = "┣",
-	verthoriz = "╋",
-}
-
--- Nvimtree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 vim.env.PYENV_VERSION = vim.fn.system("pyenv version"):match("(%S+)%s+%(.-%)")

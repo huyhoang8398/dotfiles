@@ -1,9 +1,12 @@
-local colorscheme = vim.cmd.colorscheme
-local fn = vim.fn
+local load = function(mod)
+  package.loaded[mod] = nil
+  require(mod)
+end
 
--- Enable the Lua loader byte-compilation cache.
-vim.loader.enable()
+load('kn.settings')
+load('kn.diagnostics')
+load('kn.commands')
+load('kn.keymaps')
+require('kn.plugins')
 
-require("custom.options")
-require("custom.keymaps")
-require("custom.lazy") -- Plugin Manager
+pcall(vim.cmd.colorscheme, 'rose-pine')

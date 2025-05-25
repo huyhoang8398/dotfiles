@@ -28,6 +28,7 @@ sign_define('Hint', opts.signs.text[levels.HINT])
 sign_define('Info', opts.signs.text[levels.INFO])
 
 vim.keymap.set('n', '<C-w>d', '<cmd>lua vim.diagnostic.open_float()<cr>')
+vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
 vim.keymap.set('n', '<C-w><C-d>', '<cmd>lua vim.diagnostic.open_float()<cr>')
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
 vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')

@@ -1,118 +1,117 @@
-local Plugin = {'neovim/nvim-lspconfig'}
+local Plugin = { 'neovim/nvim-lspconfig' }
 local user = {}
 
-Plugin.dependencies =  {
-  {'hrsh7th/cmp-nvim-lsp'},
-  {'mason-org/mason.nvim'},
-  {'mason-org/mason-lspconfig.nvim'},
+Plugin.dependencies = {
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'mason-org/mason.nvim' },
+    { 'mason-org/mason-lspconfig.nvim' },
 }
 
-Plugin.cmd = {'LspInfo', 'LspInstall', 'LspUnInstall'}
+Plugin.cmd = { 'LspInfo', 'LspInstall', 'LspUnInstall' }
 
-Plugin.event = {'BufReadPre', 'BufNewFile'}
+Plugin.event = { 'BufReadPre', 'BufNewFile' }
 
 if vim.fn.has('nvim-0.10') == 0 then
-  -- Last version that supports Neovim v0.9
-  Plugin.tag = 'v1.8.0'
-  Plugin.pin = true
+    -- Last version that supports Neovim v0.9
+    Plugin.tag = 'v1.8.0'
+    Plugin.pin = true
 end
 
 function Plugin.config()
-  if vim.fn.has('nvim-0.11') == 0 then
-    user.compat_09()
-    user.legacy_api = true
-  end
-
-  user.lsp_capabilities()
-
-  local lspconfig = require('lspconfig')
-  local group = vim.api.nvim_create_augroup('lsp_cmds', {clear = true})
-
-  local setup = function(server, opts)
-    if user.legacy_api then
-      lspconfig[server].setup(opts or {})
-      return
+    if vim.fn.has('nvim-0.11') == 0 then
+        user.compat_09()
+        user.legacy_api = true
     end
 
-    if opts then
-      vim.lsp.config(server, opts)
+    user.lsp_capabilities()
+
+    local lspconfig = require('lspconfig')
+    local group = vim.api.nvim_create_augroup('lsp_cmds', { clear = true })
+
+    local setup = function(server, opts)
+        if user.legacy_api then
+            lspconfig[server].setup(opts or {})
+            return
+        end
+
+        if opts then
+            vim.lsp.config(server, opts)
+        end
+
+        vim.lsp.enable(server)
     end
 
-    vim.lsp.enable(server)
-  end
+    vim.api.nvim_create_autocmd('LspAttach', {
+        group = group,
+        desc = 'LSP actions',
+        callback = user.on_attach
+    })
 
-  vim.api.nvim_create_autocmd('LspAttach', {
-    group = group,
-    desc = 'LSP actions',
-    callback = user.on_attach
-  })
+    local installed_servers = require('mason-lspconfig').get_installed_servers
+    for _, server in ipairs(installed_servers()) do
+        local opts = nil
 
-  local installed_servers = require('mason-lspconfig').get_installed_servers
-  for _, server in ipairs(installed_servers()) do
-    local opts = nil
+        if server == 'lua_ls' then
+            -- if you install the language server for lua it will
+            -- load the config from lua/plugins/lsp/lua_ls.lua
+            opts = require('plugins.lsp.lua_ls')
+        end
 
-    if server == 'lua_ls' then
-      -- if you install the language server for lua it will
-      -- load the config from lua/plugins/lsp/lua_ls.lua
-      opts = require('plugins.lsp.lua_ls')
+        setup(server, opts)
     end
-
-    setup(server, opts)
-  end
 end
 
 function user.on_attach(event)
-  local opts = {buffer = event.buf}
+    local opts = { buffer = event.buf }
 
-  -- You can search each function in the help page.
-  -- For example :help vim.lsp.buf.hover()
+    -- You can search each function in the help page.
+    -- For example :help vim.lsp.buf.hover()
 
-  -- These keymaps will become defaults after Neovim v0.11
-  -- I've added them here for backwards compatibility
-  vim.keymap.set('n', 'grr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
-  vim.keymap.set('n', 'gri', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-  vim.keymap.set('n', 'grn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-  vim.keymap.set('n', 'gra', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-  vim.keymap.set('n', 'gO', '<cmd>lua vim.lsp.buf.document_symbol()<cr>', opts)
+    -- These keymaps will become defaults after Neovim v0.11
+    -- I've added them here for backwards compatibility
+    vim.keymap.set('n', 'grr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+    vim.keymap.set('n', 'gri', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+    vim.keymap.set('n', 'grn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+    vim.keymap.set('n', 'gra', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+    vim.keymap.set('n', 'gO', '<cmd>lua vim.lsp.buf.document_symbol()<cr>', opts)
 
-  -- These are custom keymaps
-  vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-  vim.keymap.set('n', 'grt', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
-  vim.keymap.set('n', 'grd', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-  vim.keymap.set({'n', 'x'}, 'gq', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+    -- These are custom keymaps
+    vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+    vim.keymap.set('n', 'grt', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
+    vim.keymap.set('n', 'grd', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
+    vim.keymap.set({ 'n', 'x' }, 'gq', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
 
-  -- note: border style is only effective in neovim v0.11
-  -- below that version the style is configured by the handlers, see user.compat_09()
-  vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover({border = "rounded"})<cr>', opts)
-  vim.keymap.set({'i', 's'}, '<C-s>', '<cmd>lua vim.lsp.buf.signature_help({border = "rounded"})<cr>', opts)
+    -- note: border style is only effective in neovim v0.11
+    -- below that version the style is configured by the handlers, see user.compat_09()
+    vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover({border = "rounded"})<cr>', opts)
+    vim.keymap.set({ 'i', 's' }, '<C-s>', '<cmd>lua vim.lsp.buf.signature_help({border = "rounded"})<cr>', opts)
 end
 
 function user.compat_09()
-  vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-    vim.lsp.handlers.hover,
-    {border = 'rounded'}
-  )
+    vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+        vim.lsp.handlers.hover,
+        { border = 'rounded' }
+    )
 
-  vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-    vim.lsp.handlers.signature_help,
-    {border = 'rounded'}
-  )
+    vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+        vim.lsp.handlers.signature_help,
+        { border = 'rounded' }
+    )
 end
 
 function user.lsp_capabilities()
-  local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-  local lc_defaults = require('lspconfig').util.default_config
+    local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+    local lc_defaults = require('lspconfig').util.default_config
 
-  lc_defaults.capabilities = vim.tbl_deep_extend(
-    'force',
-    lc_defaults.capabilities,
-    cmp_capabilities
-  )
+    lc_defaults.capabilities = vim.tbl_deep_extend(
+        'force',
+        lc_defaults.capabilities,
+        cmp_capabilities
+    )
 
-  if vim.lsp.config then
-    vim.lsp.config('*', {capabilities = cmp_capabilities})
-  end
+    if vim.lsp.config then
+        vim.lsp.config('*', { capabilities = cmp_capabilities })
+    end
 end
-
 
 return Plugin

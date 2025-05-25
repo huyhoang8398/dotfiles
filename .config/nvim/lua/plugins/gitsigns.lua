@@ -1,6 +1,6 @@
-local Plugin = {'lewis6991/gitsigns.nvim'}
+local Plugin = { 'lewis6991/gitsigns.nvim' }
 
-Plugin.event = {'BufReadPre', 'BufNewFile'}
+Plugin.event = { 'BufReadPre', 'BufNewFile' }
 
 Plugin.opts = {
     signs = {

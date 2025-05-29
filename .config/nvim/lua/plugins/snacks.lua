@@ -18,6 +18,9 @@ Plugin.opts = {
         enabled = true,
         icon = '❯',
     },
+    image = {
+        enabled = true,
+    },
     explorer = {
         enabled = true,
         replace_netrw = true,

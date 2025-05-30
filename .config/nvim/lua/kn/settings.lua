@@ -19,7 +19,7 @@ opt.laststatus = 3
 opt.mouse = "a"
 
 -- Highlight cursor line
-opt.cursorline = true
+-- opt.cursorline = true
 
 -- Character limit indicator
 opt.colorcolumn = "88"

@@ -2,78 +2,73 @@
     "layer": "top",
     "spacing": 0,
     "height": 0,
-
     "margin-top": 5,
-    "margin-right": 5,
+    "margin-right": 80,
     "margin-bottom": 0,
-    "margin-left": 5,
-
+    "margin-left": 80,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
-
-    "modules-center": [
-    ],
-
+    "modules-center": [],
     "modules-right": [
-	"idle_inhibitor",
+        "idle_inhibitor",
         "pulseaudio#output",
         "pulseaudio#input",
-	"backlight",
-        "network",
-        "cpu_text",
-        "cpu",
-        "memory",
+        "backlight",
+//        "network",
+//        "cpu",
+//        "memory",
         "battery",
         "clock",
         "tray"
     ],
-
     "hyprland/workspaces": {
-	"format": "{icon}"
+        "format": "{icon}"
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "icon": true,
+        "rewrite": {
+            "^(.{40}).{11,}$": "$1..." // If longer than 40, cut to 30 and add ellipsis
+        }
     },
     "idle_inhibitor": {
-	"format": "{icon}",
-	"format-icons": {
-		"activated": "có làm thì mới có ăn 🔥",
-		"deactivated": "chilling cùng a Bảnh 🧘"
-	},
-	"timeout": 30.5
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "có làm thì mới có ăn 🔥",
+            "deactivated": "chilling cùng a Bảnh 🧘"
+        },
+        "timeout": 30.5
     },
-
     "tray": {
-        "spacing": 10,
-        "tooltip": false
+        "spacing": 5,
+        "tooltip": false,
+	"icon-size": 24
     },
-
     "clock": {
         "format": "{:%H:%M - %a, %d %b %Y}",
         "tooltip": true,
-	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-
     "cpu": {
         "format": "cpu {usage}%",
         "interval": 5,
-
         "states": {
             "critical": 90
         }
     },
-
     "memory": {
         "format": "mem {percentage}%",
         "interval": 5,
-
         "states": {
             "critical": 80
         }
     },
-
     "battery": {
         "format": "bat {capacity}%",
-	"format-charging": "charging {capacity}%",
-	"format-plugged": "plugged {capacity}%",
+        "format-charging": "charging {capacity}%",
+        "format-plugged": "plugged {capacity}%",
         "interval": 5,
         "states": {
             "warning": 20,
@@ -81,15 +76,13 @@
         },
         "tooltip": "{time}"
     },
-
     "network": {
-        "format-wifi" : "wifi {bandwidthDownBits}",
+        "format-wifi": "wifi {bandwidthDownBits}",
         "format-ethernet": "enth {bandwidthDownBits}",
-        "format-disconnected" : "no network",
+        "format-disconnected": "no network",
         "interval": 5,
         "tooltip": false
     },
-
     "pulseaudio#output": {
         "scroll-step": 5,
         "max-volume": 150,
@@ -102,10 +95,10 @@
     },
     "pulseaudio#input": {
         "scroll-step": 5,
-    	"format-source": "mic {volume}%",
-    	"format-source-muted": "mic muted",
-    	"format": "{format_source}",
-    	"on-click": "pavucontrol"
+        "format-source": "mic {volume}%",
+        "format-source-muted": "mic muted",
+        "format": "{format_source}",
+        "on-click": "pavucontrol"
     },
     "backlight": {
         "format": "light {percent}%"

@@ -33,4 +33,19 @@ vim.keymap.set('n', '<C-w><C-d>', '<cmd>lua vim.diagnostic.open_float()<cr>')
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
 vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 
+-- Vim toggle diagnostic but this one also clear the ruler so we dont know which line has issue
+-- vim.keymap.set('n', '<leader>td', function()
+--   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+-- end, { silent = true, noremap = true })
+
+--- Vim toggle diagnostics ---
+function _G.toggle_diagnostics()
+    if vim.diagnostic.config().virtual_text then
+        vim.diagnostic.config({ virtual_text = false })
+    else
+        vim.diagnostic.config({ virtual_text = true })
+    end
+end
+vim.api.nvim_set_keymap("n", "<leader>tt", ":call v:lua.toggle_diagnostics()<CR>", { noremap = true, silent = true })
+
 vim.diagnostic.config(opts)

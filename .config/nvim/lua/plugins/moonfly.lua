@@ -1,9 +1,7 @@
 local Plugin = { "bluz71/vim-moonfly-colors" }
 
 Plugin.lazy = false
-function Plugin.config(_, opts)
-    local RosePines = require("rose-pine")
-    RosePines.setup(opts)
+function Plugin.config()
     vim.g.moonflyWinSeparator = 2
     vim.g.moonflyVirtualTextColor = true
     vim.g.moonflyUnderlineMatchParen = true

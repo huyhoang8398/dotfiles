@@ -18,32 +18,68 @@ tooltip {
     border: 2px solid #323437;
 }
 
-/* Module block appearance for clarity */
+/* Modules with transparent background and solid #323437 border */
 #clock,
 #backlight,
 #tray,
 #cpu,
 #memory,
 #network,
-#idle_inhibitor,
 #pulseaudio,
 #battery {
     margin: 6px 6px 6px 0;
     padding: 4px 10px;
-    background-color: rgba(50, 52, 55, 0.6); /* clean, visible */
+    background-color: transparent;
+    border: 2px solid #323437;
     color: #bdbdbd;
 }
 
-/* Special: battery warning states override above */
+#idle_inhibitor.deactivated {
+    margin: 6px 6px 6px 0;
+    padding: 4px 10px;
+    background-color: transparent;
+    border: 2px solid #b2ceee; /* A soft green that fits dark background */
+    color: #b2ceee;
+}
+
+#idle_inhibitor.activated {
+    margin: 6px 6px 6px 0;
+    padding: 4px 10px;
+    background-color: transparent;
+    border: 2px solid #e06c75; /* A soft green that fits dark background */
+    color: #e06c75;
+}
+
+/* Output volume muted */
+#pulseaudio.output.muted {
+    background-color: transparent;
+    border: 2px solid #e06c75; /* softer red */
+    color: #e06c75;
+}
+
+/* Microphone muted */
+#pulseaudio.input.source-muted {
+    background-color: transparent;
+    border: 2px solid #e06c75; /* softer red */
+    color: #e06c75;
+}
+
+#battery.charging {
+    background-color: transparent;
+    border: 2px solid #85dc85; /* A soft green that fits dark background */
+    color: #85dc85;
+}
+
+/* Battery warning states override with red border */
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-    background-color: #ff5454;
+    background-color: transparent;
     border: 2px solid #ff5454;
-    color: #1d2021;
+    color: #ff5454;
 }
 
-/* Workspaces appearance preserved */
+/* Keep original workspace styling */
 #workspaces {
     background-color: rgba(8, 8, 8, 0.85);
     margin: 6px 6px 6px 6px;

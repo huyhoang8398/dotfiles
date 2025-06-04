@@ -1,12 +1,5 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kn/.oh-my-zsh"
-
-# Plugins
-#plugins=(git)
-
-#ZSH_THEME="oxide"
-#CASE_SENSITIVE="true"
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -15,33 +8,21 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # Other Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Useful script
-#source /home/kn/script/open.sh
-
-#zsh uses square brackets for globbing / pattern matching.
-alias pip='noglob pip'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
-#alias vim='nvim'
-alias s="kitty +kitten ssh"
-alias ss="sudo systemctl"
-#alias update="sudo pacman -Syu"
-
+alias ssh="kitty +kitten ssh"
 alias cl="clear"
-alias c="code"
 alias nv="nvim"
-alias s="subl"
 alias gcl='git clone --recurse-submodules'
 alias ga="git add"
 alias gaa="git add ."
@@ -49,8 +30,16 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gs="git status"
 
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# Promt
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
-
-export TERM=xterm-256color
-source /usr/share/doc/pkgfile/command-not-found.zsh

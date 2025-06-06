@@ -37,6 +37,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
+# Ignore duplicate in history when run find (or FZF)
+setopt HIST_FIND_NO_DUPS
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 

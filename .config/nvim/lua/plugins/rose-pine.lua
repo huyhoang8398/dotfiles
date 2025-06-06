@@ -18,6 +18,12 @@ Plugin.opts = {
         italic = true,
         transparency = true,
     },
+    before_highlight = function(group, highlight, palette)
+        -- Disable all undercurls
+        if highlight.undercurl then
+            highlight.undercurl = false
+        end
+    end,
 }
 
 function Plugin.config(_, opts)

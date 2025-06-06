@@ -1,45 +1,52 @@
 /* General Style */
 * {
-    font-family: JetBrainsMono Nerd Font, monospace;
-    font-size: 15px;
+    /* font-family: JetBrainsMono Nerd Font, monospace; */
+    font-family: "Iosevka Nerd Font", monospace;
+    font-size: 18px;
 }
 
 window {
     margin: 0px;
-    border: 1px solid #061115;
-    background-color: #061115;
+    border: 1px solid #323437; /* match Waybar border color */
+    background-color: rgba(8, 8, 8, 0.8); /* transparent background */
 }
 
 #input {
     margin: 5px;
     border: none;
     color: #D9D7D6;
-    background-color: #061115;
+    background-color: rgba(8, 8, 8, 0.8);
 }
 
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #061115;
+    background-color: rgba(8, 8, 8, 0.8);
 }
 
 #outer-box {
     margin: 5px;
     border: none;
-    background-color: #061115;
+    background-color: rgba(8, 8, 8, 0.8);
 }
 
 #scroll {
     margin: 0px;
     border: none;
+    background-color: transparent; /* no bg to keep it clean */
 }
 
 #text {
     margin: 5px;
     border: none;
     color: #D9D7D6;
+    background-color: transparent;
 }
 
 #entry:selected {
-    background-color: #323437;
+    background-color: transparent; /* keep background transparent */
+    border: 2px solid #323437;     /* match Waybar border color */
+    border-radius: 4px;            /* subtle rounding */
+    padding: 3px;                  /* space between text and border */
+    color: #bdbdbd;                /* slightly lighter text for contrast */
 }

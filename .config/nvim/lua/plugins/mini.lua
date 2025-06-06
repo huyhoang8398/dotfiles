@@ -150,6 +150,10 @@ function user.clues()
         -- `z` key
         { mode = 'n', keys = 'z' },
         { mode = 'x', keys = 'z' },
+
+        -- `h` key
+        { mode = 'n', keys = 'h' },
+        { mode = 'x', keys = 'h' },
     }
 
     local clues = {

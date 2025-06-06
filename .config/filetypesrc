@@ -1,4 +1,6 @@
 [EmbedSettings]
+embed-application/pdf=false
 embed-image/jpeg=false
+embed-text/plain=false
 embed-video/webm=false
 embed-video/x-matroska=false

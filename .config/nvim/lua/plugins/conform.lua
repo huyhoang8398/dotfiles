@@ -24,7 +24,7 @@ function Plugin.config(_, opts)
 			timeout_ms = 5000,
 			lsp_format = "fallback",
 		})
-	end)
+	end, { desc = "Formatting buffer" })
 end
 
 return Plugin

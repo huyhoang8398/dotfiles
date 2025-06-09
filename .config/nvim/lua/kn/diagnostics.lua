@@ -46,6 +46,6 @@ function _G.toggle_diagnostics()
         vim.diagnostic.config({ virtual_text = true })
     end
 end
-vim.api.nvim_set_keymap("n", "<leader>tt", ":call v:lua.toggle_diagnostics()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tt", ":call v:lua.toggle_diagnostics()<CR>", { noremap = true, silent = true, desc = "Toggle dignostic" })
 
 vim.diagnostic.config(opts)

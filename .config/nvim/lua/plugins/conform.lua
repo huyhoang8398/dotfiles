@@ -7,6 +7,7 @@ Plugin.opts = {
 		json = { "prettierd", "prettier", stop_after_first = true },
 		jsonc = { "prettierd", "prettier", stop_after_first = true },
 		css = { "prettierd", "prettier", stop_after_first = true },
+		yaml = { "prettierd", "prettier", stop_after_first = true },
 		python = function(bufnr)
 			if require("conform").get_formatter_info("ruff_format", bufnr).available then
 				return { "ruff_format" }

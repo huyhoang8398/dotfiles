@@ -15,7 +15,7 @@ Plugin.opts = {
 
     styles = {
         bold = true,
-        italic = true,
+        italic = false,
         transparency = true,
     },
     before_highlight = function(group, highlight, palette)

@@ -37,6 +37,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+
+# Personal Script
+export PATH=$PATH:/home/kn/dev/script
+
 # Ignore duplicate in history when run find (or FZF)
 setopt HIST_FIND_NO_DUPS
 

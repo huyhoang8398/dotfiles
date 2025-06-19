@@ -1,46 +1,47 @@
-local Plugin = { 'nvim-treesitter/nvim-treesitter' }
+local Plugin = { "nvim-treesitter/nvim-treesitter" }
 
-Plugin.main = 'nvim-treesitter.configs'
+Plugin.main = "nvim-treesitter.configs"
 
 Plugin.dependencies = {
-    { 'nvim-treesitter/nvim-treesitter-textobjects' }
+	{ "nvim-treesitter/nvim-treesitter-textobjects" },
 }
 
-Plugin.build = ':TSUpdate'
+Plugin.build = ":TSUpdate"
 
 -- See :help nvim-treesitter-modules
 Plugin.opts = {
-    auto_install = true,
+	auto_install = true,
 
-    highlight = {
-        enable = true,
-    },
+	highlight = {
+		enable = true,
+	},
 
-    -- :help nvim-treesitter-textobjects-modules
-    textobjects = {
-        select = {
-            enable = true,
-            lookahead = true,
-            keymaps = {
-                ['af'] = '@function.outer',
-                ['if'] = '@function.inner',
-                ['ac'] = '@class.outer',
-                ['ic'] = '@class.inner',
-            }
-        },
-    },
+	-- :help nvim-treesitter-textobjects-modules
+	textobjects = {
+		select = {
+			enable = true,
+			lookahead = true,
+			keymaps = {
+				["af"] = "@function.outer",
+				["if"] = "@function.inner",
+				["ac"] = "@class.outer",
+				["ic"] = "@class.inner",
+			},
+		},
+	},
 
-    ensure_installed = {
-        'lua',
-        'vim',
-        'vimdoc',
-        'json',
-        'bash',
-        'markdown',
-        'markdown_inline',
-        'python',
-        'yaml',
-    },
+	ensure_installed = {
+		"lua",
+		"vim",
+		"vimdoc",
+		"json",
+		"bash",
+		"markdown",
+		"markdown_inline",
+		"python",
+		"yaml",
+		"go",
+	},
 }
 
 return Plugin

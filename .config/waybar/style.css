@@ -4,13 +4,14 @@
   min-height: 0;
   font-family: "iosevka nerd font", monospace;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
+  border-radius: 2px;
   padding: 0;
 }
 
 window#waybar {
   background: rgba(8, 8, 8, 0.85); /* 85% opacity */
-  border: 2px solid #323437;
+  /* border: 2px solid #323437; */
 }
 
 tooltip {
@@ -26,6 +27,7 @@ tooltip {
 #memory,
 #network,
 #pulseaudio,
+#custom-hyprsunset,
 #battery {
   margin: 6px 6px 6px 0;
   padding: 4px 10px;

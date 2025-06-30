@@ -13,6 +13,7 @@
     "pulseaudio#output",
     "pulseaudio#input",
     "backlight",
+    "custom/hyprsunset",
     // "network",
     // "cpu",
     // "memory",
@@ -27,7 +28,7 @@
     "format": "{}",
     "icon": true,
     "rewrite": {
-      "^(.{55}).{11,}$": "$1...", // If longer than 40, cut to 30 and add ellipsis
+      "^(.{40}).{11,}$": "$1...", // If longer than 40, cut to 30 and add ellipsis
     },
   },
   "idle_inhibitor": {
@@ -41,12 +42,12 @@
   "tray": {
     "spacing": 5,
     "tooltip": false,
-    "icon-size": 24,
+    "icon-size": 22,
   },
   "clock": {
-    "format": "{:%H:%M - %a, %d %b %Y}",
+    "format": "{:%H:%M - %a %d %b %Y}",
     "tooltip": true,
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "\n<tt><small>{calendar}</small></tt>",
   },
   "cpu": {
     "format": "cpu {usage}%",
@@ -118,5 +119,15 @@
     "format": "{icon} {percent}%",
     "format-icons": ["󰃞", "󰃟", "󰃠"],
     // "format": "light {percent}%"
+  },
+
+  "custom/hyprsunset": {
+    "format": "{}",
+    "signal": 10,
+    "on-click-right": "hyprsunset-toggle toggle",
+    "on-click": "hyprsunset-toggle toggle",
+    "exec": "hyprsunset-toggle",
+    "interval": "once",
+    "tooltip": false,
   },
 }

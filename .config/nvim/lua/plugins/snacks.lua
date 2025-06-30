@@ -1,6 +1,8 @@
 -- A collection of QoL plugins for Neovim
 local Plugin = { "folke/snacks.nvim" }
 
+Plugin.priority = 1000
+
 Plugin.lazy = false
 
 Plugin.opts = {

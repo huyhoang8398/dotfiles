@@ -6,9 +6,7 @@ local opts = {
   },
   signs = {
     text = {
-      [levels.ERROR] = '✘',
-      [levels.WARN] = '▲',
-      [levels.HINT] = '⚑',
+      [levels.ERROR] = '✘', [levels.WARN] = '▲', [levels.HINT] = '⚑',
       [levels.INFO] = '»',
     },
   },

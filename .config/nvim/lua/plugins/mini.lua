@@ -57,14 +57,14 @@ function Plugin.config()
 	})
 
 	-- See :help MiniNotify.config
-	require("mini.notify").setup({
-		lsp_progress = {
-			enable = false,
-		},
-	})
-
-	vim.notify = require("mini.notify").make_notify()
-
+	-- require("mini.notify").setup({
+	-- 	lsp_progress = {
+	-- 		enable = false,
+	-- 	},
+	-- })
+	--
+	-- vim.notify = require("mini.notify").make_notify()
+	--
 	-- See :help MiniSnippets.config
 	local mini_snippets = require("mini.snippets")
 	mini_snippets.setup({

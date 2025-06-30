@@ -29,6 +29,7 @@ alias gaa="git add ."
 alias gc="git commit -m"
 alias gp="git push"
 alias gs="git status"
+alias cat="bat"
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
@@ -39,6 +40,10 @@ eval "$(pyenv init - zsh)"
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
+
+# nodejs - allow user-wide installation
+export PATH="$HOME/.local/bin:$PATH"
+export npm_config_prefix="$HOME/.local"
 
 # Personal Script
 export PATH=$PATH:/home/kn/dev/script

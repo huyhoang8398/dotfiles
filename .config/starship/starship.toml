@@ -1,7 +1,36 @@
+palette = "moonfly"
+
+[c]
+style = "green"
+
+[character]
+success_symbol = "[❯](blue)"
+error_symbol = "[❯](red)"
 
 [directory]
-truncation_length = 100
-truncate_to_repo = false
+truncation_length = 1000
+style = "fern"
+
+[git_branch]
+style = "lavender"
+
+[package]
+style = "orange"
+
+[perl]
+style = "green"
+
+[swift]
+style = "red"
+
+[terraform]
+style = "purple"
+
+[palettes.moonfly]
+fern = "#87d787"
+lavender = "#adadf3"
+orange = "#f09479"
+red = "#f07496"
 
 [line_break]
 disabled = false

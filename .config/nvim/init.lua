@@ -9,6 +9,5 @@ load("kn.commands")
 load("kn.keymaps")
 require("kn.plugins")
 
-pcall(vim.cmd.colorscheme, 'rose-pine')
--- pcall(vim.cmd.colorscheme, 'moonfly')
--- pcall(vim.cmd.colorscheme, 'one_monokai')
+-- pcall(vim.cmd.colorscheme, 'rose-pine')
+pcall(vim.cmd.colorscheme, 'moonfly')

@@ -10,6 +10,7 @@ error_symbol = "[❯](red)"
 [directory]
 truncation_length = 1000
 style = "fern"
+truncate_to_repo = false
 
 [git_branch]
 style = "lavender"

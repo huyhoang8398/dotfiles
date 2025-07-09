@@ -115,7 +115,7 @@ function user.statusline()
 	local mode, mode_hl = mini.section_mode({ trunc_width = 120 })
 	local diagnostics = mini.section_diagnostics({ trunc_width = 75 })
 	local lsp = mini.section_lsp({ icon = "LSP", trunc_width = 75 })
-	local git = mini.section_git({ trunc_width = 40 })
+	local git = mini.section_git({})
 	local filename = mini.section_filename({ trunc_width = 140 })
 	local percent = "%2p%%"
 	local location = "%3l:%-2c"

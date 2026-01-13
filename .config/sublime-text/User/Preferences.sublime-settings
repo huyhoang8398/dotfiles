@@ -1,0 +1,14 @@
+{
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"neovintageous_build_version": 13200,
+    "font_face": "JetBrainsMono Nerd Font",
+    "font_size": 14,
+    "index_files": false,
+    "highlight_line": true,
+    "vintageous_use_sys_clipboard": true,
+    "relative_line_numbers": true,
+}

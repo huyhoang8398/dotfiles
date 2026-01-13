@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AutoProjects",
+		"Debugger",
+		"LSP",
+		"LSP-bash",
+		"LSP-json",
+		"LSP-pyright",
+		"LSP-yaml",
+		"NeoVintageous",
+		"Package Control",
+	],
+}

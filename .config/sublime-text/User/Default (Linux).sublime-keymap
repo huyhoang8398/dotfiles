@@ -1,171 +1,6 @@
 [
 	{
 		"keys": [
-			"g",
-			"d",
-		],
-		"command": "lsp_symbol_definition",
-		"args": {
-			"side_by_side": false,
-			"force_group": true,
-			"fallback": false,
-			"group": -1
-		},
-		"context": [
-			{
-				"key": "lsp.session_with_capability",
-				"operand": "definitionProvider"
-			},
-			{
-				"key": "auto_complete_visible",
-				"operand": false
-			},
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	{
-		"keys": [
-			"g",
-			"r",
-			"d"
-		],
-		"command": "lsp_symbol_declaration",
-		"args": {
-			"side_by_side": false,
-			"force_group": true,
-			"group": -1
-		},
-		"context": [
-			{
-				"key": "lsp.session_with_capability",
-				"operand": "declarationProvider"
-			},
-			{
-				"key": "auto_complete_visible",
-				"operand": false
-			},
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	{
-		"keys": [
-			"g",
-			"r",
-			"r"
-		],
-		"command": "lsp_symbol_references",
-		"args": {
-			"side_by_side": false,
-			"force_group": true,
-			"fallback": false,
-			"group": -1,
-			"include_declaration": false
-		},
-		"context": [
-			{
-				"key": "lsp.session_with_capability",
-				"operand": "referencesProvider"
-			},
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	// Hover Popup
-	{
-		"keys": [
-			"K"
-		],
-		"command": "lsp_hover",
-		"context": [
-			{
-				"key": "lsp.session_with_capability",
-				"operand": "hoverProvider"
-			},
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	// Rename
-	{
-		"keys": [
-			"g",
-			"r",
-			"n",
-		],
-		"command": "lsp_symbol_rename",
-		"context": [
-			{
-				"key": "lsp.session_with_capability",
-				"operand": "renameProvider"
-			},
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	{
-		"keys": [
-			"g",
-			"r",
-			"i"
-		],
-		"command": "lsp_symbol_implementation",
-		"args": {
-			"side_by_side": false,
-			"force_group": true,
-			"group": -1
-		},
-		"context": [
-			{
-				"key": "lsp.session_with_capability",
-				"operand": "implementationProvider"
-			},
-			{
-				"key": "auto_complete_visible",
-				"operand": false
-			},
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	{
-		"keys": [
-			"g",
-			"g"
-		],
-		"command": "move_to",
-		"args": {
-			"to": "bof",
-			"extend": false
-		},
-		"context": [
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	{
-		"keys": [
-			"\\",
-			"h",
-			"d"
-		],
-		"command": "toggle_inline_diff",
-		"context": [
-			{
-				"key": "vi_command_mode_aware"
-			},
-		]
-	},
-	{
-		"keys": [
 			"\\",
 			"\\"
 		],
@@ -173,7 +8,12 @@
 		"args": {
 			"overlay": "goto",
 			"show_files": true
-		}
+		},
+		"context": [
+			{
+				"key": "vi_command_mode_aware"
+			},
+		]
 	},
 	{
 		"keys": [
@@ -192,6 +32,28 @@
 			},
 			{
 				"key": "vi_insert_mode_aware"
+			},
+		]
+	},
+	{
+		"keys": [
+			"ctrl+tab"
+		],
+		"command": "next_view",
+		"context": [
+			{
+				"key": "vi_command_mode_aware"
+			},
+		]
+	},
+	{
+		"keys": [
+			"ctrl+shift+tab"
+		],
+		"command": "prev_view",
+		"context": [
+			{
+				"key": "vi_command_mode_aware"
 			},
 		]
 	},

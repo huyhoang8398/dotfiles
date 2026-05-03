@@ -1,5 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/kn/.oh-my-zsh"
+
+# plugins
+plugins=(command-not-found)
+
+# Other Plugins
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -8,15 +16,12 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='vim'
 fi
 
-# Other Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+# Alias
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -29,21 +34,6 @@ alias gaa="git add ."
 alias gc="git commit -m"
 alias gp="git push"
 alias gs="git status"
-alias cat="bat"
-
-source /usr/share/doc/pkgfile/command-not-found.zsh
-
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
-# Golang
-export PATH=$PATH:/usr/local/go/bin
-
-# nodejs - allow user-wide installation
-export PATH="$HOME/.local/bin:$PATH"
-export npm_config_prefix="$HOME/.local"
 
 # Personal Script
 export PATH=$PATH:/home/kn/dev/script

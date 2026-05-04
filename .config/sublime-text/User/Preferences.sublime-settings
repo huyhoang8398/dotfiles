@@ -10,6 +10,7 @@
 	"neovintageous_build_version": 13200,
 	"vintageous_use_sys_clipboard": true,
 	"relative_line_numbers": true,
-	"theme": "auto",
-	"word_wrap": "auto",
+	"theme": "Default.sublime-theme",
+	"word_wrap": true,
+	"hot_exit": "disabled",
 }

@@ -37,6 +37,26 @@
 	},
 	{
 		"keys": [
+			"shift+tab"
+		],
+		"command": "move",
+		"args": {
+			"by": "lines",
+			"forward": false
+		},
+		"context": [
+			{
+				"key": "auto_complete_primed",
+				"operator": "equal",
+				"operand": true
+			},
+			{
+				"key": "vi_insert_mode_aware"
+			},
+		]
+	},
+	{
+		"keys": [
 			"ctrl+tab"
 		],
 		"command": "next_view",
@@ -56,5 +76,15 @@
 				"key": "vi_command_mode_aware"
 			},
 		]
+	},
+	// Open a terminal tab at current file directory
+	{
+		"keys": [
+			"ctrl+alt+t"
+		],
+		"command": "terminus_open",
+		"args": {
+			"cwd": "${file_path:${folder}}"
+		}
 	},
 ]

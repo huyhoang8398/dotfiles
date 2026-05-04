@@ -1,13 +1,18 @@
 " http://www.lazyvim.org/keymaps#lsp
-nnoremap FileType css,go,html,js,py,sh <Leader>ca :LspCodeActions<CR>
-nnoremap FileType css,go,html,js,py,sh <Leader>cc :LspCodeLens<CR>
-nnoremap FileType css,go,html,js,py,sh grn :LspSymbolRename<CR>
-nnoremap FileType css,go,html,js,py,sh K :LspHover<CR>
-nnoremap FileType css,go,html,js,py,sh [d :LspPrevDiagnostic<CR>
-nnoremap FileType css,go,html,js,py,sh ]d :LspNextDiagnostic<CR>
-nnoremap FileType css,go,html,js,py,sh grd :LspSymbolDeclaration<CR>
-nnoremap FileType css,go,html,js,py,sh gri :LspSymbolImplementation<CR>
-nnoremap FileType css,go,html,js,py,sh gK :LspSignatureHelpShow<CR>
-nnoremap FileType css,go,html,js,py,sh gd :LspSymbolDefinition<CR>
-nnoremap FileType css,go,html,js,py,sh grr :LspSymbolReferences<CR>
-nnoremap FileType css,go,html,js,py,sh gy :LspSymbolTypeDefinition<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml <Leader>ca :LspCodeActions<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml <Leader>cc :LspCodeLens<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml grn :LspSymbolRename<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml K :LspHover<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml [d :LspPrevDiagnostic<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml ]d :LspNextDiagnostic<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml grd :LspSymbolDeclaration<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml gri :LspSymbolImplementation<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml gK :LspSignatureHelpShow<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml gd :LspSymbolDefinition<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml grr :LspSymbolReferences<CR>
+nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml gy :LspSymbolTypeDefinition<CR>
+" Make j and k work file linewise instead of screen linewise.
+nnoremap gj j
+nnoremap gk k
+nnoremap j gj
+nnoremap k gk

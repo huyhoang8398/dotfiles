@@ -1,0 +1,51 @@
+" http://www.lazyvim.org/keymaps#lsp
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile <Leader>ca :LspCodeActions<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile <Leader>cc :LspCodeLens<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile grn :LspSymbolRename<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile K :LspHover<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile [d :LspPrevDiagnostic<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile ]d :LspNextDiagnostic<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile grd :LspSymbolDeclaration<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile gri :LspSymbolImplementation<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile gK :LspSignatureHelpShow<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile gd :LspSymbolDefinition<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile grr :LspSymbolReferences<CR>
+" nnoremap FileType css,go,html,js,py,sh,bb,bbappend,yml,Containerfile,Dockerfile gy :LspSymbolTypeDefinition<CR>
+
+let mapleader=<space>
+
+" Because of LSP-dockerfile, we map it as global
+nnoremap <Leader>ca :LspCodeActions<CR>
+nnoremap <Leader>cc :LspCodeLens<CR>
+nnoremap grn :LspSymbolRename<CR>
+nnoremap K :LspHover<CR>
+nnoremap [d :LspPrevDiagnostic<CR>
+nnoremap ]d :LspNextDiagnostic<CR>
+nnoremap grd :LspSymbolDeclaration<CR>
+nnoremap gri :LspSymbolImplementation<CR>
+nnoremap gK :LspSignatureHelpShow<CR>
+nnoremap gd :LspSymbolDefinition<CR>
+nnoremap grr :LspSymbolReferences<CR>
+nnoremap gy :LspSymbolTypeDefinition<CR>
+
+" Make j and k work file linewise instead of screen linewise.
+nnoremap gj j
+nnoremap gk k
+nnoremap j gj
+nnoremap k gk
+
+" Harpoon
+nnoremap <Leader>a :HarpoonAdd<CR>
+nnoremap <Leader>m :HarpoonList<CR>
+nnoremap <Leader>n :HarpoonNext<CR>
+nnoremap <Leader>p :HarpoonPrev<CR>
+nnoremap <Leader>c :HarpoonClear<CR>
+nnoremap <Leader>e :HarpoonEdit<CR>
+nnoremap <C-1> :HarpoonGoto index=1<CR>
+nnoremap <C-2> :HarpoonGoto index=2<CR>
+nnoremap <C-3> :HarpoonGoto index=3<CR>
+nnoremap <C-4> :HarpoonGoto index=4<CR>
+nnoremap <C-5> :HarpoonGoto index=5<CR>
+
+" Sublime Lint
+nnoremap gl :SublimeLinterPanelToggle<CR>

@@ -1,0 +1,35 @@
+{
+	"bootstrapped": true,
+	"channels":
+	[
+		"https://packages.sublimetext.io/channel.json",
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AutoProjects",
+		"BracketHighlighter",
+		"Containerfile",
+		"Debugger",
+		"Harpoon",
+		"LSP",
+		"LSP-bash",
+		"LSP-dockerfile",
+		"LSP-file-watcher-rust",
+		"LSP-json",
+		"LSP-pyright",
+		"LSP-ruff",
+		"LSP-yaml",
+		"NeoVintageous",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-pylint",
+		"SublimeLinter-shellcheck",
+		"UndoTree",
+		"WhereAmI",
+	],
+	"in_process_packages":
+	[
+	],
+}

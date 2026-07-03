@@ -1,0 +1,24 @@
+{
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"ignored_packages": [
+		"Vintage",
+	],
+	"font_face": "JetBrainsMono Nerd Font",
+	"font_size": 14,
+	"index_files": false,
+	"highlight_line": true,
+	"neovintageous_build_version": 13200,
+	"vintageous_use_sys_clipboard": true,
+	"relative_line_numbers": true,
+	"theme": "Default.sublime-theme",
+	"word_wrap": true,
+	"hot_exit": "disabled",
+
+	"rulers": [80],
+	// input method
+	// https://neovintageous.github.io/plugins/input-method
+	// 	"vintageous_auto_switch_input_method": true,
+	// 	"vintageous_auto_switch_input_method_default": "1",
+	// 	"vintageous_auto_switch_input_method_get_cmd": "/usr/bin/fcitx5-remote",
+	// 	"vintageous_auto_switch_input_method_set_cmd": "/usr/bin/fcitx5-remote -t {im}",
+}
